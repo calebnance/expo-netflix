@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Expo Netflix",
+    "description": "expo netflix prototype",
+    "slug": "expo-netflix",
+    "privacy": "public",
+    "sdkVersion": "31.0.0",
+    "version": "0.0.1",
+    "platforms": ["ios", "android"],
+    "orientation": "portrait",
+    "primaryColor": "#000000",
+    "icon": "src/assets/icon.png",
+    "splash": {
+      "image": "src/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
