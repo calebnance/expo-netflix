@@ -1,5 +1,5 @@
-// const test = require("../assets/images/test.jpg");
+const netflix = require('../assets/images/netflix-logo.png');
 
-// export default {
-//   test
-// };
+export default {
+  netflix
+};

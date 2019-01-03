@@ -74,6 +74,9 @@ export default {
   p16: {
     padding: 16
   },
+  pH8: {
+    paddingHorizontal: 8
+  },
   pH16: {
     paddingHorizontal: 16
   }

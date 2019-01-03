@@ -7,6 +7,7 @@ export default {
   brandPrimary: '#d22f27',
   bgGrey: '#191919',
   inactiveGrey: '#727272',
+  castGrey: '#303030',
 
   // home
   heading: '#e6e6e6',

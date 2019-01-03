@@ -1,11 +1,22 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import { gStyle } from '../api/constants';
 
-const Home = () => (
-  <View style={gStyle.container}>
-    <Text style={gStyle.heading}>Home</Text>
-  </View>
-);
+import Cast from '../components/Cast';
+import Header from '../components/Header';
+
+const Home = props => {
+  const { navigation } = props;
+
+  return (
+    <View style={gStyle.container}>
+      <Header navigation={navigation} />
+      <ScrollView style={gStyle.pH8}>
+        <Text style={gStyle.heading}>Home</Text>
+      </ScrollView>
+      <Cast navigation={navigation} />
+    </View>
+  );
+};
 
 export default Home;
