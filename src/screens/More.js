@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { colors } from '../api/constants';
+import { Text, View } from 'react-native';
+import { gStyle } from '../api/constants';
 
 class More extends React.Component {
   constructor(props) {
@@ -15,20 +15,11 @@ class More extends React.Component {
     const { some } = this.state;
 
     return (
-      <View style={styles.container}>
-        <Text>{some}</Text>
+      <View style={gStyle.container}>
+        <Text style={gStyle.heading}>{some}</Text>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    backgroundColor: colors.white,
-    flex: 1,
-    justifyContent: 'center'
-  }
-});
 
 export default More;

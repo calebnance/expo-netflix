@@ -22,6 +22,7 @@ export default createStackNavigator(
     }
   },
   {
+    headerMode: 'none',
     navigationOptions: {
       tabBarLabel: 'More',
       tabBarIcon: Icon

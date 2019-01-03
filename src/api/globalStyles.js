@@ -2,7 +2,7 @@ import colors from './colors';
 
 export default {
   container: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.bgGrey,
     flex: 1
   },
   centerItems: {
@@ -39,12 +39,9 @@ export default {
     color: colors.white
   },
   heading: {
-    color: colors.lightBlack,
+    color: colors.heading,
     fontFamily: 'HelveticaNeue-Medium',
-    fontSize: 20,
-    marginBottom: 8,
-    marginTop: 16,
-    textAlign: 'center'
+    fontSize: 22
   },
   paragraph: {
     color: colors.black
