@@ -5,9 +5,6 @@ import { gStyle } from '../api/constants';
 
 const Search = props => {
   const { navigation } = props;
-  console.log('hit search screen');
-  console.log(navigation);
-  console.log('-----------------');
 
   return (
     <View style={gStyle.container}>
