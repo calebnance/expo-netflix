@@ -5,9 +5,9 @@ import { createStackNavigator } from 'react-navigation';
 import navigationOptions from './defaultOptions';
 
 import DownloadsScreen from '../screens/Downloads';
-import SvgHome from '../components/icons/Svg.Home';
+import SvgDownloads from '../components/icons/Svg.Downloads';
 
-const Icon = ({ focused }) => <SvgHome active={focused} />;
+const Icon = ({ focused }) => <SvgDownloads active={focused} />;
 
 Icon.propTypes = {
   // required
