@@ -17,5 +17,9 @@ export default {
   searchBarBg: '#323232',
   searchIcon: '#7f7f7f',
   searchHeadingBg: '#3a3a3a',
-  searchHeadingText: '#b3b3b3'
+  searchHeadingText: '#b3b3b3',
+
+  // downloads
+  downloadsHeaderBg: '#1b1b1b',
+  downloadsIconBg: '#404040'
 };
