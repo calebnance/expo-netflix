@@ -21,5 +21,10 @@ export default {
 
   // downloads
   downloadsHeaderBg: '#1b1b1b',
-  downloadsIconBg: '#404040'
+  downloadsIconBg: '#404040',
+
+  // cast connect modal
+  castConnectBg: '#181818',
+  castConnectText: '#b3b3b3',
+  castConnectDeviceText: '#58b1e2'
 };

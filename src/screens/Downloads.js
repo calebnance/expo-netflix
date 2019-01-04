@@ -21,7 +21,7 @@ const Downloads = props => {
       />
 
       <View style={styles.containerIcon}>
-        <SvgDownloads fill={colors.bgGrey} size={120} />
+        <SvgDownloads fill={colors.bgGrey} size={80} />
       </View>
 
       <Text style={styles.description}>
@@ -48,11 +48,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.downloadsIconBg,
     borderRadius: 96,
-    height: 192,
+    height: 140,
     justifyContent: 'center',
     marginBottom: 32,
     marginTop: 48,
-    width: 192
+    width: 140
   },
   description: {
     alignSelf: 'center',

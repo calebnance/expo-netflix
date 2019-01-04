@@ -1,6 +1,7 @@
 import { createAppContainer, createStackNavigator } from 'react-navigation';
 
 // grab screens
+import ModalCastConnect from '../screens/ModalCastConnect';
 import ModalVideo from '../screens/ModalVideo';
 
 // grab tabbed stacks
@@ -11,19 +12,22 @@ import ModalRoutes from './ModalRoutes';
 
 const StackNavigator = createStackNavigator(
   {
-    TabMain: {
+    Main: {
       screen: TabNavigator
     },
 
     // Modals
     // /////////////////////////////////////////////////////////////////////////
+    ModalCastConnect: {
+      screen: ModalCastConnect
+    },
     ModalVideo: {
       screen: ModalVideo
     }
   },
   {
     headerMode: 'none',
-    initialRouteName: 'TabMain',
+    initialRouteName: 'Main',
     transitionConfig: ModalRoutes
   }
 );

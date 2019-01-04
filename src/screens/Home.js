@@ -1,18 +1,19 @@
 import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
-import { gStyle } from '../api/constants';
+import { Image, ScrollView, Text, View } from 'react-native';
+import { gStyle, images } from '../api/constants';
 
 import Cast from '../components/Cast';
-import Header from '../components/Header';
+import HeaderHome from '../components/HeaderHome';
 
 const Home = props => {
   const { navigation } = props;
 
   return (
     <View style={gStyle.container}>
-      <Header navigation={navigation} />
+      <HeaderHome navigation={navigation} />
 
-      <ScrollView style={gStyle.pH8}>
+      <ScrollView>
+        <Image source={images.bannerBander} style={{ width: '100%' }} />
         <Text style={gStyle.heading}>Previews</Text>
         <Text style={gStyle.heading}>Popular on Netflix</Text>
         <Text style={gStyle.heading}>Trending Now</Text>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 import { colors } from '../api/constants';
 
@@ -9,9 +9,13 @@ const Cast = props => {
   const { navigation } = props;
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={() => navigation.navigate('ModalCastConnect')}
+      style={styles.container}
+    >
       <SvgCast />
-    </View>
+    </TouchableOpacity>
   );
 };
 
