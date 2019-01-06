@@ -36,4 +36,11 @@ Run Project Locally: `expo start`
 
 **version 0.0.1 (current)**
 
-- TODO LIST HERE
+- Tab Navigation set
+  - Home
+  - Search
+  - My Downloads
+  - More
+- Downloads screen
+- Chrome Cast modal screen
+- Started Home screen functionality
