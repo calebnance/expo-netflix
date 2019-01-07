@@ -36,11 +36,19 @@ Run Project Locally: `expo start`
 
 **version 0.0.1 (current)**
 
-- Tab Navigation set
+<p align="left">
+  <img src="creative/releases/expo-netflix-0.0.1.gif?raw=true" width="320" />
+</p>
+
+- Tab Navigation
   - Home
+    - simple banner (bandersnatch)
+    - add to my list
+    - simple wireframe with FlatList (horizontal scroll)
   - Search
+    - simple animation onFocus and onBlur of search input
+    - autofocus on first render
   - My Downloads
   - More
-- Downloads screen
+    - simple account profiles layout
 - Chrome Cast modal screen
-- Started Home screen functionality
