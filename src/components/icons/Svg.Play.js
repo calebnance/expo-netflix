@@ -1,29 +1,42 @@
 import React from 'react';
+import { View } from 'react-native';
 import { Svg } from 'expo';
 import PropTypes from 'prop-types';
 import { colors } from '../../api/constants';
 
 const SvgPlay = props => {
-  const { active, size } = props;
+  const { active, fill, size } = props;
+
+  let fillColor = fill;
+
+  if (fillColor === null) {
+    fillColor = active ? colors.white : colors.inactiveGrey;
+  }
 
   return (
-    <Svg height={size} width={size} viewBox="0 0 24 24">
-      <Svg.Path
-        d="M19.5 11.2l-14-9c-.3-.2-.7-.2-1 0-.3.1-.5.4-.5.8v18c0 .4.2.7.5.9.2.1.3.1.5.1s.4-.1.5-.2l14-9c.3-.2.5-.5.5-.8s-.2-.7-.5-.8zM6 19.2V4.8L17.2 12 6 19.2z"
-        fill={active ? colors.white : colors.inactiveGrey}
-      />
-    </Svg>
+    <View style={{ paddingBottom: 3 }}>
+      <Svg
+        height={size}
+        width={size}
+        overflow="visible"
+        viewBox="0 0 590.74 460.5"
+      >
+        <Svg.Path d="M.5.866l459 265.004L.5 530.874z" stroke={fillColor} />
+      </Svg>
+    </View>
   );
 };
 
 SvgPlay.defaultProps = {
   active: true,
-  size: 24
+  fill: null,
+  size: 20
 };
 
 SvgPlay.propTypes = {
   // optional
   active: PropTypes.bool,
+  fill: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   size: PropTypes.number
 };
 

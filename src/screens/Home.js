@@ -1,18 +1,10 @@
 import React from 'react';
-import {
-  Image,
-  ImageBackground,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-import { gStyle, images } from '../api/constants';
+import { ScrollView, Text, View } from 'react-native';
+import { gStyle } from '../api/constants';
 
 import Cast from '../components/Cast';
 import HeaderHome from '../components/HeaderHome';
-
-import SvgPlus from '../components/icons/Svg.Plus';
+import PromotionBanner from '../components/PromotionBanner';
 
 const Home = props => {
   const { navigation } = props;
@@ -22,15 +14,7 @@ const Home = props => {
       <HeaderHome navigation={navigation} />
 
       <ScrollView>
-        <ImageBackground
-          source={images.bannerBander}
-          style={styles.imageBackground}
-        >
-          <View style={styles.containerContent}>
-            <Image source={images.logoBander} style={styles.image} />
-            <SvgPlus />
-          </View>
-        </ImageBackground>
+        <PromotionBanner />
 
         <Text style={gStyle.heading}>Previews</Text>
         <Text style={gStyle.heading}>Popular on Netflix</Text>
@@ -44,22 +28,5 @@ const Home = props => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  imageBackground: {
-    alignItems: 'center',
-    height: 534,
-    width: '100%'
-  },
-  containerContent: {
-    bottom: 124,
-    position: 'absolute',
-    zIndex: 1
-  },
-  image: {
-    height: 69,
-    width: 291
-  }
-});
 
 export default Home;
