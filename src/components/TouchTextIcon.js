@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors } from '../api/constants';
+import { colors, fonts } from '../api/constants';
 
 const TouchTextIcon = props => {
   const { icon, iconSize, onPress, text, width } = props;
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.infoGrey,
-    fontFamily: 'HelveticaNeue-Light',
+    fontFamily: fonts.light,
     marginTop: 2
   },
   icon: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors, device, gStyle, images } from '../api/constants';
+import { colors, device, fonts, images } from '../api/constants';
 
 import SvgEdit from './icons/Svg.Edit';
 import SvgPlus from './icons/Svg.Plus';
@@ -68,11 +68,11 @@ const styles = StyleSheet.create({
   username: {
     color: colors.inactiveGrey,
     fontSize: 12,
-    fontFamily: 'HelveticaNeue-Medium'
+    fontFamily: fonts.medium
   },
   usernameActive: {
     color: colors.white,
-    fontFamily: 'HelveticaNeue-Bold'
+    fontFamily: fonts.bold
   },
   containerPlus: {
     alignItems: 'center',
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   manageText: {
     color: colors.inactiveGrey,
-    fontFamily: 'HelveticaNeue-Medium',
+    fontFamily: fonts.medium,
     marginLeft: 4
   }
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors, gStyle } from '../api/constants';
+import { colors, fonts, gStyle } from '../api/constants';
 
 import Header from '../components/Header';
 
@@ -33,13 +33,13 @@ const styles = StyleSheet.create({
   },
   connect: {
     color: colors.castConnectText,
-    fontFamily: 'HelveticaNeue',
+    fontFamily: fonts.regular,
     fontSize: 16,
     textAlign: 'center'
   },
   deviceText: {
     color: colors.castConnectDeviceText,
-    fontFamily: 'HelveticaNeue-Bold',
+    fontFamily: fonts.bold,
     fontSize: 16,
     padding: 20,
     textAlign: 'center'

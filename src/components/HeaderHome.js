@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors, device, images } from '../api/constants';
+import { colors, device, fonts, images } from '../api/constants';
 
 const HeaderHome = props => {
   const { navigation } = props;
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.white,
-    fontFamily: 'HelveticaNeue-Medium',
+    fontFamily: fonts.medium,
     marginRight: 24
   }
 });

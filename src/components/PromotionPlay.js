@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors } from '../api/constants';
+import { colors, fonts } from '../api/constants';
 
 import SvgPlay from './icons/Svg.Play';
 
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.black,
-    fontFamily: 'HelveticaNeue-Medium',
+    fontFamily: fonts.medium,
     fontSize: 18
   },
   icon: {

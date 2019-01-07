@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors, gStyle } from '../api/constants';
+import { colors, fonts, gStyle } from '../api/constants';
 
 import Cast from '../components/Cast';
 import Header from '../components/Header';
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   description: {
     alignSelf: 'center',
     color: colors.white,
-    fontFamily: 'HelveticaNeue',
+    fontFamily: fonts.regular,
     fontSize: 16,
     marginBottom: 48,
     textAlign: 'center',

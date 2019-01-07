@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors, device, images } from '../api/constants';
+import { colors, device, fonts, images } from '../api/constants';
 
 const Header = props => {
   const { bg, close, navigation, showLogoFull, title } = props;
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
   closeText: {
     color: colors.white,
-    fontFamily: 'HelveticaNeue-Light',
+    fontFamily: fonts.light,
     fontSize: 16
   }
 });

@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-import { colors, device } from '../api/constants';
+import { colors, device, fonts } from '../api/constants';
 
 class HeaderSearch extends React.Component {
   constructor(props) {
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.searchBarBg,
     borderRadius: 4,
     color: colors.heading,
-    fontFamily: 'HelveticaNeue',
+    fontFamily: fonts.regular,
     fontSize: 16,
     textAlign: 'center',
     paddingHorizontal: 8,
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   },
   cancel: {
     color: colors.heading,
-    fontFamily: 'HelveticaNeue-Light',
+    fontFamily: fonts.light,
     fontSize: 16,
     paddingVertical: 4,
     textAlign: 'center'
