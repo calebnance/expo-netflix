@@ -67,6 +67,7 @@ class HeaderSearch extends React.Component {
       <View style={styles.container}>
         <Animated.View style={[styles.containerInput, { width: percentage }]}>
           <TextInput
+            autoFocus
             keyboardAppearance="dark"
             onBlur={this.onBlur}
             onChangeText={input => this.setState({ text: input })}

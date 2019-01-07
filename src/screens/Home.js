@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
+import PropTypes from 'prop-types';
 import { gStyle } from '../api/constants';
 
 import Cast from '../components/Cast';
@@ -41,6 +42,11 @@ const Home = props => {
       <Cast navigation={navigation} />
     </View>
   );
+};
+
+Home.propTypes = {
+  // required
+  navigation: PropTypes.object.isRequired
 };
 
 export default Home;
