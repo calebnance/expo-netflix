@@ -41,7 +41,10 @@ export default {
   heading: {
     color: colors.heading,
     fontFamily: 'HelveticaNeue-Medium',
-    fontSize: 22
+    fontSize: 22,
+    marginBottom: 4,
+    marginLeft: 4,
+    marginTop: 16
   },
   paragraph: {
     color: colors.black
