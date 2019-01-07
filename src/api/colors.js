@@ -23,6 +23,9 @@ export default {
   downloadsHeaderBg: '#1b1b1b',
   downloadsIconBg: '#404040',
 
+  // more
+  moreAddProfileBg: '#0b0b0b',
+
   // cast connect modal
   castConnectBg: '#181818',
   castConnectText: '#b3b3b3',
