@@ -3,12 +3,12 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { colors, device, images } from '../api/constants';
 
-const Header = props => {
+const HeaderHome = props => {
   const { navigation } = props;
 
   return (
     <View style={styles.container}>
-      <Image source={images.netflix} style={styles.logo} />
+      <Image source={images.netflixTransparent} style={styles.logo} />
       <View style={styles.containerMenu}>
         <Text style={styles.text}>TV Shows</Text>
         <Text style={styles.text}>Movies</Text>
@@ -18,7 +18,7 @@ const Header = props => {
   );
 };
 
-Header.propTypes = {
+HeaderHome.propTypes = {
   // required
   navigation: PropTypes.object.isRequired
 };
@@ -53,4 +53,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Header;
+export default HeaderHome;
