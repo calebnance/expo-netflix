@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     backgroundColor: colors.black20,
     flexDirection: 'row',
-    // justifyContent: 'space-between',
     paddingBottom: 4,
     paddingHorizontal: 16,
     paddingTop: device.iPhoneX ? 54 : 30,
