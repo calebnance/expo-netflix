@@ -4,7 +4,7 @@
     "description": "expo netflix prototype",
     "slug": "expo-netflix",
     "privacy": "public",
-    "sdkVersion": "31.0.0",
+    "sdkVersion": "32.0.0",
     "version": "0.0.1",
     "platforms": ["ios", "android"],
     "orientation": "portrait",
