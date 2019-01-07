@@ -40,6 +40,7 @@ Run Project Locally: `expo start`
   <img src="creative/releases/expo-netflix-0.0.1.gif?raw=true" width="320" />
 </p>
 
+- iOS and Android
 - Tab Navigation
   - Home
     - simple banner (bandersnatch)
