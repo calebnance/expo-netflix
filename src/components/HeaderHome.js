@@ -3,6 +3,8 @@ import { Animated, Image, StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { colors, device, fonts, images } from '../api/constants';
 
+import TouchText from './TouchText';
+
 class HeaderHome extends React.Component {
   constructor(props) {
     super(props);
@@ -26,26 +28,47 @@ class HeaderHome extends React.Component {
   }
 
   render() {
-    const { navigation } = this.props;
+    const { all, navigation, movies, myList, shows } = this.props;
     const { top } = this.state;
 
     return (
       <Animated.View style={[styles.container, { top }]}>
         <Image source={images.netflixTransparent} style={styles.logo} />
         <View style={styles.containerMenu}>
-          <Text style={styles.text}>TV Shows</Text>
-          <Text style={styles.text}>Movies</Text>
-          <Text style={styles.text}>My List</Text>
+          {all && (
+            <React.Fragment>
+              <TouchText
+                onPress={() => navigation.navigate('HomeTvShows')}
+                text="TV Shows"
+                textStyle={styles.text}
+              />
+              <Text style={styles.text}>Movies</Text>
+              <Text style={styles.text}>My List</Text>
+            </React.Fragment>
+          )}
         </View>
       </Animated.View>
     );
   }
 }
 
+HeaderHome.defaultProps = {
+  all: true,
+  movies: false,
+  myList: false,
+  shows: false
+};
+
 HeaderHome.propTypes = {
   // required
   navigation: PropTypes.object.isRequired,
-  show: PropTypes.bool.isRequired
+  show: PropTypes.bool.isRequired,
+
+  // optional
+  all: PropTypes.bool,
+  movies: PropTypes.bool,
+  myList: PropTypes.bool,
+  shows: PropTypes.bool
 };
 
 const styles = StyleSheet.create({

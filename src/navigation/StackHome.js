@@ -5,6 +5,7 @@ import { createStackNavigator } from 'react-navigation';
 import navigationOptions from './defaultOptions';
 
 import HomeScreen from '../screens/Home';
+import TvShowsScreen from '../screens/TvShows';
 import SvgHome from '../components/icons/Svg.Home';
 
 const Icon = ({ focused }) => <SvgHome active={focused} />;
@@ -18,6 +19,10 @@ export default createStackNavigator(
   {
     HomeMain: {
       screen: HomeScreen,
+      navigationOptions
+    },
+    HomeTvShows: {
+      screen: TvShowsScreen,
       navigationOptions
     }
   },
