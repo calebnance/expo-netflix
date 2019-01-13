@@ -8,41 +8,82 @@ import HeaderHome from '../components/HeaderHome';
 import PromotionBanner from '../components/PromotionBanner';
 import ShowScroller from '../components/ShowScroller';
 
-const Home = props => {
-  const { navigation } = props;
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <View style={gStyle.container}>
-      <HeaderHome navigation={navigation} />
+    this.state = {
+      showHeader: true
+    };
 
-      <ScrollView>
-        <PromotionBanner />
+    this.offset = 0;
 
-        <Text style={gStyle.heading}>Previews</Text>
-        <ShowScroller type="containerRound" />
+    this.onScroll = this.onScroll.bind(this);
+  }
 
-        <Text style={gStyle.heading}>Popular on Netflix</Text>
-        <ShowScroller />
+  onScroll(event) {
+    const { showHeader } = this.state;
 
-        <Text style={gStyle.heading}>Trending Now</Text>
-        <ShowScroller />
+    let show = showHeader;
+    const currentOffset = event.nativeEvent.contentOffset.y;
+    const direction = currentOffset > this.offset ? 'down' : 'up';
 
-        <Text style={gStyle.heading}>Watch It Again</Text>
-        <ShowScroller />
+    if (direction === 'down') {
+      show = false;
+    } else {
+      show = true;
+    }
 
-        <Text style={gStyle.heading}>NETFLIX ORIGINALS</Text>
-        <ShowScroller />
+    if (show !== showHeader || this.offset === 0) {
+      this.setState({
+        showHeader: show
+      });
+    }
 
-        <Text style={gStyle.heading}>Documentaries</Text>
-        <ShowScroller />
+    this.offset = currentOffset;
+  }
 
-        <View style={gStyle.spacer24} />
-      </ScrollView>
+  render() {
+    const { navigation } = this.props;
+    const { showHeader } = this.state;
 
-      <Cast navigation={navigation} />
-    </View>
-  );
-};
+    return (
+      <View style={gStyle.container}>
+        <HeaderHome navigation={navigation} show={showHeader} />
+
+        <ScrollView
+          bounces={false}
+          onScroll={this.onScroll}
+          scrollEventThrottle={16}
+        >
+          <PromotionBanner />
+
+          <Text style={gStyle.heading}>Previews</Text>
+          <ShowScroller type="containerRound" />
+
+          <Text style={gStyle.heading}>Popular on Netflix</Text>
+          <ShowScroller />
+
+          <Text style={gStyle.heading}>Trending Now</Text>
+          <ShowScroller />
+
+          <Text style={gStyle.heading}>Watch It Again</Text>
+          <ShowScroller />
+
+          <Text style={gStyle.heading}>NETFLIX ORIGINALS</Text>
+          <ShowScroller />
+
+          <Text style={gStyle.heading}>Documentaries</Text>
+          <ShowScroller />
+
+          <View style={gStyle.spacer24} />
+        </ScrollView>
+
+        <Cast navigation={navigation} />
+      </View>
+    );
+  }
+}
 
 Home.propTypes = {
   // required

@@ -1,26 +1,51 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Animated, Image, StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { colors, device, fonts, images } from '../api/constants';
 
-const HeaderHome = props => {
-  const { navigation } = props;
+class HeaderHome extends React.Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <View style={styles.container}>
-      <Image source={images.netflixTransparent} style={styles.logo} />
-      <View style={styles.containerMenu}>
-        <Text style={styles.text}>TV Shows</Text>
-        <Text style={styles.text}>Movies</Text>
-        <Text style={styles.text}>My List</Text>
-      </View>
-    </View>
-  );
-};
+    this.state = {
+      top: new Animated.Value(0)
+    };
+  }
+
+  componentDidUpdate(prevProps) {
+    const { show } = this.props;
+    const { top } = this.state;
+
+    if (prevProps.show !== show) {
+      if (show) {
+        Animated.timing(top, { duration: 200, toValue: 0 }).start();
+      } else {
+        Animated.timing(top, { duration: 200, toValue: -100 }).start();
+      }
+    }
+  }
+
+  render() {
+    const { navigation } = this.props;
+    const { top } = this.state;
+
+    return (
+      <Animated.View style={[styles.container, { top }]}>
+        <Image source={images.netflixTransparent} style={styles.logo} />
+        <View style={styles.containerMenu}>
+          <Text style={styles.text}>TV Shows</Text>
+          <Text style={styles.text}>Movies</Text>
+          <Text style={styles.text}>My List</Text>
+        </View>
+      </Animated.View>
+    );
+  }
+}
 
 HeaderHome.propTypes = {
   // required
-  navigation: PropTypes.object.isRequired
+  navigation: PropTypes.object.isRequired,
+  show: PropTypes.bool.isRequired
 };
 
 const styles = StyleSheet.create({
