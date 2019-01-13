@@ -12,14 +12,16 @@ const TouchTextIcon = props => {
       onPress={onPress}
       style={[styles.container, { width }]}
     >
-      <View style={styles.icon}>{React.cloneElement(icon, { iconSize })}</View>
+      <View style={styles.icon}>
+        {React.cloneElement(icon, { size: iconSize })}
+      </View>
       <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
 };
 
 TouchTextIcon.defaultProps = {
-  iconSize: 12,
+  iconSize: 20,
   width: 280
 };
 

@@ -8,6 +8,7 @@ export default {
   bgGrey: '#191919',
   inactiveGrey: '#727272',
   castGrey: '#303030',
+  textGrey: '#b3b3b3',
 
   // home
   heading: '#e6e6e6',
@@ -28,6 +29,5 @@ export default {
 
   // cast connect modal
   castConnectBg: '#181818',
-  castConnectText: '#b3b3b3',
   castConnectDeviceText: '#58b1e2'
 };

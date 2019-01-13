@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     padding: 24
   },
   connect: {
-    color: colors.castConnectText,
+    color: colors.textGrey,
     fontFamily: fonts.regular,
     fontSize: 16,
     textAlign: 'center'
