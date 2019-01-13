@@ -72,10 +72,10 @@ const styles = StyleSheet.create({
   },
   containerRound: {
     backgroundColor: colors.infoGrey,
-    borderRadius: 40,
-    height: 80,
+    borderRadius: 48,
+    height: 96,
     marginRight: 8,
-    width: 80
+    width: 96
   }
 });
 
