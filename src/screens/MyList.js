@@ -6,7 +6,7 @@ import { gStyle } from '../api/constants';
 import Cast from '../components/Cast';
 import HeaderHome from '../components/HeaderHome';
 
-const TvShows = props => {
+const MyList = props => {
   const { navigation } = props;
 
   return (
@@ -16,7 +16,7 @@ const TvShows = props => {
       <View style={gStyle.spacer96} />
 
       <View style={gStyle.pH4}>
-        <Text style={gStyle.heading}>TV Shows</Text>
+        <Text style={gStyle.heading}>My List</Text>
       </View>
 
       <Cast navigation={navigation} />
@@ -24,9 +24,9 @@ const TvShows = props => {
   );
 };
 
-TvShows.propTypes = {
+MyList.propTypes = {
   // required
   navigation: PropTypes.object.isRequired
 };
 
-export default TvShows;
+export default MyList;

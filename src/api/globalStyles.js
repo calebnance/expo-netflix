@@ -39,6 +39,11 @@ export default {
   btnPrimaryText: {
     color: colors.white
   },
+  navHeaderStyle: {
+    backgroundColor: colors.black,
+    borderBottomWidth: 0,
+    elevation: 0
+  },
   heading: {
     color: colors.heading,
     fontFamily: fonts.medium,
@@ -52,6 +57,10 @@ export default {
   },
   spacer24: {
     height: 24,
+    width: '100%'
+  },
+  spacer96: {
+    height: 96,
     width: '100%'
   },
   mB8: {
@@ -72,11 +81,17 @@ export default {
   mV32: {
     marginVertical: 32
   },
+  p4: {
+    padding: 4
+  },
   p8: {
     padding: 8
   },
   p16: {
     padding: 16
+  },
+  pH4: {
+    paddingHorizontal: 4
   },
   pH8: {
     paddingHorizontal: 8

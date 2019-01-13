@@ -1,5 +1,12 @@
 import React from 'react';
-import { Animated, Image, StyleSheet, Text, View } from 'react-native';
+import {
+  Animated,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
+} from 'react-native';
 import PropTypes from 'prop-types';
 import { colors, device, fonts, images } from '../api/constants';
 
@@ -33,7 +40,12 @@ class HeaderHome extends React.Component {
 
     return (
       <Animated.View style={[styles.container, { top }]}>
-        <Image source={images.netflixTransparent} style={styles.logo} />
+        <TouchableOpacity
+          activeOpacity={0.8}
+          onPress={() => navigation.navigate('HomeMain')}
+        >
+          <Image source={images.netflixTransparent} style={styles.logo} />
+        </TouchableOpacity>
         <View style={styles.containerMenu}>
           {all && (
             <React.Fragment>
@@ -42,8 +54,16 @@ class HeaderHome extends React.Component {
                 text="TV Shows"
                 textStyle={styles.text}
               />
-              <Text style={styles.text}>Movies</Text>
-              <Text style={styles.text}>My List</Text>
+              <TouchText
+                onPress={() => navigation.navigate('HomeMovies')}
+                text="Movies"
+                textStyle={styles.text}
+              />
+              <TouchText
+                onPress={() => navigation.navigate('HomeMyList')}
+                text="My List"
+                textStyle={styles.text}
+              />
             </React.Fragment>
           )}
         </View>

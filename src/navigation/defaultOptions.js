@@ -1,8 +1,5 @@
-import { colors } from '../api/constants';
+import { gStyle } from '../api/constants';
 
 export default () => ({
-  headerStyle: {
-    backgroundColor: colors.black,
-    borderBottomWidth: 0
-  }
+  headerStyle: gStyle.navHeaderStyle
 });
