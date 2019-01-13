@@ -34,7 +34,17 @@ Run Project Locally: `expo start`
 
 #### Release Notes
 
-**version 0.0.1 (current)**
+**version 0.0.2 (current)**
+
+- home nav top bar
+  - show/hide on scroll
+  - start of stack navigation in nav bar
+  - TV Shows, Movies and My List screens
+- ScrollView no longer "[bounces](https://facebook.github.io/react-native/docs/scrollview#bounces)" at start and end of scrollable content
+
+---
+
+**version 0.0.1**
 
 <p align="left">
   <img src="creative/releases/expo-netflix-0.0.1.gif?raw=true" width="320" />
