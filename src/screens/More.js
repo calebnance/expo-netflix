@@ -1,7 +1,8 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Constants } from 'expo';
 import PropTypes from 'prop-types';
-import { gStyle } from '../api/constants';
+import { colors, fonts, gStyle } from '../api/constants';
 
 import Cast from '../components/Cast';
 import HeaderAccounts from '../components/HeaderAccounts';
@@ -61,6 +62,9 @@ class More extends React.Component {
             showArrow={false}
             text="Sign Out"
           />
+          <Text style={styles.versionText}>
+            {`Version: ${Constants.manifest.version}`}
+          </Text>
         </ScrollView>
 
         <Cast navigation={navigation} />
@@ -73,5 +77,15 @@ More.propTypes = {
   // required
   navigation: PropTypes.object.isRequired
 };
+
+const styles = StyleSheet.create({
+  versionText: {
+    color: colors.moreVersionText,
+    fontFamily: fonts.regular,
+    fontSize: 18,
+    paddingHorizontal: 8,
+    paddingVertical: 16
+  }
+});
 
 export default More;

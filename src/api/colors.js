@@ -26,6 +26,7 @@ export default {
 
   // more
   moreAddProfileBg: '#0b0b0b',
+  moreVersionText: '#555',
 
   // cast connect modal
   castConnectBg: '#181818',
