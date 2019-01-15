@@ -41,9 +41,17 @@ Run Project Locally: `expo start`
   - start of stack navigation in nav bar
   - TV Shows, Movies and My List screens
 - ScrollView no longer "[bounces](https://facebook.github.io/react-native/docs/scrollview#bounces)" at start and end of scrollable content
-- More screen
-  - Menu list (scrollable) created, with current version on screen
-  - 
+- More Stack
+  - menu list (scrollable) created, with current version on screen
+  - **app settings**
+    - start of section headings
+    - displays current phone model name (ios only, for now)
+    - storage bar styled: device storage space, netflix (downloaded) space used, and free space (all mock data)
+  - **privacy** now opens a modal with WebView that opens [Help Netflix - Privacy page](https://help.netflix.com/legal/privacy?headless=true&locale=en-US)
+  - **sign out** now opens an alert with selectable options
+- Modal Video player screen added
+  - on open (mount), screen orientation changes to landscape
+  - on close (unmount), screen orientation changes back to portrait
 ---
 
 **version 0.0.1**

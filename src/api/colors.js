@@ -27,9 +27,12 @@ export default {
   // more
   moreAddProfileBg: '#0b0b0b',
   moreVersionText: '#555',
-  moreSwitchColor: '#357af6',
+  moreUsed: '#4a4a4a',
+  moreBlue: '#357af6',
+  moreFree: '#d8d8d8',
   moreSectionText: '#979797',
   moreSectionBorder: '#3e3e3f',
+  moreDeviceText: '#999',
 
   // cast connect modal
   castConnectBg: '#181818',
