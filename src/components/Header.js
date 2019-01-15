@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { colors, device, fonts, images } from '../api/constants';
 
 const Header = props => {
-  const { bg, close, navigation, showLogoFull, title } = props;
+  const { bg, close, closeText, navigation, showLogoFull, title } = props;
 
   return (
     <View style={[styles.container, { backgroundColor: bg }]}>
@@ -29,7 +29,7 @@ const Header = props => {
           onPress={() => navigation.goBack(null)}
           style={styles.close}
         >
-          <Text style={styles.closeText}>Cancel</Text>
+          <Text style={styles.closeText}>{closeText}</Text>
         </TouchableOpacity>
       )}
     </View>
@@ -39,6 +39,7 @@ const Header = props => {
 Header.defaultProps = {
   bg: colors.black,
   close: false,
+  closeText: 'Cancel',
   showLogoFull: false,
   title: null
 };
@@ -50,6 +51,7 @@ Header.propTypes = {
   // optional
   bg: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   close: PropTypes.bool,
+  closeText: PropTypes.string,
   showLogoFull: PropTypes.bool,
   title: PropTypes.string
 };

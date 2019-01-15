@@ -3,6 +3,7 @@ import { createAppContainer, createStackNavigator } from 'react-navigation';
 // grab screens
 import ModalCastConnect from '../screens/ModalCastConnect';
 import ModalVideo from '../screens/ModalVideo';
+import ModalWebView from '../screens/ModalWebView';
 
 // grab tabbed stacks
 import TabNavigator from './TabNavigator';
@@ -19,10 +20,17 @@ const StackNavigator = createStackNavigator(
     // Modals
     // /////////////////////////////////////////////////////////////////////////
     ModalCastConnect: {
-      screen: ModalCastConnect
+      screen: ModalCastConnect,
+      navigationOptions: {
+        gesturesEnabled: false
+      }
     },
-    ModalVideo: {
-      screen: ModalVideo
+    ModalVideo,
+    ModalWebView: {
+      screen: ModalWebView,
+      navigationOptions: {
+        gesturesEnabled: false
+      }
     }
   },
   {
