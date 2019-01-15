@@ -52,6 +52,7 @@ Run Project Locally: `expo start`
 - Modal Video player screen added
   - on open (mount), screen orientation changes to landscape
   - on close (unmount), screen orientation changes back to portrait
+
 ---
 
 **version 0.0.1**
