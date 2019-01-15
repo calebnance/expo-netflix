@@ -36,7 +36,7 @@ Run Project Locally: `expo start`
 
 **version 0.0.2 (current)**
 
-- home nav top bar
+- Home Top Navbar
   - show/hide on scroll
   - start of stack navigation in nav bar
   - TV Shows, Movies and My List screens
