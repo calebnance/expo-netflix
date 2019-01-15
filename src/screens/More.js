@@ -55,7 +55,7 @@ const More = props => {
           text="My List"
         />
         <TouchLineItem
-          onPress={() => console.log('App Settings')}
+          onPress={() => navigation.navigate('AppSettingsScreen')}
           showArrow={false}
           showBorder
           text="App Settings"

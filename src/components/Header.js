@@ -3,18 +3,30 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { colors, device, fonts, images } from '../api/constants';
 
+import SvgArrowLeft from './icons/Svg.ArrowLeft';
+
 const Header = props => {
-  const { bg, close, closeText, navigation, showLogoFull, title } = props;
+  const { bg, close, closeText, navigation, showBack, showLogo, title } = props;
 
   return (
     <View style={[styles.container, { backgroundColor: bg }]}>
+      {showBack && (
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={() => navigation.goBack(null)}
+          style={styles.back}
+        >
+          <SvgArrowLeft />
+        </TouchableOpacity>
+      )}
+
       {title && (
         <View style={styles.containerTitle}>
           <Text style={styles.title}>{title}</Text>
         </View>
       )}
 
-      {showLogoFull && (
+      {showLogo && (
         <React.Fragment>
           <View style={{ flex: 1 }} />
           <View style={styles.containerLogoFull}>
@@ -22,6 +34,8 @@ const Header = props => {
           </View>
         </React.Fragment>
       )}
+
+      {showBack && !close && <View style={{ flex: 1 }} />}
 
       {close && (
         <TouchableOpacity
@@ -40,7 +54,8 @@ Header.defaultProps = {
   bg: colors.black,
   close: false,
   closeText: 'Cancel',
-  showLogoFull: false,
+  showBack: false,
+  showLogo: false,
   title: null
 };
 
@@ -52,7 +67,8 @@ Header.propTypes = {
   bg: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   close: PropTypes.bool,
   closeText: PropTypes.string,
-  showLogoFull: PropTypes.bool,
+  showBack: PropTypes.bool,
+  showLogo: PropTypes.bool,
   title: PropTypes.string
 };
 
@@ -65,6 +81,21 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: device.iPhoneX ? 54 : 30
   },
+  back: {
+    alignSelf: 'center',
+    flex: 1
+  },
+  containerTitle: {
+    flex: 4,
+    height: 35,
+    justifyContent: 'flex-end'
+  },
+  title: {
+    color: colors.heading,
+    fontSize: 18,
+    paddingBottom: 4,
+    textAlign: 'center'
+  },
   containerLogoFull: {
     alignItems: 'center',
     flex: 2,
@@ -74,17 +105,6 @@ const styles = StyleSheet.create({
   logoFull: {
     height: 26,
     width: 95
-  },
-  containerTitle: {
-    flex: 1,
-    height: 35,
-    justifyContent: 'flex-end'
-  },
-  title: {
-    color: colors.heading,
-    fontSize: 18,
-    paddingBottom: 4,
-    textAlign: 'center'
   },
   close: {
     alignItems: 'flex-end',

@@ -10,7 +10,7 @@ const ModalWebView = props => {
 
   return (
     <View style={gStyle.container}>
-      <Header close closeText="Close" navigation={navigation} showLogoFull />
+      <Header close closeText="Close" navigation={navigation} showLogo />
 
       <WebView
         bounces={false}

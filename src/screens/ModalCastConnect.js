@@ -10,7 +10,7 @@ const ModalCastConnect = props => {
 
   return (
     <View style={gStyle.container}>
-      <Header close navigation={navigation} showLogoFull />
+      <Header close navigation={navigation} showLogo />
 
       <View style={styles.containerConnect}>
         <Text style={styles.connect}>Connect to device</Text>

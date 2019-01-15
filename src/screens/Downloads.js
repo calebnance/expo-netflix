@@ -14,9 +14,8 @@ const Downloads = props => {
   return (
     <View style={gStyle.container}>
       <Header
-        bg={colors.downloadsHeaderBg}
+        bg={colors.headerBarBg}
         navigation={navigation}
-        showLogo={false}
         title="My Downloads"
       />
 

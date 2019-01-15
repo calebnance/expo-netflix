@@ -7,6 +7,7 @@ export default {
   brandPrimary: '#d22f27',
   bgGrey: '#191919',
   inactiveGrey: '#727272',
+  headerBarBg: '#1b1b1b',
   castGrey: '#303030',
   textGrey: '#b3b3b3',
 
@@ -21,7 +22,6 @@ export default {
   searchHeadingText: '#b3b3b3',
 
   // downloads
-  downloadsHeaderBg: '#1b1b1b',
   downloadsIconBg: '#404040',
 
   // more
