@@ -25,7 +25,7 @@ export default createStackNavigator(
     AppSettingsScreen
   },
   {
-    // initialRouteName: 'AppSettingsScreen',
+    initialRouteName: 'MoreMain',
     headerMode: 'none',
     navigationOptions: {
       tabBarLabel: 'More',

@@ -1,12 +1,35 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Constants } from 'expo';
 import PropTypes from 'prop-types';
 import { colors, fonts, gStyle } from '../api/constants';
 
 import Header from '../components/Header';
+import TouchLineItemApp from '../components/TouchLineItemApp';
+import TouchLineItemElement from '../components/TouchLineItemElement';
 
-// console.log(Constants.platform);
+import SvgTrash from '../components/icons/Svg.Trash';
+
+const alertDeleteDownloads = () => {
+  Alert.alert(
+    'Delete All Downloads',
+    'Are you sure you want to delete this one download?',
+    [
+      {
+        onPress: () => console.log('Cancel'),
+        text: 'Cancel'
+      },
+      {
+        onPress: () => console.log('Delete'),
+        style: 'destructive',
+        text: 'Delete'
+      }
+    ],
+    {
+      cancelable: false
+    }
+  );
+};
 
 const AppSettings = props => {
   const { navigation } = props;
@@ -19,7 +42,7 @@ const AppSettings = props => {
   }
 
   return (
-    <View style={gStyle.container}>
+    <ScrollView bounces={false} style={gStyle.container}>
       <Header
         bg={colors.headerBarBg}
         navigation={navigation}
@@ -30,6 +53,28 @@ const AppSettings = props => {
       <View style={styles.containerHeading}>
         <Text style={styles.heading}>Video Playback</Text>
       </View>
+
+      <TouchLineItemApp
+        onPress={() => null}
+        tagline="Automatic"
+        text="Cellular Data Usage"
+      />
+
+      <View style={styles.containerHeading}>
+        <Text style={styles.heading}>Downloads</Text>
+      </View>
+
+      <TouchLineItemApp
+        onPress={() => null}
+        tagline="Standard"
+        text="Video Quality"
+      />
+
+      <TouchLineItemElement
+        onPress={() => alertDeleteDownloads()}
+        element={<SvgTrash size={20} />}
+        text="Delete All Downloads"
+      />
 
       <View style={styles.containerDevice}>
         <Text style={styles.deviceText}>{deviceType}</Text>
@@ -52,7 +97,7 @@ const AppSettings = props => {
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

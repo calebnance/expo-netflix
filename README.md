@@ -46,6 +46,7 @@ Run Project Locally: `expo start`
   - **app settings**
     - start of section headings
     - displays current phone model name (ios only, for now)
+    - delete all downloads (mock alert)
     - storage bar styled: device storage space, netflix (downloaded) space used, and free space (all mock data)
   - **privacy** now opens a modal with WebView that opens [Help Netflix - Privacy page](https://help.netflix.com/legal/privacy?headless=true&locale=en-US)
   - **sign out** now opens an alert with selectable options
