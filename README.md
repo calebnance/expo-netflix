@@ -6,7 +6,7 @@ quick prototype of netflix's native app
 
 - [Install & Build](#install--build)
 - [Linting](#linting)
-- [Release Notes](#release-notes)
+- [Demo & Release Notes](#release-notes)
 
 ---
 
