@@ -26,7 +26,12 @@ const StackNavigator = createStackNavigator(
         gesturesEnabled: false
       }
     },
-    ModalManageProfiles,
+    ModalManageProfiles: {
+      screen: ModalManageProfiles,
+      navigationOptions: {
+        gesturesEnabled: false
+      }
+    },
     ModalVideo,
     ModalWebView: {
       screen: ModalWebView,

@@ -44,18 +44,18 @@ const More = props => {
       <ScrollView>
         <TouchLineItem
           icon={<SvgBell />}
-          onPress={() => console.log('Notifications')}
+          onPress={() => navigation.navigate('MoreNotificationsScreen')}
           showBorder
           text="Notifications"
         />
         <TouchLineItem
           icon={<SvgCheck />}
-          onPress={() => console.log('My List')}
+          onPress={() => navigation.navigate('MoreMyListScreen')}
           showBorder
           text="My List"
         />
         <TouchLineItem
-          onPress={() => navigation.navigate('AppSettingsScreen')}
+          onPress={() => navigation.navigate('MoreAppSettingsScreen')}
           showArrow={false}
           showBorder
           text="App Settings"

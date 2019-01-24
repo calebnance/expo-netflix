@@ -5,7 +5,10 @@ import { createStackNavigator } from 'react-navigation';
 import navigationOptions from './defaultOptions';
 
 import MoreScreen from '../screens/More';
-import AppSettingsScreen from '../screens/AppSettings';
+
+import MoreAppSettingsScreen from '../screens/MoreAppSettings';
+import MoreNotificationsScreen from '../screens/MoreNotifications';
+import MoreMyListScreen from '../screens/MoreMyList';
 
 import SvgMenu from '../components/icons/Svg.Menu';
 
@@ -22,7 +25,9 @@ export default createStackNavigator(
       screen: MoreScreen,
       navigationOptions
     },
-    AppSettingsScreen
+    MoreAppSettingsScreen,
+    MoreNotificationsScreen,
+    MoreMyListScreen
   },
   {
     initialRouteName: 'MoreMain',
