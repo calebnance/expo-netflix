@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { colors, device, fonts, images } from '../api/constants';
 
@@ -27,10 +27,14 @@ const HeaderAccounts = props => {
           <Text style={styles.username}>Add Profile</Text>
         </View>
       </View>
-      <View style={styles.containerManage}>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={() => navigation.navigate('ModalManageProfiles')}
+        style={styles.containerManage}
+      >
         <SvgEdit active={false} size={18} />
         <Text style={styles.manageText}>Manage Profiles</Text>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };

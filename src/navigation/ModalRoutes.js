@@ -2,7 +2,12 @@ import { StackViewTransitionConfigs } from 'react-navigation';
 
 // the screens you add to "iosModalRoutes" will have the modal transition.
 // https://bit.ly/2RmMFRO
-const iosModalRoutes = ['ModalCastConnect', 'ModalVideo', 'ModalWebView'];
+const iosModalRoutes = [
+  'ModalCastConnect',
+  'ModalManageProfiles',
+  'ModalVideo',
+  'ModalWebView'
+];
 
 export default (transitionProps, prevTransitionProps) => {
   const isModal = iosModalRoutes.some(

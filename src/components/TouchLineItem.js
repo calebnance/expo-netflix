@@ -56,8 +56,8 @@ const styles = StyleSheet.create({
     borderTopWidth: 2,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 8,
-    paddingVertical: 16
+    paddingHorizontal: 16,
+    paddingVertical: 12
   },
   icon: {
     justifyContent: 'center',
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     color: colors.textGrey,
     flex: 2,
     fontFamily: fonts.regular,
-    fontSize: 18
+    fontSize: 16
   },
   arrow: {
     justifyContent: 'center'
