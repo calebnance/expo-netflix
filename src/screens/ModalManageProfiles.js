@@ -26,7 +26,9 @@ const ModalManageProfiles = props => {
         </View>
         <View style={styles.containerUser}>
           <View style={styles.containerPlus}>
-            <SvgPlus active={false} size={40} />
+            <View style={styles.plusBackground}>
+              <SvgPlus active size={40} />
+            </View>
           </View>
           <Text style={styles.text}>Add Profile</Text>
         </View>
@@ -75,12 +77,17 @@ const styles = StyleSheet.create({
   },
   containerPlus: {
     alignItems: 'center',
-    backgroundColor: colors.moreAddProfileBg,
-    borderRadius: 54,
     height: 108,
     justifyContent: 'center',
-    marginBottom: 4,
     width: 108
+  },
+  plusBackground: {
+    alignItems: 'center',
+    backgroundColor: colors.moreAddProfileBg,
+    borderRadius: 34,
+    height: 68,
+    justifyContent: 'center',
+    width: 68
   }
 });
 
