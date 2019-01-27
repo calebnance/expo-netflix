@@ -3,7 +3,9 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { colors, fonts, gStyle, images } from '../api/constants';
 
-import Header from '../components/Header';
+import HeaderManage from '../components/HeaderManage';
+
+import SvgEdit from '../components/icons/Svg.Edit';
 import SvgPlus from '../components/icons/Svg.Plus';
 
 const ModalManageProfiles = props => {
@@ -11,18 +13,24 @@ const ModalManageProfiles = props => {
 
   return (
     <View style={[gStyle.container, { backgroundColor: colors.black }]}>
-      <Header close closeText="Close" navigation={navigation} showLogo />
+      <HeaderManage navigation={navigation} />
 
       <View style={styles.container}>
         <View style={styles.containerUser}>
-          <View style={styles.overlay} />
           <Image source={images.robot} style={styles.avatar} />
           <Text style={styles.text}>Caleb</Text>
+          <View style={styles.overlay} />
+          <View style={styles.containerSvg}>
+            <SvgEdit active size={40} />
+          </View>
         </View>
         <View style={styles.containerUser}>
-          <View style={styles.overlay} />
           <Image source={images.penguin} style={styles.avatar} />
           <Text style={styles.text}>Kim</Text>
+          <View style={styles.overlay} />
+          <View style={styles.containerSvg}>
+            <SvgEdit active size={40} />
+          </View>
         </View>
         <View style={styles.containerUser}>
           <View style={styles.containerPlus}>
@@ -42,6 +50,8 @@ ModalManageProfiles.propTypes = {
   navigation: PropTypes.object.isRequired
 };
 
+const BLOCK_SIZE = 108;
+
 const styles = StyleSheet.create({
   container: {
     alignSelf: 'center',
@@ -55,18 +65,24 @@ const styles = StyleSheet.create({
   containerUser: {
     marginBottom: 16
   },
+  containerSvg: {
+    alignItems: 'center',
+    height: BLOCK_SIZE,
+    justifyContent: 'center',
+    position: 'absolute',
+    width: BLOCK_SIZE
+  },
   overlay: {
     backgroundColor: colors.black50,
-    height: 108,
+    height: BLOCK_SIZE,
     top: 0,
     position: 'absolute',
-    width: 108,
-    zIndex: 10
+    width: BLOCK_SIZE
   },
   avatar: {
-    height: 108,
+    height: BLOCK_SIZE,
     resizeMode: 'contain',
-    width: 108
+    width: BLOCK_SIZE
   },
   text: {
     color: colors.white,
@@ -77,9 +93,9 @@ const styles = StyleSheet.create({
   },
   containerPlus: {
     alignItems: 'center',
-    height: 108,
+    height: BLOCK_SIZE,
     justifyContent: 'center',
-    width: 108
+    width: BLOCK_SIZE
   },
   plusBackground: {
     alignItems: 'center',
