@@ -59,7 +59,10 @@ class Home extends React.Component {
           <PromotionBanner />
 
           <Text style={gStyle.heading}>Previews</Text>
-          <ShowScroller type="containerRound" />
+          <ShowScroller type="round" />
+
+          <Text style={gStyle.heading}>My List</Text>
+          <ShowScroller dataset="myList" />
 
           <Text style={gStyle.heading}>Popular on Netflix</Text>
           <ShowScroller />
