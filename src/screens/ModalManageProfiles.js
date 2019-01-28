@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { colors, fonts, gStyle, images } from '../api/constants';
 
@@ -32,14 +32,18 @@ const ModalManageProfiles = props => {
             <SvgEdit active size={40} />
           </View>
         </View>
-        <View style={styles.containerUser}>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={() => navigation.navigate('ModalAddProfile')}
+          style={styles.containerUser}
+        >
           <View style={styles.containerPlus}>
             <View style={styles.plusBackground}>
               <SvgPlus active size={40} />
             </View>
           </View>
           <Text style={styles.text}>Add Profile</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

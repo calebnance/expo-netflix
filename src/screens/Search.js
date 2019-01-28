@@ -16,6 +16,7 @@ const Search = props => {
           <HeaderSearch />
         </View>
       </TouchableWithoutFeedback>
+
       <Cast navigation={navigation} />
     </React.Fragment>
   );

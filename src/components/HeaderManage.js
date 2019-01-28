@@ -4,16 +4,18 @@ import PropTypes from 'prop-types';
 import { colors, device, fonts } from '../api/constants';
 
 const HeaderManage = props => {
-  const { navigation, save, title } = props;
+  const { backText, navigation, save, saveActive, title } = props;
+
+  const saveColor = saveActive ? { color: colors.white } : {};
 
   return (
     <View style={styles.container}>
       <TouchableOpacity
         activeOpacity={0.7}
         onPress={() => navigation.goBack(null)}
-        style={styles.done}
+        style={styles.back}
       >
-        <Text style={styles.doneText}>Done</Text>
+        <Text style={styles.backText}>{backText}</Text>
       </TouchableOpacity>
 
       {title && (
@@ -30,7 +32,7 @@ const HeaderManage = props => {
           onPress={() => navigation.goBack(null)}
           style={styles.save}
         >
-          <Text style={styles.saveText}>Save</Text>
+          <Text style={[styles.saveText, saveColor]}>Save</Text>
         </TouchableOpacity>
       )}
     </View>
@@ -38,6 +40,7 @@ const HeaderManage = props => {
 };
 
 HeaderManage.defaultProps = {
+  backText: 'Done',
   save: false,
   title: 'Manage Profiles'
 };
@@ -47,6 +50,7 @@ HeaderManage.propTypes = {
   navigation: PropTypes.object.isRequired,
 
   // optional
+  backText: PropTypes.string,
   save: PropTypes.bool,
   title: PropTypes.string
 };
@@ -62,8 +66,14 @@ const styles = StyleSheet.create({
     paddingTop: device.iPhoneX ? 54 : 30
   },
   back: {
-    alignSelf: 'center',
-    flex: 1
+    alignItems: 'flex-start',
+    flex: 1,
+    justifyContent: 'center',
+    height: 35
+  },
+  backText: {
+    color: colors.white,
+    fontFamily: fonts.bold
   },
   containerTitle: {
     flex: 4,
@@ -76,26 +86,15 @@ const styles = StyleSheet.create({
     paddingBottom: 4,
     textAlign: 'center'
   },
-  containerLogoFull: {
-    alignItems: 'center',
-    flex: 2,
-    height: 35,
-    justifyContent: 'center'
-  },
-  logoFull: {
-    height: 26,
-    width: 95
-  },
-  done: {
-    alignItems: 'flex-start',
+  save: {
+    alignItems: 'flex-end',
     flex: 1,
     justifyContent: 'center',
     height: 35
   },
-  doneText: {
-    color: colors.white,
-    fontFamily: fonts.light,
-    fontSize: 16
+  saveText: {
+    color: colors.inactiveGrey,
+    fontFamily: fonts.bold
   }
 });
 
