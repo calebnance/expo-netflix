@@ -1,5 +1,13 @@
 import React from 'react';
-import { Image, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
+import {
+  Alert,
+  Image,
+  StyleSheet,
+  Switch,
+  Text,
+  TextInput,
+  View
+} from 'react-native';
 import PropTypes from 'prop-types';
 import { colors, fonts, gStyle, images } from '../api/constants';
 
@@ -13,6 +21,24 @@ class ModalAddProfile extends React.Component {
       forKidsValue: false,
       text: ''
     };
+
+    this.handleSwitchChange = this.handleSwitchChange.bind(this);
+  }
+
+  handleSwitchChange(value) {
+    // warn on switch off from kids settings...
+    if (value === false) {
+      Alert.alert(
+        'This profile will now allow access to TV shows and movies of all maturity levels.',
+        '',
+        [{ onPress: () => console.log('OK... I KNOW'), text: 'OK' }],
+        { cancelable: false }
+      );
+    }
+
+    this.setState({
+      forKidsValue: value
+    });
   }
 
   render() {
@@ -30,7 +56,7 @@ class ModalAddProfile extends React.Component {
         />
 
         <View style={styles.container}>
-          <Image source={images.penguin} style={styles.avatar} />
+          <Image source={images.mask} style={styles.avatar} />
           <Text style={styles.text}>CHANGE</Text>
 
           <TextInput
@@ -42,19 +68,19 @@ class ModalAddProfile extends React.Component {
             style={styles.input}
             value={text}
           />
+
+          <View style={styles.containerSwitch}>
+            <Text style={styles.switchLabel}>For Kids</Text>
+            <Switch
+              onValueChange={val => this.handleSwitchChange(val)}
+              value={forKidsValue}
+            />
+          </View>
         </View>
       </View>
     );
   }
 }
-
-/*
-<Switch
-  ios_backgroundColor={colors.black}
-  onValueChange={val => this.setState({ forKidsValue: val })}
-  value={forKidsValue}
-/>
-*/
 
 ModalAddProfile.propTypes = {
   // required
@@ -91,6 +117,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 12,
     width: 260
+  },
+  containerSwitch: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    marginTop: 16
+  },
+  switchLabel: {
+    color: colors.white,
+    fontFamily: fonts.light,
+    fontSize: 16,
+    marginRight: 8,
+    textTransform: 'uppercase'
   }
 });
 

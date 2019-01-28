@@ -35,6 +35,7 @@ export default {
   moreSectionText: '#979797',
   moreSectionBorder: '#3e3e3f',
   moreDeviceText: '#999',
+  moreSaveText: '#595959',
 
   // cast connect modal
   castConnectBg: '#181818',

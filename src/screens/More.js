@@ -19,18 +19,10 @@ const alertSignOut = () => {
     'Sign Out',
     'Are you sure that you want to sign out?',
     [
-      {
-        onPress: () => console.log('no'),
-        text: 'No'
-      },
-      {
-        onPress: () => console.log('yes'),
-        text: 'Yes'
-      }
+      { onPress: () => console.log('no'), text: 'No' },
+      { onPress: () => console.log('yes'), text: 'Yes' }
     ],
-    {
-      cancelable: false
-    }
+    { cancelable: false }
   );
 };
 

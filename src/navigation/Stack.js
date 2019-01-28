@@ -2,6 +2,7 @@ import { createAppContainer, createStackNavigator } from 'react-navigation';
 
 // grab screens
 import ModalCastConnect from '../screens/ModalCastConnect';
+import ModalAddProfile from '../screens/ModalAddProfile';
 import ModalManageProfiles from '../screens/ModalManageProfiles';
 import ModalVideo from '../screens/ModalVideo';
 import ModalWebView from '../screens/ModalWebView';
@@ -22,6 +23,12 @@ const StackNavigator = createStackNavigator(
     // /////////////////////////////////////////////////////////////////////////
     ModalCastConnect: {
       screen: ModalCastConnect,
+      navigationOptions: {
+        gesturesEnabled: false
+      }
+    },
+    ModalAddProfile: {
+      screen: ModalAddProfile,
       navigationOptions: {
         gesturesEnabled: false
       }
