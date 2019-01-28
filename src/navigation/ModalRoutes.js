@@ -4,6 +4,7 @@ import { StackViewTransitionConfigs } from 'react-navigation';
 // https://bit.ly/2RmMFRO
 const iosModalRoutes = [
   'ModalCastConnect',
+  'ModalAddProfile',
   'ModalManageProfiles',
   'ModalVideo',
   'ModalWebView'

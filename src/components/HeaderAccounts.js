@@ -20,12 +20,16 @@ const HeaderAccounts = props => {
           <Image source={images.penguin} style={styles.avatar} />
           <Text style={styles.username}>Kim</Text>
         </View>
-        <View style={styles.containerUser}>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={() => navigation.navigate('ModalAddProfile')}
+          style={styles.containerUser}
+        >
           <View style={styles.containerPlus}>
             <SvgPlus active={false} size={40} />
           </View>
           <Text style={styles.username}>Add Profile</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <TouchableOpacity
         activeOpacity={0.7}

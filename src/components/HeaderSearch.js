@@ -83,7 +83,7 @@ class HeaderSearch extends React.Component {
         <Animated.View
           style={[styles.containerCancel, { opacity: cancelOpacity }]}
         >
-          <TouchableOpacity activeOpacity={0.8} onPress={this.onCancel}>
+          <TouchableOpacity activeOpacity={0.7} onPress={this.onCancel}>
             <Text style={styles.cancel}>Cancel</Text>
           </TouchableOpacity>
         </Animated.View>

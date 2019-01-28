@@ -10,7 +10,7 @@ const Cast = props => {
 
   return (
     <TouchableOpacity
-      activeOpacity={0.8}
+      activeOpacity={0.7}
       onPress={() => navigation.navigate('ModalCastConnect')}
       style={styles.container}
     >

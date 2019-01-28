@@ -41,7 +41,7 @@ class HeaderHome extends React.Component {
     return (
       <Animated.View style={[styles.container, { top }]}>
         <TouchableOpacity
-          activeOpacity={0.8}
+          activeOpacity={0.7}
           onPress={() => navigation.navigate('HomeMain')}
         >
           <Image source={images.netflixTransparent} style={styles.logo} />
