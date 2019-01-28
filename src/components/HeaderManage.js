@@ -42,6 +42,7 @@ const HeaderManage = props => {
 HeaderManage.defaultProps = {
   backText: 'Done',
   save: false,
+  saveActive: false,
   title: 'Manage Profiles'
 };
 
@@ -52,6 +53,7 @@ HeaderManage.propTypes = {
   // optional
   backText: PropTypes.string,
   save: PropTypes.bool,
+  saveActive: PropTypes.bool,
   title: PropTypes.string
 };
 
@@ -93,7 +95,7 @@ const styles = StyleSheet.create({
     height: 35
   },
   saveText: {
-    color: colors.inactiveGrey,
+    color: colors.moreSaveText,
     fontFamily: fonts.bold
   }
 });
