@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "image": "americanGangster",
+    "title": "American Gangster"
+  },
+  {
+    "id": 2,
+    "image": "breakingBad",
+    "title": "Breaking Bad"
+  },
+  {
+    "id": 3,
+    "image": "starwarsJedi",
+    "title": "Star Wars: The Last Jedi"
+  },
+  {
+    "id": 4,
+    "image": "guardians2",
+    "title": "Guardians of the Galaxy, Vol.2"
+  },
+  {
+    "id": 5,
+    "image": "darkKnight",
+    "title": "The Dark Knight"
+  },
+  {
+    "id": 6,
+    "image": "blackPanther",
+    "title": "Black Panther"
+  }
+]

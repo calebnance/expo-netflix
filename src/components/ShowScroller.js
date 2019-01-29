@@ -21,7 +21,7 @@ const ShowScroller = props => {
         let renderItem = <View style={styles[type]} />;
         if (item.image) {
           renderItem = (
-            <Image source={images[item.image]} style={styles[type]} />
+            <Image source={images[item.image]} style={styles[`${type}Image`]} />
           );
         }
 
@@ -50,11 +50,23 @@ const styles = StyleSheet.create({
     marginRight: 8,
     width: 91
   },
+  rectangleImage: {
+    height: 131,
+    marginRight: 8,
+    resizeMode: 'contain',
+    width: 91
+  },
   round: {
     backgroundColor: colors.infoGrey,
     borderRadius: 48,
     height: 96,
     marginRight: 8,
+    width: 96
+  },
+  roundImage: {
+    height: 96,
+    marginRight: 8,
+    resizeMode: 'contain',
     width: 96
   }
 });
