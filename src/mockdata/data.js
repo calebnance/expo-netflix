@@ -1,7 +1,7 @@
-import dumbData from './dumbData';
+import dumbData from './dumbData.json';
 
-import myList from './myList';
-import previews from './previews';
+import myList from './myList.json';
+import previews from './previews.json';
 
 export default {
   dumbData,
