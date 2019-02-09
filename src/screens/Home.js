@@ -26,15 +26,12 @@ class Home extends React.Component {
 
     let show = showHeader;
     const currentOffset = event.nativeEvent.contentOffset.y;
-    const direction = currentOffset > this.offset ? 'down' : 'up';
+    show = currentOffset < this.offset;
 
-    if (direction === 'down') {
-      show = false;
-    } else {
-      show = true;
-    }
+    if (show !== showHeader || this.offset <= 0) {
+      // account for negative value with "bounce" offset
+      if (this.offset <= 0) show = true;
 
-    if (show !== showHeader || this.offset === 0) {
       this.setState({
         showHeader: show
       });
@@ -51,11 +48,7 @@ class Home extends React.Component {
       <View style={gStyle.container}>
         <HeaderHome navigation={navigation} show={showHeader} />
 
-        <ScrollView
-          bounces={false}
-          onScroll={this.onScroll}
-          scrollEventThrottle={16}
-        >
+        <ScrollView bounces onScroll={this.onScroll} scrollEventThrottle={16}>
           <PromotionBanner />
 
           <Text style={gStyle.heading}>Previews</Text>
