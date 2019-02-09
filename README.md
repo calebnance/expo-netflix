@@ -41,7 +41,6 @@ Run Project Locally: `expo start`
   - start of stack navigation in nav bar
   - TV Shows, Movies and My List screens
   - start of mock data and images for shows/movies
-- ScrollView no longer "[bounces](https://facebook.github.io/react-native/docs/scrollview#bounces)" at start and end of scrollable content
 - More Stack
   - menu list (scrollable) created, with current version on screen
   - **app settings**
