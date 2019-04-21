@@ -1,6 +1,4 @@
-# Expo Netflix
-
-quick prototype of netflix's native app
+# Netflix Clone with Expo
 
 ---
 
