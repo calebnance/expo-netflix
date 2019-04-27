@@ -4,15 +4,14 @@
   <img src="creative/screenshare-6.png?raw=true" />
 </p>
 
----
+## Table of Contents
 
 - [Install & Build](#install--build)
+- [Stats](#stats)
 - [Linting](#linting)
 - [Demo & Release Notes](#release-notes)
 
----
-
-#### Install & Build
+## Install & Build
 
 Install: `yarn install`
 
@@ -20,9 +19,13 @@ Expo CLI: `npm install -g expo-cli` (if not already installed)
 
 Run Project Locally: `expo start`
 
----
+## Stats
 
-#### Linting
+- Expo SDK 32
+- React Navigation v3
+- PropTypes
+
+## Linting
 
 - prettier and airbnb config
 - make sure you have [prettier package](https://atom.io/packages/prettier-atom) installed on your atom/vscode editor
@@ -32,11 +35,9 @@ Run Project Locally: `expo start`
   - automatic format on save (toggle format on save)
 - be aware of the `.prettierignore` file
 
----
+## Release Notes
 
-#### Release Notes
-
-**version 0.0.2 (current)**
+### version 0.0.2 (current)
 
 - Home Top Navbar
   - show/hide on scroll
@@ -59,9 +60,7 @@ Run Project Locally: `expo start`
   - on open (mount), screen orientation changes to landscape
   - on close (unmount), screen orientation changes back to portrait
 
----
-
-**version 0.0.1**
+### version 0.0.1
 
 <p align="left">
   <img src="creative/releases/expo-netflix-0.0.1.gif?raw=true" width="320" />
