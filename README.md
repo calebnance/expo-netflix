@@ -62,10 +62,6 @@ Run Project Locally: `expo start`
 
 ### version 0.0.1
 
-<p align="left">
-  <img src="creative/releases/expo-netflix-0.0.1.gif?raw=true" width="320" />
-</p>
-
 - iOS and Android
 - Tab Navigation
   - Home
@@ -79,3 +75,7 @@ Run Project Locally: `expo start`
   - More
     - simple account profiles layout
 - Chrome Cast modal screen
+
+<p align="left">
+  <img src="creative/releases/expo-netflix-0.0.1.gif?raw=true" width="320" />
+</p>
