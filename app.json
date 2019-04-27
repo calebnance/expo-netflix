@@ -1,13 +1,13 @@
 {
   "expo": {
     "name": "Expo Netflix",
-    "description": "expo netflix prototype",
+    "description": "netflix clone with expo",
     "scheme": "exponetflix",
     "slug": "exponetflix",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "version": "0.0.2",
-    "platforms": ["ios", "android"],
+    "platforms": ["android", "ios"],
     "githubUrl": "https://github.com/calebnance/expo-netflix",
     "orientation": "portrait",
     "primaryColor": "#000000",
@@ -23,9 +23,6 @@
     "assetBundlePatterns": ["**/*"],
     "android": {
       "versionCode": 2
-    },
-    "androidStatusBar": {
-      "backgroundColor": "#000000"
     },
     "ios": {
       "buildNumber": "0.0.2",

@@ -1,12 +1,13 @@
 {
   "name": "expo-netflix",
   "version": "0.0.2",
-  "description": "expo netflix prototype",
+  "description": "netflix clone with expo",
   "author": "Caleb Nance",
   "license": "MIT",
   "keywords": [
     "expo",
-    "react-native",
+    "react native",
+    "react navigation",
     "netflix"
   ],
   "main": "node_modules/expo/AppEntry.js",
