@@ -5,22 +5,18 @@ import { colors, fonts } from '../api/constants';
 
 import SvgPlay from './icons/Svg.Play';
 
-const PromotionPlay = props => {
-  const { icon, onPress, text } = props;
-
-  return (
-    <TouchableOpacity
-      activeOpacity={0.7}
-      onPress={onPress}
-      style={styles.container}
-    >
-      <View style={styles.icon}>
-        {React.cloneElement(icon, { fill: colors.black })}
-      </View>
-      <Text style={styles.text}>{text}</Text>
-    </TouchableOpacity>
-  );
-};
+const PromotionPlay = ({ icon, onPress, text }) => (
+  <TouchableOpacity
+    activeOpacity={0.7}
+    onPress={onPress}
+    style={styles.container}
+  >
+    <View style={styles.icon}>
+      {React.cloneElement(icon, { fill: colors.black })}
+    </View>
+    <Text style={styles.text}>{text}</Text>
+  </TouchableOpacity>
+);
 
 PromotionPlay.defaultProps = {
   icon: <SvgPlay />,

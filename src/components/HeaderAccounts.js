@@ -6,42 +6,38 @@ import { colors, device, fonts, images } from '../api/constants';
 import SvgEdit from './icons/Svg.Edit';
 import SvgPlus from './icons/Svg.Plus';
 
-const HeaderAccounts = props => {
-  const { navigation } = props;
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.containerAccounts}>
-        <View style={styles.containerUser}>
-          <Image source={images.robot} style={styles.avatar} />
-          <Text style={[styles.username, styles.usernameActive]}>Caleb</Text>
-        </View>
-        <View style={styles.containerUser}>
-          <Image source={images.penguin} style={styles.avatar} />
-          <Text style={styles.username}>Kim</Text>
-        </View>
-        <TouchableOpacity
-          activeOpacity={0.7}
-          onPress={() => navigation.navigate('ModalAddProfile')}
-          style={styles.containerUser}
-        >
-          <View style={styles.containerPlus}>
-            <SvgPlus active={false} size={40} />
-          </View>
-          <Text style={styles.username}>Add Profile</Text>
-        </TouchableOpacity>
+const HeaderAccounts = ({ navigation }) => (
+  <View style={styles.container}>
+    <View style={styles.containerAccounts}>
+      <View style={styles.containerUser}>
+        <Image source={images.robot} style={styles.avatar} />
+        <Text style={[styles.username, styles.usernameActive]}>Caleb</Text>
+      </View>
+      <View style={styles.containerUser}>
+        <Image source={images.penguin} style={styles.avatar} />
+        <Text style={styles.username}>Kim</Text>
       </View>
       <TouchableOpacity
         activeOpacity={0.7}
-        onPress={() => navigation.navigate('ModalManageProfiles')}
-        style={styles.containerManage}
+        onPress={() => navigation.navigate('ModalAddProfile')}
+        style={styles.containerUser}
       >
-        <SvgEdit active={false} size={18} />
-        <Text style={styles.manageText}>Manage Profiles</Text>
+        <View style={styles.containerPlus}>
+          <SvgPlus active={false} size={40} />
+        </View>
+        <Text style={styles.username}>Add Profile</Text>
       </TouchableOpacity>
     </View>
-  );
-};
+    <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={() => navigation.navigate('ModalManageProfiles')}
+      style={styles.containerManage}
+    >
+      <SvgEdit active={false} size={18} />
+      <Text style={styles.manageText}>Manage Profiles</Text>
+    </TouchableOpacity>
+  </View>
+);
 
 HeaderAccounts.propTypes = {
   // required

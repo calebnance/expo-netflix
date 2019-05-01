@@ -3,20 +3,16 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { colors, fonts } from '../api/constants';
 
-const TouchLineItemElement = props => {
-  const { element, onPress, text } = props;
-
-  return (
-    <TouchableOpacity
-      activeOpacity={0.7}
-      onPress={onPress}
-      style={styles.container}
-    >
-      <Text style={styles.text}>{text}</Text>
-      <View style={styles.element}>{React.cloneElement(element)}</View>
-    </TouchableOpacity>
-  );
-};
+const TouchLineItemElement = ({ element, onPress, text }) => (
+  <TouchableOpacity
+    activeOpacity={0.7}
+    onPress={onPress}
+    style={styles.container}
+  >
+    <Text style={styles.text}>{text}</Text>
+    <View style={styles.element}>{React.cloneElement(element)}</View>
+  </TouchableOpacity>
+);
 
 TouchLineItemElement.propTypes = {
   // required

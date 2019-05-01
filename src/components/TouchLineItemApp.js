@@ -5,27 +5,23 @@ import { colors, fonts } from '../api/constants';
 
 import SvgArrowRight from './icons/Svg.ArrowRight';
 
-const TouchLineItemApp = props => {
-  const { iconSize, onPress, showArrow, tagline, text } = props;
-
-  return (
-    <TouchableOpacity
-      activeOpacity={0.7}
-      onPress={onPress}
-      style={styles.container}
-    >
-      <View style={styles.containerText}>
-        <Text style={styles.text}>{text}</Text>
-        {tagline && <Text style={styles.tagline}>{tagline}</Text>}
+const TouchLineItemApp = ({ iconSize, onPress, showArrow, tagline, text }) => (
+  <TouchableOpacity
+    activeOpacity={0.7}
+    onPress={onPress}
+    style={styles.container}
+  >
+    <View style={styles.containerText}>
+      <Text style={styles.text}>{text}</Text>
+      {tagline && <Text style={styles.tagline}>{tagline}</Text>}
+    </View>
+    {showArrow && (
+      <View style={styles.arrow}>
+        <SvgArrowRight size={iconSize} />
       </View>
-      {showArrow && (
-        <View style={styles.arrow}>
-          <SvgArrowRight size={iconSize} />
-        </View>
-      )}
-    </TouchableOpacity>
-  );
-};
+    )}
+  </TouchableOpacity>
+);
 
 TouchLineItemApp.defaultProps = {
   iconSize: 20,

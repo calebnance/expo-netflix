@@ -5,19 +5,15 @@ import { colors } from '../api/constants';
 
 import SvgCast from './icons/Svg.Cast';
 
-const Cast = props => {
-  const { navigation } = props;
-
-  return (
-    <TouchableOpacity
-      activeOpacity={0.7}
-      onPress={() => navigation.navigate('ModalCastConnect')}
-      style={styles.container}
-    >
-      <SvgCast />
-    </TouchableOpacity>
-  );
-};
+const Cast = ({ navigation }) => (
+  <TouchableOpacity
+    activeOpacity={0.7}
+    onPress={() => navigation.navigate('ModalCastConnect')}
+    style={styles.container}
+  >
+    <SvgCast />
+  </TouchableOpacity>
+);
 
 Cast.propTypes = {
   // required

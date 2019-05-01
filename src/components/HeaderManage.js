@@ -3,9 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { colors, device, fonts } from '../api/constants';
 
-const HeaderManage = props => {
-  const { backText, navigation, save, saveActive, title } = props;
-
+const HeaderManage = ({ backText, navigation, save, saveActive, title }) => {
   const saveColor = saveActive ? { color: colors.white } : {};
 
   return (

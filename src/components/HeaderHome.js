@@ -3,7 +3,6 @@ import {
   Animated,
   Image,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View
 } from 'react-native';
@@ -35,7 +34,7 @@ class HeaderHome extends React.Component {
   }
 
   render() {
-    const { all, navigation, movies, myList, shows } = this.props;
+    const { all, navigation } = this.props;
     const { top } = this.state;
 
     return (
@@ -73,10 +72,7 @@ class HeaderHome extends React.Component {
 }
 
 HeaderHome.defaultProps = {
-  all: true,
-  movies: false,
-  myList: false,
-  shows: false
+  all: true
 };
 
 HeaderHome.propTypes = {
@@ -85,10 +81,7 @@ HeaderHome.propTypes = {
   show: PropTypes.bool.isRequired,
 
   // optional
-  all: PropTypes.bool,
-  movies: PropTypes.bool,
-  myList: PropTypes.bool,
-  shows: PropTypes.bool
+  all: PropTypes.bool
 };
 
 const styles = StyleSheet.create({

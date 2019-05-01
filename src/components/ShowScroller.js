@@ -5,8 +5,7 @@ import { colors, images } from '../api/constants';
 
 import mockData from '../mockdata/data';
 
-const ShowScroller = props => {
-  const { dataset, type } = props;
+const ShowScroller = ({ dataset, type }) => {
   const dataArray = Object.values(mockData[dataset]);
 
   return (
