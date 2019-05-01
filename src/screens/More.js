@@ -18,10 +18,7 @@ const alertSignOut = () => {
   Alert.alert(
     'Sign Out',
     'Are you sure that you want to sign out?',
-    [
-      { onPress: () => console.log('no'), text: 'No' },
-      { onPress: () => console.log('yes'), text: 'Yes' }
-    ],
+    [{ text: 'No' }, { text: 'Yes' }],
     { cancelable: false }
   );
 };
@@ -59,11 +56,7 @@ const More = props => {
           showArrow={false}
           text="Privacy"
         />
-        <TouchLineItem
-          onPress={() => console.log('Help')}
-          showArrow={false}
-          text="Help"
-        />
+        <TouchLineItem onPress={() => null} showArrow={false} text="Help" />
         <TouchLineItem
           onPress={() => alertSignOut()}
           showArrow={false}

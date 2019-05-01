@@ -8,33 +8,29 @@ import Header from '../components/Header';
 
 import SvgDownloads from '../components/icons/Svg.Downloads';
 
-const Downloads = props => {
-  const { navigation } = props;
+const Downloads = ({ navigation }) => (
+  <View style={gStyle.container}>
+    <Header
+      bg={colors.headerBarBg}
+      navigation={navigation}
+      title="My Downloads"
+    />
 
-  return (
-    <View style={gStyle.container}>
-      <Header
-        bg={colors.headerBarBg}
-        navigation={navigation}
-        title="My Downloads"
-      />
-
-      <View style={styles.containerIcon}>
-        <SvgDownloads fill={colors.bgGrey} size={80} />
-      </View>
-
-      <Text style={styles.description}>
-        Movies and TV shows that you download appear here.
-      </Text>
-
-      <View style={styles.button}>
-        <Text style={styles.buttonText}>FIND SOMETHING TO DOWNLOAD</Text>
-      </View>
-
-      <Cast navigation={navigation} />
+    <View style={styles.containerIcon}>
+      <SvgDownloads fill={colors.bgGrey} size={80} />
     </View>
-  );
-};
+
+    <Text style={styles.description}>
+      Movies and TV shows that you download appear here.
+    </Text>
+
+    <View style={styles.button}>
+      <Text style={styles.buttonText}>FIND SOMETHING TO DOWNLOAD</Text>
+    </View>
+
+    <Cast navigation={navigation} />
+  </View>
+);
 
 Downloads.propTypes = {
   // required

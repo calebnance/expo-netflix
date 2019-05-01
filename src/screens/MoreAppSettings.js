@@ -16,11 +16,9 @@ const alertDeleteDownloads = () => {
     'Are you sure you want to delete this one download?',
     [
       {
-        onPress: () => console.log('Cancel'),
         text: 'Cancel'
       },
       {
-        onPress: () => console.log('Delete'),
         style: 'destructive',
         text: 'Delete'
       }
@@ -31,8 +29,7 @@ const alertDeleteDownloads = () => {
   );
 };
 
-const AppSettings = props => {
-  const { navigation } = props;
+const AppSettings = ({ navigation }) => {
   const { platform } = Constants;
   let deviceType = 'Unknown Device';
 

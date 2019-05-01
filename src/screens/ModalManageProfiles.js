@@ -8,46 +8,42 @@ import HeaderManage from '../components/HeaderManage';
 import SvgEdit from '../components/icons/Svg.Edit';
 import SvgPlus from '../components/icons/Svg.Plus';
 
-const ModalManageProfiles = props => {
-  const { navigation } = props;
+const ModalManageProfiles = ({ navigation }) => (
+  <View style={[gStyle.container, { backgroundColor: colors.black }]}>
+    <HeaderManage navigation={navigation} />
 
-  return (
-    <View style={[gStyle.container, { backgroundColor: colors.black }]}>
-      <HeaderManage navigation={navigation} />
-
-      <View style={styles.container}>
-        <View style={styles.containerUser}>
-          <Image source={images.robot} style={styles.avatar} />
-          <Text style={styles.text}>Caleb</Text>
-          <View style={styles.overlay} />
-          <View style={styles.containerSvg}>
-            <SvgEdit active size={40} />
-          </View>
+    <View style={styles.container}>
+      <View style={styles.containerUser}>
+        <Image source={images.robot} style={styles.avatar} />
+        <Text style={styles.text}>Caleb</Text>
+        <View style={styles.overlay} />
+        <View style={styles.containerSvg}>
+          <SvgEdit active size={40} />
         </View>
-        <View style={styles.containerUser}>
-          <Image source={images.penguin} style={styles.avatar} />
-          <Text style={styles.text}>Kim</Text>
-          <View style={styles.overlay} />
-          <View style={styles.containerSvg}>
-            <SvgEdit active size={40} />
-          </View>
-        </View>
-        <TouchableOpacity
-          activeOpacity={0.7}
-          onPress={() => navigation.navigate('ModalAddProfile')}
-          style={styles.containerUser}
-        >
-          <View style={styles.containerPlus}>
-            <View style={styles.plusBackground}>
-              <SvgPlus active size={40} />
-            </View>
-          </View>
-          <Text style={styles.text}>Add Profile</Text>
-        </TouchableOpacity>
       </View>
+      <View style={styles.containerUser}>
+        <Image source={images.penguin} style={styles.avatar} />
+        <Text style={styles.text}>Kim</Text>
+        <View style={styles.overlay} />
+        <View style={styles.containerSvg}>
+          <SvgEdit active size={40} />
+        </View>
+      </View>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={() => navigation.navigate('ModalAddProfile')}
+        style={styles.containerUser}
+      >
+        <View style={styles.containerPlus}>
+          <View style={styles.plusBackground}>
+            <SvgPlus active size={40} />
+          </View>
+        </View>
+        <Text style={styles.text}>Add Profile</Text>
+      </TouchableOpacity>
     </View>
-  );
-};
+  </View>
+);
 
 ModalManageProfiles.propTypes = {
   // required

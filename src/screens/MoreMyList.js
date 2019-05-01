@@ -5,20 +5,16 @@ import { colors, gStyle } from '../api/constants';
 
 import Header from '../components/Header';
 
-const MoreMyList = props => {
-  const { navigation } = props;
-
-  return (
-    <View style={gStyle.container}>
-      <Header
-        bg={colors.headerBarBg}
-        navigation={navigation}
-        showBack
-        title="My List"
-      />
-    </View>
-  );
-};
+const MoreMyList = ({ navigation }) => (
+  <View style={gStyle.container}>
+    <Header
+      bg={colors.headerBarBg}
+      navigation={navigation}
+      showBack
+      title="My List"
+    />
+  </View>
+);
 
 MoreMyList.propTypes = {
   // required

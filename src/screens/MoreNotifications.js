@@ -5,20 +5,16 @@ import { colors, gStyle } from '../api/constants';
 
 import Header from '../components/Header';
 
-const MoreNotifications = props => {
-  const { navigation } = props;
-
-  return (
-    <View style={gStyle.container}>
-      <Header
-        bg={colors.headerBarBg}
-        navigation={navigation}
-        showBack
-        title="Notifications"
-      />
-    </View>
-  );
-};
+const MoreNotifications = ({ navigation }) => (
+  <View style={gStyle.container}>
+    <Header
+      bg={colors.headerBarBg}
+      navigation={navigation}
+      showBack
+      title="Notifications"
+    />
+  </View>
+);
 
 MoreNotifications.propTypes = {
   // required
