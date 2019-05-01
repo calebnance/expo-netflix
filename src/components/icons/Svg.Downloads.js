@@ -3,9 +3,7 @@ import { Svg } from 'expo';
 import PropTypes from 'prop-types';
 import { colors } from '../../api/constants';
 
-const SvgDownloads = props => {
-  const { active, fill, size } = props;
-
+const SvgDownloads = ({ active, fill, size }) => {
   let fillColor = fill;
 
   if (fillColor === null) {

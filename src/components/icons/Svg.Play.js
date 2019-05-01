@@ -4,9 +4,7 @@ import { Svg } from 'expo';
 import PropTypes from 'prop-types';
 import { colors } from '../../api/constants';
 
-const SvgPlay = props => {
-  const { active, fill, size } = props;
-
+const SvgPlay = ({ active, fill, size }) => {
   let fillColor = fill;
 
   if (fillColor === null) {
