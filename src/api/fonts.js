@@ -1,10 +1,20 @@
 import { Platform } from 'react-native';
 
-const isiOS = Platform.OS === 'ios';
-
 export default {
-  bold: isiOS ? 'HelveticaNeue-Bold' : 'sans-serif-condensed',
-  light: isiOS ? 'HelveticaNeue-Light' : 'sans-serif-light',
-  medium: isiOS ? 'HelveticaNeue-Medium' : 'sans-serif-medium',
-  regular: isiOS ? 'HelveticaNeue' : 'sans-serif'
+  bold: Platform.select({
+    ios: 'HelveticaNeue-Bold',
+    android: 'sans-serif-condensed'
+  }),
+  light: Platform.select({
+    ios: 'HelveticaNeue-Light',
+    android: 'sans-serif-light'
+  }),
+  medium: Platform.select({
+    ios: 'HelveticaNeue-Medium',
+    android: 'sans-serif-medium'
+  }),
+  regular: Platform.select({
+    ios: 'HelveticaNeue',
+    android: 'sans-serif'
+  })
 };

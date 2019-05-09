@@ -7,7 +7,11 @@
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "version": "0.0.2",
-    "platforms": ["android", "ios"],
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
     "githubUrl": "https://github.com/calebnance/expo-netflix",
     "orientation": "portrait",
     "primaryColor": "#000000",
@@ -20,7 +24,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "android": {
       "versionCode": 2
     },

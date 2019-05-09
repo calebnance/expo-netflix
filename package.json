@@ -18,10 +18,12 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^32.0.0",
+    "expo": "^33.0.0-alpha.web.3",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
+    "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-web": "^0.11.2",
     "react-navigation": "^3.0.9"
   },
   "devDependencies": {
