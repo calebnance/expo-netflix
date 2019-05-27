@@ -46,10 +46,10 @@ class PromotionBanner extends React.Component {
               onPress={this.myListPress}
               text="My List"
             />
-            <PromotionPlay onPress={() => console.log('play modal TODO')} />
+            <PromotionPlay onPress={() => null} />
             <TouchTextIcon
               icon={<SvgInfo />}
-              onPress={() => console.log('info modal TODO')}
+              onPress={() => null}
               text="Info"
             />
           </View>

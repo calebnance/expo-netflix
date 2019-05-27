@@ -31,7 +31,7 @@ class ModalAddProfile extends React.Component {
       Alert.alert(
         'This profile will now allow access to TV shows and movies of all maturity levels.',
         '',
-        [{ onPress: () => console.log('OK... I KNOW'), text: 'OK' }],
+        [{ text: 'OK' }],
         { cancelable: false }
       );
     }
