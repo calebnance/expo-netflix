@@ -7,7 +7,7 @@ import {
   View
 } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors, device, fonts, images } from '../api/constants';
+import { colors, device, fonts, images } from '../constants';
 
 import TouchText from './TouchText';
 

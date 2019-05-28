@@ -1,7 +1,7 @@
 import React from 'react';
 import { Svg } from 'expo';
 import PropTypes from 'prop-types';
-import { colors } from '../../api/constants';
+import { colors } from '../../constants';
 
 const SvgInfo = ({ active, fill, size }) => {
   let fillColor = fill;

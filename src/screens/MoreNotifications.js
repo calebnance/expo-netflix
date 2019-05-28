@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors, gStyle } from '../api/constants';
+import { colors, gStyle } from '../constants';
 
 import Header from '../components/Header';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList, Image, StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors, images } from '../api/constants';
+import { colors, images } from '../constants';
 
 import mockData from '../mockdata/data';
 

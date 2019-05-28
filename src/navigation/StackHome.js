@@ -2,7 +2,7 @@ import React from 'react';
 import { Animated, Easing } from 'react-native';
 import PropTypes from 'prop-types';
 import { createStackNavigator } from 'react-navigation';
-import { gStyle } from '../api/constants';
+import { gStyle } from '../constants';
 
 import HomeScreen from '../screens/Home';
 import TvShowsScreen from '../screens/TvShows';

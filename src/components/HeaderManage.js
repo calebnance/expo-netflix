@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { colors, device, fonts } from '../api/constants';
+import { colors, device, fonts } from '../constants';
 
 const HeaderManage = ({ backText, navigation, save, saveActive, title }) => {
   const saveColor = saveActive ? { color: colors.white } : {};
