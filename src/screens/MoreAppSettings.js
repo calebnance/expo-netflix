@@ -2,7 +2,7 @@ import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Constants } from 'expo';
 import PropTypes from 'prop-types';
-import { colors, fonts, gStyle } from '../api/constants';
+import { colors, fonts, gStyle } from '../constants';
 
 import Header from '../components/Header';
 import TouchLineItemApp from '../components/TouchLineItemApp';

@@ -1,7 +1,7 @@
 # Netflix Clone with Expo
 
 <p align="center">
-  <img src="creative/screenshare-6.png?raw=true" />
+  <img src="screenshots/screenshare-6.png?raw=true" />
 </p>
 
 ## Table of Contents
@@ -77,5 +77,5 @@ Run Project Locally: `expo start`
 - Chrome Cast modal screen
 
 <p align="left">
-  <img src="creative/releases/expo-netflix-0.0.1.gif?raw=true" width="320" />
+  <img src="screenshots/expo-netflix-0.0.1.gif?raw=true" width="320" />
 </p>

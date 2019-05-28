@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-import { colors, device, fonts } from '../api/constants';
+import { colors, device, fonts } from '../constants';
 
 class HeaderSearch extends React.Component {
   constructor(props) {

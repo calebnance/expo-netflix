@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, ImageBackground, StyleSheet, View } from 'react-native';
-import { gStyle, images } from '../api/constants';
+import { gStyle, images } from '../constants';
 
 import PromotionPlay from './PromotionPlay';
 import TouchTextIcon from './TouchTextIcon';

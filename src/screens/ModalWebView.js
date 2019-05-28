@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, WebView } from 'react-native';
 import PropTypes from 'prop-types';
-import { gStyle } from '../api/constants';
+import { gStyle } from '../constants';
 
 import Header from '../components/Header';
 
