@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Svg } from 'expo';
+import Svg, { Path } from 'react-native-svg';
 import PropTypes from 'prop-types';
 import { colors } from '../../constants';
 
@@ -19,7 +19,7 @@ const SvgPlay = ({ active, fill, size }) => {
         overflow="visible"
         viewBox="0 0 590.74 460.5"
       >
-        <Svg.Path d="M.5.866l459 265.004L.5 530.874z" stroke={fillColor} />
+        <Path d="M.5.866l459 265.004L.5 530.874z" stroke={fillColor} />
       </Svg>
     </View>
   );
