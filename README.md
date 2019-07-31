@@ -21,7 +21,7 @@ Run Project Locally: `expo start`
 
 ## Stats
 
-- Expo SDK 33
+- Expo SDK 34
 - React Navigation v3
 - PropTypes
 
@@ -39,6 +39,7 @@ Run Project Locally: `expo start`
 
 ### version 0.0.2 (current)
 
+- upgraded to [Expo SDK 34](https://blog.expo.io/expo-sdk-34-is-now-available-4f7825239319)
 - Home Top Navbar
   - show/hide on scroll
   - start of stack navigation in nav bar
