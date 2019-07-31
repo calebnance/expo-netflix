@@ -40,6 +40,7 @@ Run Project Locally: `expo start`
 ### version 0.0.2 (current)
 
 - upgraded to [Expo SDK 34](https://blog.expo.io/expo-sdk-34-is-now-available-4f7825239319)
+- upgraded to [Expo SDK 33](https://blog.expo.io/expo-sdk-v33-0-0-is-now-available-52d1c99dfe4c)
 - Home Top Navbar
   - show/hide on scroll
   - start of stack navigation in nav bar
