@@ -1,5 +1,7 @@
 # Netflix Clone with Expo
 
+web demo: [Expo Netflix](https://expo-netflix.calebnance.now.sh)
+
 <p align="center">
   <img src="screenshots/screenshare-6.png?raw=true" />
 </p>
