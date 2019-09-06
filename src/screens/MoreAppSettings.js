@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Constants from 'expo-constants';
-import PropTypes from 'prop-types';
 import { colors, fonts, gStyle } from '../constants';
 
 import Header from '../components/Header';

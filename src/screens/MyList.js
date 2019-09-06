@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import PropTypes from 'prop-types';
+import { Text, View } from 'react-native';
 import { gStyle } from '../constants';
 
 import Cast from '../components/Cast';

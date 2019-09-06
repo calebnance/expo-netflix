@@ -1,6 +1,6 @@
 import React from 'react';
-import { FlatList, Image, StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
+import { FlatList, Image, StyleSheet, View } from 'react-native';
 import { colors, images } from '../constants';
 
 import mockData from '../mockdata/data';
@@ -13,11 +13,10 @@ const ShowScroller = ({ dataset, type }) => {
       contentContainerStyle={{ paddingHorizontal: 4 }}
       data={dataArray}
       horizontal
-      keyExtractor={itemObj => itemObj.id.toString()}
-      renderItem={itemObj => {
-        const { item } = itemObj;
-
+      keyExtractor={({ id }) => id.toString()}
+      renderItem={({ item }) => {
         let renderItem = <View style={styles[type]} />;
+
         if (item.image) {
           renderItem = (
             <Image source={images[item.image]} style={styles[`${type}Image`]} />

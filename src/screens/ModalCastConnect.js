@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
+import { Text, StyleSheet, View } from 'react-native';
 import { colors, fonts, gStyle } from '../constants';
 
 import Header from '../components/Header';

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Animated,
   Image,
@@ -6,7 +7,6 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-import PropTypes from 'prop-types';
 import { colors, device, fonts, images } from '../constants';
 
 import TouchText from './TouchText';

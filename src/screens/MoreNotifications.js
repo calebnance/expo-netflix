@@ -1,6 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
 import PropTypes from 'prop-types';
+import { View } from 'react-native';
 import { colors, gStyle } from '../constants';
 
 import Header from '../components/Header';

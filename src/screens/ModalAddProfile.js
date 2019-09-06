@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Alert,
   Image,
@@ -8,7 +9,6 @@ import {
   TextInput,
   View
 } from 'react-native';
-import PropTypes from 'prop-types';
 import { colors, fonts, gStyle, images } from '../constants';
 
 import HeaderManage from '../components/HeaderManage';

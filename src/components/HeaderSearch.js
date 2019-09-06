@@ -48,6 +48,7 @@ class HeaderSearch extends React.Component {
     const { cancelOpacity, inputWidth } = this.state;
 
     this.setState({ focus: true });
+
     Animated.timing(inputWidth, { duration: 300, toValue: 80 }).start();
     Animated.timing(cancelOpacity, { duration: 300, toValue: 1 }).start();
   }

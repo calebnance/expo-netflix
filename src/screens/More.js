@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Constants from 'expo-constants';
-import PropTypes from 'prop-types';
 import { colors, fonts, gStyle } from '../constants';
 
 import Cast from '../components/Cast';
@@ -23,54 +23,50 @@ const alertSignOut = () => {
   );
 };
 
-const More = props => {
-  const { navigation } = props;
+const More = ({ navigation }) => (
+  <View style={gStyle.container}>
+    <HeaderAccounts navigation={navigation} />
 
-  return (
-    <View style={gStyle.container}>
-      <HeaderAccounts navigation={navigation} />
+    <ScrollView>
+      <TouchLineItem
+        icon={<SvgBell />}
+        onPress={() => navigation.navigate('MoreNotificationsScreen')}
+        showBorder
+        text="Notifications"
+      />
+      <TouchLineItem
+        icon={<SvgCheck />}
+        onPress={() => navigation.navigate('MoreMyListScreen')}
+        showBorder
+        text="My List"
+      />
+      <TouchLineItem
+        onPress={() => navigation.navigate('MoreAppSettingsScreen')}
+        showArrow={false}
+        showBorder
+        text="App Settings"
+      />
+      <TouchLineItem
+        onPress={() => {
+          navigation.navigate('ModalWebView', { url: privacyUrl });
+        }}
+        showArrow={false}
+        text="Privacy"
+      />
+      <TouchLineItem onPress={() => null} showArrow={false} text="Help" />
+      <TouchLineItem
+        onPress={() => alertSignOut()}
+        showArrow={false}
+        text="Sign Out"
+      />
+      <Text style={styles.versionText}>
+        {`Version: ${Constants.manifest.version}`}
+      </Text>
+    </ScrollView>
 
-      <ScrollView>
-        <TouchLineItem
-          icon={<SvgBell />}
-          onPress={() => navigation.navigate('MoreNotificationsScreen')}
-          showBorder
-          text="Notifications"
-        />
-        <TouchLineItem
-          icon={<SvgCheck />}
-          onPress={() => navigation.navigate('MoreMyListScreen')}
-          showBorder
-          text="My List"
-        />
-        <TouchLineItem
-          onPress={() => navigation.navigate('MoreAppSettingsScreen')}
-          showArrow={false}
-          showBorder
-          text="App Settings"
-        />
-        <TouchLineItem
-          onPress={() => {
-            navigation.navigate('ModalWebView', { url: privacyUrl });
-          }}
-          showArrow={false}
-          text="Privacy"
-        />
-        <TouchLineItem onPress={() => null} showArrow={false} text="Help" />
-        <TouchLineItem
-          onPress={() => alertSignOut()}
-          showArrow={false}
-          text="Sign Out"
-        />
-        <Text style={styles.versionText}>
-          {`Version: ${Constants.manifest.version}`}
-        </Text>
-      </ScrollView>
-
-      <Cast navigation={navigation} />
-    </View>
-  );
-};
+    <Cast navigation={navigation} />
+  </View>
+);
 
 More.propTypes = {
   // required
