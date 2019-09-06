@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import { colors } from '../constants';
 
 import SvgCast from './icons/Svg.Cast';

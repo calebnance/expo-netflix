@@ -1,6 +1,6 @@
 import React from 'react';
-import { Image, StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
+import { Image, StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import { colors, device, fonts, images } from '../constants';
 
 import SvgEdit from './icons/Svg.Edit';

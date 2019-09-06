@@ -1,6 +1,7 @@
 import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
+import { Text, View } from 'react-native';
+import { ScrollView } from 'react-navigation';
 import { gStyle } from '../constants';
 
 import Cast from '../components/Cast';

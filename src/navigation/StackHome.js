@@ -1,6 +1,6 @@
 import React from 'react';
-import { Animated, Easing } from 'react-native';
 import PropTypes from 'prop-types';
+import { Animated, Easing } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { gStyle } from '../constants';
 
