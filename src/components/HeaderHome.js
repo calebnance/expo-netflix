@@ -1,4 +1,5 @@
 import React from 'react';
+import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
 import {
   Animated,
@@ -114,4 +115,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default HeaderHome;
+export default withNavigation(HeaderHome);

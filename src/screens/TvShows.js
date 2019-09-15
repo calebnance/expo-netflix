@@ -8,7 +8,7 @@ import HeaderHome from '../components/HeaderHome';
 
 const TvShows = ({ navigation }) => (
   <View style={gStyle.container}>
-    <HeaderHome navigation={navigation} show />
+    <HeaderHome show />
 
     <View style={gStyle.spacer96} />
 
