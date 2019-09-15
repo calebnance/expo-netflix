@@ -47,7 +47,7 @@ class Home extends React.Component {
 
     return (
       <View style={gStyle.container}>
-        <HeaderHome navigation={navigation} show={showHeader} />
+        <HeaderHome show={showHeader} />
 
         <ScrollView bounces onScroll={this.onScroll} scrollEventThrottle={16}>
           <PromotionBanner />
