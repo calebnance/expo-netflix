@@ -7,7 +7,7 @@ import Header from '../components/Header';
 
 const ModalWebView = ({ navigation }) => (
   <View style={gStyle.container}>
-    <Header close closeText="Close" navigation={navigation} showLogo />
+    <Header close closeText="Close" showLogo />
 
     <WebView
       bounces={false}

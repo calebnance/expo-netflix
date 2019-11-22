@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Keyboard, TouchableWithoutFeedback, View } from 'react-native';
 import { gStyle } from '../constants';
 
 import Cast from '../components/Cast';
 import HeaderSearch from '../components/HeaderSearch';
 
-const Search = ({ navigation }) => (
+const Search = () => (
   <React.Fragment>
     <TouchableWithoutFeedback accessible={false} onPress={Keyboard.dismiss}>
       <View style={gStyle.container}>
@@ -14,13 +13,8 @@ const Search = ({ navigation }) => (
       </View>
     </TouchableWithoutFeedback>
 
-    <Cast navigation={navigation} />
+    <Cast />
   </React.Fragment>
 );
-
-Search.propTypes = {
-  // required
-  navigation: PropTypes.object.isRequired
-};
 
 export default Search;

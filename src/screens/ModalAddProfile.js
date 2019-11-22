@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   Alert,
   Image,
@@ -11,6 +10,7 @@ import {
 } from 'react-native';
 import { colors, fonts, gStyle, images } from '../constants';
 
+// components
 import HeaderManage from '../components/HeaderManage';
 
 class ModalAddProfile extends React.Component {
@@ -42,14 +42,12 @@ class ModalAddProfile extends React.Component {
   }
 
   render() {
-    const { navigation } = this.props;
     const { forKidsValue, text } = this.state;
 
     return (
       <View style={[gStyle.container, { backgroundColor: colors.black }]}>
         <HeaderManage
           backText="Cancel"
-          navigation={navigation}
           save
           saveActive={text !== ''}
           title="Create Profile"
@@ -81,11 +79,6 @@ class ModalAddProfile extends React.Component {
     );
   }
 }
-
-ModalAddProfile.propTypes = {
-  // required
-  navigation: PropTypes.object.isRequired
-};
 
 const BLOCK_SIZE = 108;
 

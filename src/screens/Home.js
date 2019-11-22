@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Text, View } from 'react-native';
 import { ScrollView } from 'react-navigation';
 import { gStyle } from '../constants';
@@ -42,7 +41,6 @@ class Home extends React.Component {
   }
 
   render() {
-    const { navigation } = this.props;
     const { showHeader } = this.state;
 
     return (
@@ -76,15 +74,10 @@ class Home extends React.Component {
           <View style={gStyle.spacer24} />
         </ScrollView>
 
-        <Cast navigation={navigation} />
+        <Cast />
       </View>
     );
   }
 }
-
-Home.propTypes = {
-  // required
-  navigation: PropTypes.object.isRequired
-};
 
 export default Home;

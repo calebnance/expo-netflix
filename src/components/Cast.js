@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, TouchableOpacity } from 'react-native';
+import { withNavigation } from 'react-navigation';
 import { colors } from '../constants';
 
+// icons
 import SvgCast from './icons/Svg.Cast';
 
 const Cast = ({ navigation }) => (
@@ -38,4 +40,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Cast;
+export default withNavigation(Cast);

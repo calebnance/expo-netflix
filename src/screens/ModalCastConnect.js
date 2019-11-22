@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Text, StyleSheet, View } from 'react-native';
 import { colors, fonts, gStyle } from '../constants';
 
 import Header from '../components/Header';
 
-const ModalCastConnect = ({ navigation }) => (
+const ModalCastConnect = () => (
   <View style={gStyle.container}>
-    <Header close navigation={navigation} showLogo />
+    <Header close showLogo />
 
     <View style={styles.containerConnect}>
       <Text style={styles.connect}>Connect to device</Text>
@@ -16,11 +15,6 @@ const ModalCastConnect = ({ navigation }) => (
     <Text style={styles.deviceText}>[TV] Samsung 7 Series (43)</Text>
   </View>
 );
-
-ModalCastConnect.propTypes = {
-  // required
-  navigation: PropTypes.object.isRequired
-};
 
 const styles = StyleSheet.create({
   containerConnect: {

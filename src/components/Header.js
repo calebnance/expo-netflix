@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { withNavigation } from 'react-navigation';
 import { colors, device, fonts, images } from '../constants';
 
 import SvgArrowLeft from './icons/Svg.ArrowLeft';
@@ -119,4 +120,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Header;
+export default withNavigation(Header);

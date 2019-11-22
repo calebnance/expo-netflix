@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Constants from 'expo-constants';
 import { colors, fonts, gStyle } from '../constants';
@@ -29,7 +28,7 @@ const alertDeleteDownloads = () => {
   );
 };
 
-const AppSettings = ({ navigation }) => {
+const AppSettings = () => {
   const { platform } = Constants;
   let deviceType = 'Unknown Device';
 
@@ -40,12 +39,7 @@ const AppSettings = ({ navigation }) => {
 
   return (
     <ScrollView bounces={false} style={gStyle.container}>
-      <Header
-        bg={colors.headerBarBg}
-        navigation={navigation}
-        showBack
-        title="App Settings"
-      />
+      <Header bg={colors.headerBarBg} showBack title="App Settings" />
 
       <View style={styles.containerHeading}>
         <Text style={styles.heading}>Video Playback</Text>
@@ -96,11 +90,6 @@ const AppSettings = ({ navigation }) => {
       </View>
     </ScrollView>
   );
-};
-
-AppSettings.propTypes = {
-  // required
-  navigation: PropTypes.object.isRequired
 };
 
 const styles = StyleSheet.create({

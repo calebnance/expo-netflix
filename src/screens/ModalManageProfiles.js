@@ -10,7 +10,7 @@ import SvgPlus from '../components/icons/Svg.Plus';
 
 const ModalManageProfiles = ({ navigation }) => (
   <View style={[gStyle.container, { backgroundColor: colors.black }]}>
-    <HeaderManage navigation={navigation} />
+    <HeaderManage />
 
     <View style={styles.container}>
       <View style={styles.containerUser}>

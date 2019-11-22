@@ -1,20 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { StyleSheet, Text, View } from 'react-native';
 import { colors, fonts, gStyle } from '../constants';
 
+// components
 import Cast from '../components/Cast';
 import Header from '../components/Header';
 
+// icons
 import SvgDownloads from '../components/icons/Svg.Downloads';
 
-const Downloads = ({ navigation }) => (
+const Downloads = () => (
   <View style={gStyle.container}>
-    <Header
-      bg={colors.headerBarBg}
-      navigation={navigation}
-      title="My Downloads"
-    />
+    <Header bg={colors.headerBarBg} title="My Downloads" />
 
     <View style={styles.containerIcon}>
       <SvgDownloads fill={colors.bgGrey} size={80} />
@@ -28,14 +25,9 @@ const Downloads = ({ navigation }) => (
       <Text style={styles.buttonText}>FIND SOMETHING TO DOWNLOAD</Text>
     </View>
 
-    <Cast navigation={navigation} />
+    <Cast />
   </View>
 );
-
-Downloads.propTypes = {
-  // required
-  navigation: PropTypes.object.isRequired
-};
 
 const styles = StyleSheet.create({
   containerIcon: {

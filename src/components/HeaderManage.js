@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { withNavigation } from 'react-navigation';
 import { colors, device, fonts } from '../constants';
 
 const HeaderManage = ({ backText, navigation, save, saveActive, title }) => {
@@ -98,4 +99,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default HeaderManage;
+export default withNavigation(HeaderManage);

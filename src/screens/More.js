@@ -25,7 +25,7 @@ const alertSignOut = () => {
 
 const More = ({ navigation }) => (
   <View style={gStyle.container}>
-    <HeaderAccounts navigation={navigation} />
+    <HeaderAccounts />
 
     <ScrollView>
       <TouchLineItem
@@ -64,7 +64,7 @@ const More = ({ navigation }) => (
       </Text>
     </ScrollView>
 
-    <Cast navigation={navigation} />
+    <Cast />
   </View>
 );
 
