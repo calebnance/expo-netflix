@@ -27,7 +27,7 @@ const More = ({ navigation }) => (
   <View style={gStyle.container}>
     <HeaderAccounts />
 
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <TouchLineItem
         icon={<SvgBell />}
         onPress={() => navigation.navigate('MoreNotificationsScreen')}
