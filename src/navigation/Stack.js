@@ -1,4 +1,5 @@
-import { createAppContainer, createStackNavigator } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 // grab screens
 import ModalCastConnect from '../screens/ModalCastConnect';
@@ -9,9 +10,6 @@ import ModalWebView from '../screens/ModalWebView';
 
 // grab tabbed stacks
 import TabNavigator from './TabNavigator';
-
-// grab modal routes (dynamic transitions)
-import ModalRoutes from './ModalRoutes';
 
 const StackNavigator = createStackNavigator(
   {
@@ -50,7 +48,7 @@ const StackNavigator = createStackNavigator(
   {
     headerMode: 'none',
     initialRouteName: 'Main',
-    transitionConfig: ModalRoutes
+    mode: 'modal'
   }
 );
 
