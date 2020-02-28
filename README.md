@@ -69,7 +69,7 @@ a couple manual changes within `index.html` i found needed to be made so far:
 
 ### version 0.0.2 (current)
 
-- upgraded to [React Navigation v4](https://reactnavigation.org/docs/en/getting-started.html)
+- upgraded to [React Navigation v4](https://reactnavigation.org/docs/4.x/getting-started)
 - upgraded to [Expo SDK 36](https://blog.expo.io/expo-sdk-36-is-now-available-b91897b437fe)
 - upgraded to [Expo SDK 35](https://blog.expo.io/expo-sdk-35-is-now-available-beee0dfafbf4)
 - Expo Web support
