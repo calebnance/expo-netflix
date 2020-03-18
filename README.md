@@ -7,7 +7,7 @@ web demo: [Expo Netflix](https://expo-netflix.calebnance.now.sh)
 [![follow @calebnance](https://img.shields.io/twitter/follow/calebnance.svg?style=for-the-badge&logo=TWITTER&logoColor=FFFFFF&labelColor=00aced&logoWidth=20&color=lightgray)](https://twitter.com/calebnance)
 
 <p align="center">
-  <img src="screenshots/screenshare-6.png?raw=true" />
+  <img src=".gh-assets/screenshare-6.png?raw=true" />
 </p>
 
 ## Table of Contents
@@ -113,5 +113,5 @@ a couple manual changes within `index.html` i found needed to be made so far:
 - Chrome Cast modal screen
 
 <p align="left">
-  <img src="screenshots/expo-netflix-0.0.1.gif?raw=true" width="320" />
+  <img src=".gh-assets/expo-netflix-0.0.1.gif?raw=true" width="320" />
 </p>
