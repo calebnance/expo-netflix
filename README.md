@@ -113,5 +113,5 @@ a couple manual changes within `index.html` i found needed to be made so far:
 - Chrome Cast modal screen
 
 <p align="left">
-  <img src=".gh-assets/expo-netflix-0.0.1.gif?raw=true" width="320" />
+  <img alt="screen grab of netflix clone" src=".gh-assets/expo-netflix-0.0.1.gif" width="320" />
 </p>
