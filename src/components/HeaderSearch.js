@@ -33,8 +33,16 @@ class HeaderSearch extends React.Component {
 
     // if empty, go back to orignial state
     if (text === '') {
-      Animated.timing(inputWidth, { duration: 300, toValue: 100 }).start();
-      Animated.timing(cancelOpacity, { duration: 300, toValue: 0 }).start();
+      Animated.timing(inputWidth, {
+        duration: 300,
+        toValue: 100,
+        useNativeDriver: false
+      }).start();
+      Animated.timing(cancelOpacity, {
+        duration: 300,
+        toValue: 0,
+        useNativeDriver: false
+      }).start();
     }
   }
 
@@ -49,8 +57,16 @@ class HeaderSearch extends React.Component {
 
     this.setState({ focus: true });
 
-    Animated.timing(inputWidth, { duration: 300, toValue: 80 }).start();
-    Animated.timing(cancelOpacity, { duration: 300, toValue: 1 }).start();
+    Animated.timing(inputWidth, {
+      duration: 300,
+      toValue: 80,
+      useNativeDriver: false
+    }).start();
+    Animated.timing(cancelOpacity, {
+      duration: 300,
+      toValue: 1,
+      useNativeDriver: false
+    }).start();
   }
 
   render() {

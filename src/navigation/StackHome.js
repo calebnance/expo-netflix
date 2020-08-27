@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Animated, Easing } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { gStyle } from '../constants';
 
@@ -18,14 +17,6 @@ Icon.propTypes = {
   focused: PropTypes.bool.isRequired
 };
 
-const transitionConfig = () => ({
-  transitionSpec: {
-    duration: 0,
-    timing: Animated.timing,
-    easing: Easing.step0
-  }
-});
-
 export default createStackNavigator(
   {
     HomeMain: {
@@ -37,21 +28,18 @@ export default createStackNavigator(
     HomeTvShows: {
       screen: TvShowsScreen,
       navigationOptions: {
-        gesturesEnabled: false,
         headerStyle: gStyle.navHeaderStyle
       }
     },
     HomeMovies: {
       screen: MoviesScreen,
       navigationOptions: {
-        gesturesEnabled: false,
         headerStyle: gStyle.navHeaderStyle
       }
     },
     HomeMyList: {
       screen: MyListScreen,
       navigationOptions: {
-        gesturesEnabled: false,
         headerStyle: gStyle.navHeaderStyle
       }
     }
@@ -61,7 +49,6 @@ export default createStackNavigator(
     navigationOptions: {
       tabBarLabel: 'Home',
       tabBarIcon: Icon
-    },
-    transitionConfig
+    }
   }
 );

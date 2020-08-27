@@ -27,9 +27,17 @@ class HeaderHome extends React.Component {
 
     if (prevProps.show !== show) {
       if (show) {
-        Animated.timing(top, { duration: 200, toValue: 0 }).start();
+        Animated.timing(top, {
+          duration: 200,
+          toValue: 0,
+          useNativeDriver: false
+        }).start();
       } else {
-        Animated.timing(top, { duration: 200, toValue: -100 }).start();
+        Animated.timing(top, {
+          duration: 200,
+          toValue: -100,
+          useNativeDriver: false
+        }).start();
       }
     }
   }

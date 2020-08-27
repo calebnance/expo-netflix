@@ -19,31 +19,11 @@ const StackNavigator = createStackNavigator(
 
     // Modals
     // /////////////////////////////////////////////////////////////////////////
-    ModalCastConnect: {
-      screen: ModalCastConnect,
-      navigationOptions: {
-        gesturesEnabled: false
-      }
-    },
-    ModalAddProfile: {
-      screen: ModalAddProfile,
-      navigationOptions: {
-        gesturesEnabled: false
-      }
-    },
-    ModalManageProfiles: {
-      screen: ModalManageProfiles,
-      navigationOptions: {
-        gesturesEnabled: false
-      }
-    },
+    ModalCastConnect,
+    ModalAddProfile,
+    ModalManageProfiles,
     ModalVideo,
-    ModalWebView: {
-      screen: ModalWebView,
-      navigationOptions: {
-        gesturesEnabled: false
-      }
-    }
+    ModalWebView
   },
   {
     headerMode: 'none',
