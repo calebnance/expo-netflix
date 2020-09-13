@@ -13,7 +13,8 @@ web demo: [Expo Netflix](https://expo-netflix.calebnance.now.sh)
 ## Table of Contents
 
 - [Install & Build](#install--build)
-- [Stats](#stats)
+- [Features](#features)
+- [API Components/Packages Used](#api-components-packages-used)
 - [Linting](#linting)
 - [Expo Web](#expo-web)
 - [Demo & Release Notes](#release-notes)
@@ -26,12 +27,35 @@ Install: `yarn` or `yarn install`
 
 Run Project Locally: `expo start` or `yarn dev`
 
-## Stats
+## Features
 
 - Expo SDK 38
-- iOS, Android and PWA (Web App)
+- iOS, Android and PWA (Progressive Web App)
 - React Navigation v4
 - PropTypes
+
+## API Components/Packages Used
+
+- React Native
+  - `Animated`
+  - `Alert` and `Switch`
+  - `Image` and `ImageBackground`
+  - `Keyboard` and `TextInput`
+  - `TouchableOpacity` and `TouchableWithoutFeedback`
+  - `Dimensions`, `Platform` and `StatusBar`
+  - `ScrollView` and `FlatList`
+  - `StyleSheet`, `Text`, and `View`
+- Expo
+  - `expo-asset`
+  - `expo-constants`
+  - `expo-font`
+  - `expo-linear-gradient`
+  - `AppLoading`
+  - `ScreenOrientation`
+- 3rd Party
+  - `react-native-appearance`
+  - `react-native-svg`
+  - `react-native-webview`
 
 ## Linting
 
