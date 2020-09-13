@@ -14,7 +14,7 @@ web demo: [Expo Netflix](https://expo-netflix.calebnance.now.sh)
 
 - [Install & Build](#install--build)
 - [Features](#features)
-- [API Components/Packages Used](#api-components-packages-used)
+- [API Components/Packages Used](#api-componentspackages-used)
 - [Linting](#linting)
 - [Expo Web](#expo-web)
 - [Demo & Release Notes](#release-notes)
