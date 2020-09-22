@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Expo Netflix",
-    "description": "netflix clone with expo",
+    "description": "netflix ui clone with expo",
     "scheme": "netflixclone",
     "slug": "netflixclone",
     "privacy": "public",
