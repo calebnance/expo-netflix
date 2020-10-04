@@ -3,10 +3,10 @@ import { StatusBar } from 'react-native';
 import { AppLoading, registerRootComponent } from 'expo';
 import { func } from './constants';
 
-// RootStack Navigation
+// main navigation stack
 import Stack from './navigation/Stack';
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
 
