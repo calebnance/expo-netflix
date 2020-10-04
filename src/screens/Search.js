@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Keyboard, TouchableWithoutFeedback, View } from 'react-native';
 import { gStyle } from '../constants';
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
 import {
