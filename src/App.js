@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { StatusBar } from 'react-native';
-import { AppLoading } from 'expo';
-import { func } from './src/constants';
+import { AppLoading, registerRootComponent } from 'expo';
+import { func } from './constants';
 
-import Stack from './src/navigation/Stack';
+// RootStack Navigation
+import Stack from './navigation/Stack';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -34,3 +35,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+registerRootComponent(App);
