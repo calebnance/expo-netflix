@@ -23,4 +23,4 @@ SvgCheck.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgCheck;
+export default React.memo(SvgCheck);

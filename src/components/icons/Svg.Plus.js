@@ -23,4 +23,4 @@ SvgPlus.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgPlus;
+export default React.memo(SvgPlus);

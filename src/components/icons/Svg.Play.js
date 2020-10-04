@@ -38,4 +38,4 @@ SvgPlay.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgPlay;
+export default React.memo(SvgPlay);

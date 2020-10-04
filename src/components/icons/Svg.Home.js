@@ -23,4 +23,4 @@ SvgHome.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgHome;
+export default React.memo(SvgHome);

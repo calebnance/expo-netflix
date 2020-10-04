@@ -37,4 +37,4 @@ SvgInfo.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgInfo;
+export default React.memo(SvgInfo);

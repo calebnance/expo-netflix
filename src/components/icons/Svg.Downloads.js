@@ -37,4 +37,4 @@ SvgDownloads.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgDownloads;
+export default React.memo(SvgDownloads);

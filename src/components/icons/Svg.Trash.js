@@ -27,4 +27,4 @@ SvgTrash.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgTrash;
+export default React.memo(SvgTrash);

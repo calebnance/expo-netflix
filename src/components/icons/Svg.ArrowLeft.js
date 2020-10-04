@@ -23,4 +23,4 @@ SvgArrowLeft.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgArrowLeft;
+export default React.memo(SvgArrowLeft);

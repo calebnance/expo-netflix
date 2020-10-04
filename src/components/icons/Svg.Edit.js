@@ -23,4 +23,4 @@ SvgEdit.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgEdit;
+export default React.memo(SvgEdit);

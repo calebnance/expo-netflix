@@ -27,4 +27,4 @@ SvgCast.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgCast;
+export default React.memo(SvgCast);

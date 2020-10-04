@@ -23,4 +23,4 @@ SvgBell.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgBell;
+export default React.memo(SvgBell);

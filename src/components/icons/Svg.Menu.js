@@ -23,4 +23,4 @@ SvgMenu.propTypes = {
   size: PropTypes.number
 };
 
-export default SvgMenu;
+export default React.memo(SvgMenu);
