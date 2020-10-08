@@ -17,7 +17,6 @@ let iPhoneX = false;
 if (iOS) {
   // iphone screen breakdown
   // https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions
-  // http://iosres.com
   if (height === 812 || width === 812 || height === 896 || width === 896) {
     iPhoneX = true;
   }

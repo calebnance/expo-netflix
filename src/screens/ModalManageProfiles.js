@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { colors, fonts, gStyle, images } from '../constants';
 
+// components
 import HeaderManage from '../components/HeaderManage';
 
+// icons
 import SvgEdit from '../components/icons/Svg.Edit';
 import SvgPlus from '../components/icons/Svg.Plus';
 

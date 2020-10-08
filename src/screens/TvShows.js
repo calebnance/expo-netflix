@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Text, View } from 'react-native';
 import { gStyle } from '../constants';
 
+// components
 import Cast from '../components/Cast';
 import HeaderHome from '../components/HeaderHome';
 

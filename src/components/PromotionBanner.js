@@ -2,9 +2,11 @@ import * as React from 'react';
 import { Image, ImageBackground, StyleSheet, View } from 'react-native';
 import { gStyle, images } from '../constants';
 
+// components
 import PromotionPlay from './PromotionPlay';
 import TouchTextIcon from './TouchTextIcon';
 
+// icons
 import SvgCheck from './icons/Svg.Check';
 import SvgInfo from './icons/Svg.Info';
 import SvgPlus from './icons/Svg.Plus';
@@ -21,7 +23,7 @@ class PromotionBanner extends React.Component {
   }
 
   myListPress() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       added: !prevState.added
     }));
   }

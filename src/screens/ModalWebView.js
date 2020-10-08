@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { gStyle } from '../constants';
 
+// components
 import Header from '../components/Header';
 
 const ModalWebView = ({ navigation }) => (

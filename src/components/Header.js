@@ -4,9 +4,10 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import { colors, device, fonts, images } from '../constants';
 
+// icons
 import SvgArrowLeft from './icons/Svg.ArrowLeft';
 
-const Header = props => {
+const Header = (props) => {
   const { bg, close, closeText, navigation, showBack, showLogo, title } = props;
 
   return (

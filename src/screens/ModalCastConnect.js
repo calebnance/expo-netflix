@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import { colors, fonts, gStyle } from '../constants';
 
+// components
 import Header from '../components/Header';
 
 const ModalCastConnect = () => (

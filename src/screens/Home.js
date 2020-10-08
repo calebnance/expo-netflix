@@ -3,14 +3,15 @@ import { Text, View } from 'react-native';
 import { ScrollView } from 'react-navigation';
 import { gStyle } from '../constants';
 
+// components
 import Cast from '../components/Cast';
 import HeaderHome from '../components/HeaderHome';
 import PromotionBanner from '../components/PromotionBanner';
 import ShowScroller from '../components/ShowScroller';
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       showHeader: true

@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { colors, fonts } from '../constants';
 
+// icons
 import SvgArrowRight from './icons/Svg.ArrowRight';
 
-const TouchLineItem = props => {
+const TouchLineItem = (props) => {
   const { icon, iconSize, onPress, showArrow, showBorder, text } = props;
 
   const borderTopWidth = showBorder ? 2 : 0;

@@ -4,10 +4,12 @@ import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Constants from 'expo-constants';
 import { colors, fonts, gStyle } from '../constants';
 
+// components
 import Cast from '../components/Cast';
 import HeaderAccounts from '../components/HeaderAccounts';
 import TouchLineItem from '../components/TouchLineItem';
 
+// icons
 import SvgBell from '../components/icons/Svg.Bell';
 import SvgCheck from '../components/icons/Svg.Check';
 

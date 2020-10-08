@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { colors, fonts } from '../constants';
 
+// icons
 import SvgArrowRight from './icons/Svg.ArrowRight';
 
 const TouchLineItemApp = ({ iconSize, onPress, showArrow, tagline, text }) => (

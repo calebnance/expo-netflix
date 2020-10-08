@@ -4,12 +4,13 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import navigationOptions from './defaultOptions';
 
+// screens
 import MoreScreen from '../screens/More';
-
 import MoreAppSettingsScreen from '../screens/MoreAppSettings';
 import MoreNotificationsScreen from '../screens/MoreNotifications';
 import MoreMyListScreen from '../screens/MoreMyList';
 
+// icons
 import SvgMenu from '../components/icons/Svg.Menu';
 
 const Icon = ({ focused }) => <SvgMenu active={focused} />;

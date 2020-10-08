@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Keyboard, TouchableWithoutFeedback, View } from 'react-native';
 import { gStyle } from '../constants';
 
+// components
 import Cast from '../components/Cast';
 import HeaderSearch from '../components/HeaderSearch';
 

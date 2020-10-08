@@ -4,7 +4,10 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import navigationOptions from './defaultOptions';
 
+// screens
 import DownloadsScreen from '../screens/Downloads';
+
+// icons
 import SvgDownloads from '../components/icons/Svg.Downloads';
 
 const Icon = ({ focused }) => <SvgDownloads active={focused} />;
@@ -29,13 +32,3 @@ export default createStackNavigator(
     }
   }
 );
-
-// example of navigation state manipulation
-// StackDownloads.navigationOptions = ({ navigation }) => {
-//   const { index } = navigation.state;
-//
-//   return {
-//     tabBarLabel: 'Downloads',
-//     tabBarIcon: Icon
-//   };
-// };

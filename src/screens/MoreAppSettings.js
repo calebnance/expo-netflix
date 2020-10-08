@@ -3,10 +3,12 @@ import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Constants from 'expo-constants';
 import { colors, fonts, gStyle } from '../constants';
 
+// components
 import Header from '../components/Header';
 import TouchLineItemApp from '../components/TouchLineItemApp';
 import TouchLineItemElement from '../components/TouchLineItemElement';
 
+// icons
 import SvgTrash from '../components/icons/Svg.Trash';
 
 const alertDeleteDownloads = () => {

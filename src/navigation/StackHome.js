@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import { createStackNavigator } from 'react-navigation-stack';
 import { gStyle } from '../constants';
 
+// screens
 import HomeScreen from '../screens/Home';
 import TvShowsScreen from '../screens/TvShows';
 import MoviesScreen from '../screens/Movies';
 import MyListScreen from '../screens/MyList';
 
+// icons
 import SvgHome from '../components/icons/Svg.Home';
 
 const Icon = ({ focused }) => <SvgHome active={focused} />;

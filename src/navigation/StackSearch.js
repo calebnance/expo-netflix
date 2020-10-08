@@ -4,7 +4,10 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import navigationOptions from './defaultOptions';
 
+// screens
 import SearchScreen from '../screens/Search';
+
+// icons
 import SvgSearch from '../components/icons/Svg.Search';
 
 const Icon = ({ focused }) => <SvgSearch active={focused} />;

@@ -11,8 +11,8 @@ import {
 import { colors, device, fonts } from '../constants';
 
 class HeaderSearch extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       focus: false,
@@ -88,7 +88,7 @@ class HeaderSearch extends React.Component {
             autoFocus
             keyboardAppearance="dark"
             onBlur={this.onBlur}
-            onChangeText={input => this.setState({ text: input })}
+            onChangeText={(input) => this.setState({ text: input })}
             onFocus={this.onFocus}
             placeholder="Search"
             placeholderTextColor={colors.searchIcon}

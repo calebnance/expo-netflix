@@ -2,6 +2,7 @@ import * as React from 'react';
 import { View } from 'react-native';
 import { colors, gStyle } from '../constants';
 
+// components
 import Header from '../components/Header';
 
 const MoreMyList = () => (

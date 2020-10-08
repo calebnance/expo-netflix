@@ -10,11 +10,12 @@ import {
 } from 'react-native';
 import { colors, device, fonts, images } from '../constants';
 
+// components
 import TouchText from './TouchText';
 
 class HeaderHome extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       top: new Animated.Value(0)
