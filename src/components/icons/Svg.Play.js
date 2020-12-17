@@ -19,7 +19,7 @@ const SvgPlay = ({ active, fill, size }) => {
         overflow="visible"
         viewBox="0 0 590.74 460.5"
       >
-        <Path d="M.5.866l459 265.004L.5 530.874z" stroke={fillColor} />
+        <Path d="M.5.866l459 265.004L.5 530.874z" fill={fillColor} />
       </Svg>
     </View>
   );
