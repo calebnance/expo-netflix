@@ -22,7 +22,9 @@ class App extends React.Component {
     if (isLoading) {
       return (
         <AppLoading
-          onError={console.warn}
+          onError={() => {
+            // console.warn
+          }}
           onFinish={() => this.setState({ isLoading: false })}
           startAsync={func.loadAssetsAsync}
         />
