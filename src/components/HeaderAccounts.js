@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     paddingBottom: 30,
-    paddingTop: device.iPhoneX ? 64 : 40,
+    paddingTop: device.iPhoneNotch ? 64 : 40,
     width: '100%'
   },
   containerUser: {

@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingBottom: 4,
     paddingHorizontal: 16,
-    paddingTop: device.iPhoneX ? 54 : 30
+    paddingTop: device.iPhoneNotch ? 54 : 30
   },
   back: {
     alignItems: 'flex-start',
