@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { withNavigation } from 'react-navigation';
-import { colors, device, fonts } from '../constants';
+import { colors, device, fonts, gStyle } from '../constants';
 
 const HeaderManage = ({ backText, navigation, save, saveActive, title }) => {
   const saveColor = saveActive ? { color: colors.white } : {};
@@ -10,7 +10,7 @@ const HeaderManage = ({ backText, navigation, save, saveActive, title }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
-        activeOpacity={0.7}
+        activeOpacity={gStyle.activeOpacity}
         onPress={() => navigation.goBack(null)}
         style={styles.back}
       >
@@ -27,7 +27,7 @@ const HeaderManage = ({ backText, navigation, save, saveActive, title }) => {
 
       {save && (
         <TouchableOpacity
-          activeOpacity={0.7}
+          activeOpacity={gStyle.activeOpacity}
           onPress={() => navigation.goBack(null)}
           style={styles.save}
         >

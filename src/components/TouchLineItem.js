@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { colors, fonts } from '../constants';
+import { colors, fonts, gStyle } from '../constants';
 
 // icons
 import SvgArrowRight from './icons/Svg.ArrowRight';
@@ -13,7 +13,7 @@ const TouchLineItem = (props) => {
 
   return (
     <TouchableOpacity
-      activeOpacity={0.7}
+      activeOpacity={gStyle.activeOpacity}
       onPress={onPress}
       style={[styles.container, { borderTopWidth }]}
     >

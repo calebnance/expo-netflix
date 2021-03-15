@@ -2,14 +2,14 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import { withNavigation } from 'react-navigation';
-import { colors } from '../constants';
+import { colors, gStyle } from '../constants';
 
 // icons
 import SvgCast from './icons/Svg.Cast';
 
 const Cast = ({ navigation }) => (
   <TouchableOpacity
-    activeOpacity={0.7}
+    activeOpacity={gStyle.activeOpacity}
     onPress={() => navigation.navigate('ModalCastConnect')}
     style={styles.container}
   >

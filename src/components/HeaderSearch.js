@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-import { colors, device, fonts } from '../constants';
+import { colors, device, fonts, gStyle } from '../constants';
 
 class HeaderSearch extends React.Component {
   constructor() {
@@ -100,7 +100,10 @@ class HeaderSearch extends React.Component {
         <Animated.View
           style={[styles.containerCancel, { opacity: cancelOpacity }]}
         >
-          <TouchableOpacity activeOpacity={0.7} onPress={this.onCancel}>
+          <TouchableOpacity
+            activeOpacity={gStyle.activeOpacity}
+            onPress={this.onCancel}
+          >
             <Text style={styles.cancel}>Cancel</Text>
           </TouchableOpacity>
         </Animated.View>

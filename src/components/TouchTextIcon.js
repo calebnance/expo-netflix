@@ -1,11 +1,11 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { colors, fonts } from '../constants';
+import { colors, fonts, gStyle } from '../constants';
 
 const TouchTextIcon = ({ icon, iconSize, onPress, text, width }) => (
   <TouchableOpacity
-    activeOpacity={0.7}
+    activeOpacity={gStyle.activeOpacity}
     onPress={onPress}
     style={[styles.container, { width }]}
   >

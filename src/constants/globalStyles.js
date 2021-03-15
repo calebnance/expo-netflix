@@ -2,6 +2,7 @@ import colors from './colors';
 import fonts from './fonts';
 
 export default {
+  activeOpacity: 0.7,
   container: {
     backgroundColor: colors.bgGrey,
     flex: 1

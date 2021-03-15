@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-import { colors, device, fonts, images } from '../constants';
+import { colors, device, fonts, gStyle, images } from '../constants';
 
 // components
 import TouchText from './TouchText';
@@ -50,7 +50,7 @@ class HeaderHome extends React.Component {
     return (
       <Animated.View style={[styles.container, { top }]}>
         <TouchableOpacity
-          activeOpacity={0.7}
+          activeOpacity={gStyle.activeOpacity}
           onPress={() => navigation.navigate('HomeMain')}
         >
           <Image source={images.netflixTransparent} style={styles.logo} />

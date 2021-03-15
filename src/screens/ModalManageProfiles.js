@@ -32,7 +32,7 @@ const ModalManageProfiles = ({ navigation }) => (
         </View>
       </View>
       <TouchableOpacity
-        activeOpacity={0.7}
+        activeOpacity={gStyle.activeOpacity}
         onPress={() => navigation.navigate('ModalAddProfile')}
         style={styles.containerUser}
       >

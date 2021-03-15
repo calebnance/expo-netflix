@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { withNavigation } from 'react-navigation';
-import { colors, device, fonts, images } from '../constants';
+import { colors, device, fonts, gStyle, images } from '../constants';
 
 // icons
 import SvgEdit from './icons/Svg.Edit';
@@ -20,7 +20,7 @@ const HeaderAccounts = ({ navigation }) => (
         <Text style={styles.username}>Kim</Text>
       </View>
       <TouchableOpacity
-        activeOpacity={0.7}
+        activeOpacity={gStyle.activeOpacity}
         onPress={() => navigation.navigate('ModalAddProfile')}
         style={styles.containerUser}
       >
@@ -31,7 +31,7 @@ const HeaderAccounts = ({ navigation }) => (
       </TouchableOpacity>
     </View>
     <TouchableOpacity
-      activeOpacity={0.7}
+      activeOpacity={gStyle.activeOpacity}
       onPress={() => navigation.navigate('ModalManageProfiles')}
       style={styles.containerManage}
     >
