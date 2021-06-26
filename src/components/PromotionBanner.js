@@ -35,7 +35,6 @@ class PromotionBanner extends React.Component {
 
     return (
       <ImageBackground
-        imageStyle={{ resizeMode: 'contain' }}
         source={images.bannerBander}
         style={styles.imageBackground}
       >
@@ -48,7 +47,9 @@ class PromotionBanner extends React.Component {
               onPress={this.myListPress}
               text="My List"
             />
+
             <PromotionPlay onPress={() => null} />
+
             <TouchTextIcon
               icon={<SvgInfo />}
               onPress={() => null}

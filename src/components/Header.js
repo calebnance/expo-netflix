@@ -30,14 +30,14 @@ const Header = (props) => {
 
       {showLogo && (
         <React.Fragment>
-          <View style={{ flex: 1 }} />
+          <View style={gStyle.flex1} />
           <View style={styles.containerLogoFull}>
             <Image source={images.netflixFull} style={styles.logoFull} />
           </View>
         </React.Fragment>
       )}
 
-      {showBack && !close && <View style={{ flex: 1 }} />}
+      {showBack && !close && <View style={gStyle.flex1} />}
 
       {close && (
         <TouchableOpacity
@@ -111,8 +111,8 @@ const styles = StyleSheet.create({
   close: {
     alignItems: 'flex-end',
     flex: 1,
-    justifyContent: 'center',
-    height: 35
+    height: 35,
+    justifyContent: 'center'
   },
   closeText: {
     color: colors.white,

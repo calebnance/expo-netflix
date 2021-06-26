@@ -130,9 +130,9 @@ const styles = StyleSheet.create({
     color: colors.heading,
     fontFamily: fonts.regular,
     fontSize: 16,
-    textAlign: 'center',
     paddingHorizontal: 8,
-    paddingVertical: 4
+    paddingVertical: 4,
+    textAlign: 'center'
   },
   containerCancel: {
     width: '20%'

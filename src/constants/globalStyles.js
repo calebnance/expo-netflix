@@ -10,6 +10,9 @@ export default {
   centerItems: {
     alignItems: 'center'
   },
+  flex1: {
+    flex: 1
+  },
   flexRow: {
     alignItems: 'center',
     flexDirection: 'row'

@@ -84,8 +84,8 @@ const BLOCK_SIZE = 108;
 
 const styles = StyleSheet.create({
   container: {
-    alignSelf: 'center',
     alignItems: 'center',
+    alignSelf: 'center',
     paddingHorizontal: 16,
     paddingVertical: 60
   },
@@ -96,8 +96,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.white,
-    fontSize: 16,
     fontFamily: fonts.regular,
+    fontSize: 16,
     marginBottom: 24,
     marginTop: 8,
     textAlign: 'center'

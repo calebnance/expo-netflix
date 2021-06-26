@@ -23,7 +23,7 @@ const HeaderManage = ({ backText, navigation, save, saveActive, title }) => {
         </View>
       )}
 
-      {!save && <View style={{ flex: 1 }} />}
+      {!save && <View style={gStyle.flex1} />}
 
       {save && (
         <TouchableOpacity
@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
   back: {
     alignItems: 'flex-start',
     flex: 1,
-    justifyContent: 'center',
-    height: 35
+    height: 35,
+    justifyContent: 'center'
   },
   backText: {
     color: colors.white,
@@ -90,8 +90,8 @@ const styles = StyleSheet.create({
   save: {
     alignItems: 'flex-end',
     flex: 1,
-    justifyContent: 'center',
-    height: 35
+    height: 35,
+    justifyContent: 'center'
   },
   saveText: {
     color: colors.moreSaveText,

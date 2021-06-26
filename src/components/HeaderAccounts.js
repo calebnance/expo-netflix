@@ -15,10 +15,12 @@ const HeaderAccounts = ({ navigation }) => (
         <Image source={images.robot} style={styles.avatar} />
         <Text style={[styles.username, styles.usernameActive]}>Caleb</Text>
       </View>
+
       <View style={styles.containerUser}>
         <Image source={images.penguin} style={styles.avatar} />
         <Text style={styles.username}>Kim</Text>
       </View>
+
       <TouchableOpacity
         activeOpacity={gStyle.activeOpacity}
         onPress={() => navigation.navigate('ModalAddProfile')}
@@ -30,6 +32,7 @@ const HeaderAccounts = ({ navigation }) => (
         <Text style={styles.username}>Add Profile</Text>
       </TouchableOpacity>
     </View>
+
     <TouchableOpacity
       activeOpacity={gStyle.activeOpacity}
       onPress={() => navigation.navigate('ModalManageProfiles')}
@@ -73,8 +76,8 @@ const styles = StyleSheet.create({
   },
   username: {
     color: colors.inactiveGrey,
-    fontSize: 12,
-    fontFamily: fonts.medium
+    fontFamily: fonts.medium,
+    fontSize: 12
   },
   usernameActive: {
     color: colors.white,

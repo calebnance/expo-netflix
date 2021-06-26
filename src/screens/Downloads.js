@@ -31,8 +31,8 @@ const Downloads = () => (
 
 const styles = StyleSheet.create({
   containerIcon: {
-    alignSelf: 'center',
     alignItems: 'center',
+    alignSelf: 'center',
     backgroundColor: colors.downloadsIconBg,
     borderRadius: 96,
     height: 140,

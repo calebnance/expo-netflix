@@ -23,6 +23,7 @@ const ModalManageProfiles = ({ navigation }) => (
           <SvgEdit active size={40} />
         </View>
       </View>
+
       <View style={styles.containerUser}>
         <Image source={images.penguin} style={styles.avatar} />
         <Text style={styles.text}>Kim</Text>
@@ -31,6 +32,7 @@ const ModalManageProfiles = ({ navigation }) => (
           <SvgEdit active size={40} />
         </View>
       </View>
+
       <TouchableOpacity
         activeOpacity={gStyle.activeOpacity}
         onPress={() => navigation.navigate('ModalAddProfile')}
@@ -77,8 +79,8 @@ const styles = StyleSheet.create({
   overlay: {
     backgroundColor: colors.black50,
     height: BLOCK_SIZE,
-    top: 0,
     position: 'absolute',
+    top: 0,
     width: BLOCK_SIZE
   },
   avatar: {
@@ -88,8 +90,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.white,
-    fontSize: 16,
     fontFamily: fonts.regular,
+    fontSize: 16,
     marginTop: 8,
     textAlign: 'center'
   },

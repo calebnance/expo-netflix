@@ -114,8 +114,8 @@ const styles = StyleSheet.create({
   containerMenu: {
     alignItems: 'center',
     flexDirection: 'row',
-    height: 35,
-    flex: 1
+    flex: 1,
+    height: 35
   },
   text: {
     color: colors.white,

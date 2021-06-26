@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { FlatList, Image, StyleSheet, View } from 'react-native';
-import { colors, images } from '../constants';
+import { colors, gStyle, images } from '../constants';
 
 import mockData from '../mockdata/data';
 
@@ -10,7 +10,7 @@ const ShowScroller = ({ dataset, type }) => {
 
   return (
     <FlatList
-      contentContainerStyle={{ paddingHorizontal: 4 }}
+      contentContainerStyle={gStyle.pH4}
       data={dataArray}
       horizontal
       keyExtractor={({ id }) => id.toString()}

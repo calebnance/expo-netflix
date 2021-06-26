@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 import { colors } from '../../constants';
 
@@ -12,7 +12,7 @@ const SvgPlay = ({ active, fill, size }) => {
   }
 
   return (
-    <View style={{ paddingBottom: 3 }}>
+    <View style={styles.container}>
       <Svg
         height={size}
         width={size}
@@ -37,5 +37,11 @@ SvgPlay.propTypes = {
   fill: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   size: PropTypes.number
 };
+
+const styles = StyleSheet.create({
+  container: {
+    paddingBottom: 3
+  }
+});
 
 export default React.memo(SvgPlay);
