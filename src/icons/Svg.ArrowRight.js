@@ -1,26 +1,26 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Svg, { Path } from 'react-native-svg';
-import { colors } from '../../constants';
+import { colors } from '../constants';
 
-const SvgPlus = ({ active, size }) => (
+const SvgArrowRight = ({ active, size }) => (
   <Svg height={size} width={size} viewBox="0 0 24 24">
     <Path
-      d="M19 11h-6V5c0-.6-.4-1-1-1s-1 .4-1 1v6H5c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1v-6h6c.6 0 1-.4 1-1s-.4-1-1-1z"
+      d="M15.7 11.3l-6-6c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5.3 5.3-5.3 5.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3l6-6c.4-.4.4-1 0-1.4z"
       fill={active ? colors.white : colors.inactiveGrey}
     />
   </Svg>
 );
 
-SvgPlus.defaultProps = {
+SvgArrowRight.defaultProps = {
   active: true,
   size: 24
 };
 
-SvgPlus.propTypes = {
+SvgArrowRight.propTypes = {
   // optional
   active: PropTypes.bool,
   size: PropTypes.number
 };
 
-export default React.memo(SvgPlus);
+export default React.memo(SvgArrowRight);

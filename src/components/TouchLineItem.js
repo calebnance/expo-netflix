@@ -4,7 +4,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { colors, fonts, gStyle } from '../constants';
 
 // icons
-import SvgArrowRight from './icons/Svg.ArrowRight';
+import SvgArrowRight from '../icons/Svg.ArrowRight';
 
 const TouchLineItem = (props) => {
   const { icon, iconSize, onPress, showArrow, showBorder, text } = props;

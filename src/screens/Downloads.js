@@ -7,7 +7,7 @@ import Cast from '../components/Cast';
 import Header from '../components/Header';
 
 // icons
-import SvgDownloads from '../components/icons/Svg.Downloads';
+import SvgDownloads from '../icons/Svg.Downloads';
 
 const Downloads = () => (
   <View style={gStyle.container}>

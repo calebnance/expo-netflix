@@ -7,23 +7,27 @@ import { gStyle } from '../constants';
 // components
 import Header from '../components/Header';
 
-const ModalWebView = ({ navigation }) => (
-  <View style={gStyle.container}>
-    <Header close closeText="Close" showLogo />
+const ModalWebView = ({ route }) => {
+  const { url = 'https://netflix.com' } = route.params;
 
-    <WebView
-      bounces={false}
-      javaScriptEnabled
-      scalesPageToFit
-      source={{ uri: navigation.getParam('url', 'https://netflix.com') }}
-      startInLoadingState
-    />
-  </View>
-);
+  return (
+    <View style={gStyle.container}>
+      <Header close closeText="Close" showLogo />
+
+      <WebView
+        bounces={false}
+        javaScriptEnabled
+        scalesPageToFit
+        source={{ uri: url }}
+        startInLoadingState
+      />
+    </View>
+  );
+};
 
 ModalWebView.propTypes = {
   // required
-  navigation: PropTypes.object.isRequired
+  route: PropTypes.object.isRequired
 };
 
 export default ModalWebView;

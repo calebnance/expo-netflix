@@ -7,8 +7,8 @@ import { colors, fonts, gStyle, images } from '../constants';
 import HeaderManage from '../components/HeaderManage';
 
 // icons
-import SvgEdit from '../components/icons/Svg.Edit';
-import SvgPlus from '../components/icons/Svg.Plus';
+import SvgEdit from '../icons/Svg.Edit';
+import SvgPlus from '../icons/Svg.Plus';
 
 const ModalManageProfiles = ({ navigation }) => (
   <View style={[gStyle.container, { backgroundColor: colors.black }]}>

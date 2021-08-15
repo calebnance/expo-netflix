@@ -9,7 +9,7 @@ import TouchLineItemApp from '../components/TouchLineItemApp';
 import TouchLineItemElement from '../components/TouchLineItemElement';
 
 // icons
-import SvgTrash from '../components/icons/Svg.Trash';
+import SvgTrash from '../icons/Svg.Trash';
 
 const alertDeleteDownloads = () => {
   Alert.alert(

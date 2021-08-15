@@ -10,8 +10,8 @@ import HeaderAccounts from '../components/HeaderAccounts';
 import TouchLineItem from '../components/TouchLineItem';
 
 // icons
-import SvgBell from '../components/icons/Svg.Bell';
-import SvgCheck from '../components/icons/Svg.Check';
+import SvgBell from '../icons/Svg.Bell';
+import SvgCheck from '../icons/Svg.Check';
 
 // full :: https://help.netflix.com/legal/privacy?headless=true&locale=en-US
 const privacyUrl = 'https://help.netflix.com/legal/privacy?headless=true';
@@ -32,18 +32,18 @@ const More = ({ navigation }) => (
     <ScrollView showsVerticalScrollIndicator={false}>
       <TouchLineItem
         icon={<SvgBell />}
-        onPress={() => navigation.navigate('MoreNotificationsScreen')}
+        onPress={() => navigation.navigate('MoreNotifications')}
         showBorder
         text="Notifications"
       />
       <TouchLineItem
         icon={<SvgCheck />}
-        onPress={() => navigation.navigate('MoreMyListScreen')}
+        onPress={() => navigation.navigate('MoreMyList')}
         showBorder
         text="My List"
       />
       <TouchLineItem
-        onPress={() => navigation.navigate('MoreAppSettingsScreen')}
+        onPress={() => navigation.navigate('MoreAppSettings')}
         showArrow={false}
         showBorder
         text="App Settings"

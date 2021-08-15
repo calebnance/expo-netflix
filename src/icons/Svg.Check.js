@@ -1,26 +1,26 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Svg, { Path } from 'react-native-svg';
-import { colors } from '../../constants';
+import { colors } from '../constants';
 
-const SvgMenu = ({ active, size }) => (
+const SvgCheck = ({ active, size }) => (
   <Svg height={size} width={size} viewBox="0 0 24 24">
     <Path
-      d="M21 11H3c-.6 0-1 .4-1 1s.4 1 1 1h18c.6 0 1-.4 1-1s-.4-1-1-1zM3 7h18c.6 0 1-.4 1-1s-.4-1-1-1H3c-.6 0-1 .4-1 1s.4 1 1 1zM21 17H3c-.6 0-1 .4-1 1s.4 1 1 1h18c.6 0 1-.4 1-1s-.4-1-1-1z"
+      d="M20.7 5.3c-.4-.4-1-.4-1.4 0L9 15.6l-4.3-4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5 5c.2.2.4.3.7.3s.5-.1.7-.3l11-11c.4-.4.4-1 0-1.4z"
       fill={active ? colors.white : colors.inactiveGrey}
     />
   </Svg>
 );
 
-SvgMenu.defaultProps = {
+SvgCheck.defaultProps = {
   active: true,
   size: 24
 };
 
-SvgMenu.propTypes = {
+SvgCheck.propTypes = {
   // optional
   active: PropTypes.bool,
   size: PropTypes.number
 };
 
-export default React.memo(SvgMenu);
+export default React.memo(SvgCheck);

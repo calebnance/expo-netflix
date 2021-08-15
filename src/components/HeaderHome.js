@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
 import {
   Animated,
@@ -59,17 +58,17 @@ class HeaderHome extends React.Component {
           {all && (
             <React.Fragment>
               <TouchText
-                onPress={() => navigation.navigate('HomeTvShows')}
+                onPress={() => navigation.navigate('TvShows')}
                 text="TV Shows"
                 textStyle={styles.text}
               />
               <TouchText
-                onPress={() => navigation.navigate('HomeMovies')}
+                onPress={() => navigation.navigate('Movies')}
                 text="Movies"
                 textStyle={styles.text}
               />
               <TouchText
-                onPress={() => navigation.navigate('HomeMyList')}
+                onPress={() => navigation.navigate('MyList')}
                 text="My List"
                 textStyle={styles.text}
               />
@@ -124,4 +123,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default withNavigation(HeaderHome);
+export default HeaderHome;

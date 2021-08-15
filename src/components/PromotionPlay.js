@@ -4,7 +4,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { colors, fonts, gStyle } from '../constants';
 
 // icons
-import SvgPlay from './icons/Svg.Play';
+import SvgPlay from '../icons/Svg.Play';
 
 const PromotionPlay = ({ icon, onPress, text }) => (
   <TouchableOpacity
