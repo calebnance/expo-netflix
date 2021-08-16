@@ -19,6 +19,9 @@ const Tab = createBottomTabNavigator();
 export default () => (
   <Tab.Navigator
     screenOptions={({ route }) => ({
+      headerShown: false,
+      tabBarActiveTintColor: colors.white,
+      tabBarInactiveTintColor: colors.inactiveGrey,
       tabBarIcon: ({ color }) => {
         let icon = <SvgHome fill={color} />;
 
@@ -31,13 +34,9 @@ export default () => (
         }
 
         return icon;
-      }
+      },
+      tabBarStyle: gStyle.navTabStyle
     })}
-    tabBarOptions={{
-      activeTintColor: colors.white,
-      inactiveTintColor: colors.inactiveGrey,
-      style: gStyle.navTabStyle
-    }}
   >
     <Tab.Screen
       name="StackHome"
