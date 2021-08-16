@@ -15,6 +15,7 @@ export default () => (
       name="Home"
       component={HomeScreen}
       options={{
+        animationEnabled: false,
         headerShown: false
       }}
     />
@@ -22,6 +23,7 @@ export default () => (
       name="TvShows"
       component={TvShowsScreen}
       options={{
+        animationEnabled: false,
         headerShown: false
       }}
     />
@@ -29,6 +31,7 @@ export default () => (
       name="Movies"
       component={MoviesScreen}
       options={{
+        animationEnabled: false,
         headerShown: false
       }}
     />
@@ -36,6 +39,7 @@ export default () => (
       name="MyList"
       component={MyListScreen}
       options={{
+        animationEnabled: false,
         headerShown: false
       }}
     />

@@ -9,8 +9,10 @@ import StackDownloads from './StackDownloads';
 import StackMore from './StackMore';
 
 // icons
+import SvgDownloads from '../icons/Svg.Downloads';
 import SvgHome from '../icons/Svg.Home';
 import SvgMenu from '../icons/Svg.Menu';
+import SvgSearch from '../icons/Svg.Search';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +22,11 @@ export default () => (
       tabBarIcon: ({ color }) => {
         let icon = <SvgHome fill={color} />;
 
-        if (route.name === 'StackMore') {
+        if (route.name === 'StackSearch') {
+          icon = <SvgSearch fill={color} />;
+        } else if (route.name === 'StackDownloads') {
+          icon = <SvgDownloads fill={color} />;
+        } else if (route.name === 'StackMore') {
           icon = <SvgMenu fill={color} />;
         }
 
@@ -28,8 +34,8 @@ export default () => (
       }
     })}
     tabBarOptions={{
-      activeTintColor: colors.itemActive,
-      inactiveTintColor: colors.itemInactive,
+      activeTintColor: colors.white,
+      inactiveTintColor: colors.inactiveGrey,
       style: gStyle.navTabStyle
     }}
   >

@@ -102,5 +102,16 @@ export default {
   },
   pH16: {
     paddingHorizontal: 16
+  },
+
+  // nav tab
+  // ///////////////////////////////////////////////////////////////////////////
+  navTabLabelStyle: {
+    fontSize: 12,
+    marginBottom: 0
+  },
+  navTabStyle: {
+    backgroundColor: colors.black,
+    borderTopColor: colors.black
   }
 };
