@@ -16,7 +16,7 @@ const Stack = createStackNavigator();
 
 export default () => (
   <NavigationContainer>
-    <Stack.Navigator mode="modal">
+    <Stack.Navigator screenOptions={{ presentation: 'modal' }}>
       <Stack.Screen
         name="TabNavigation"
         component={TabNavigation}
