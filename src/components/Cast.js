@@ -1,25 +1,23 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import { withNavigation } from 'react-navigation';
+import { useNavigation } from '@react-navigation/native';
 import { colors, gStyle } from '../constants';
 
 // icons
-import SvgCast from './icons/Svg.Cast';
+import SvgCast from '../icons/Svg.Cast';
 
-const Cast = ({ navigation }) => (
-  <TouchableOpacity
-    activeOpacity={gStyle.activeOpacity}
-    onPress={() => navigation.navigate('ModalCastConnect')}
-    style={styles.container}
-  >
-    <SvgCast />
-  </TouchableOpacity>
-);
+const Cast = () => {
+  const navigation = useNavigation();
 
-Cast.propTypes = {
-  // required
-  navigation: PropTypes.object.isRequired
+  return (
+    <TouchableOpacity
+      activeOpacity={gStyle.activeOpacity}
+      onPress={() => navigation.navigate('ModalCastConnect')}
+      style={styles.container}
+    >
+      <SvgCast />
+    </TouchableOpacity>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -40,4 +38,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default withNavigation(Cast);
+export default Cast;

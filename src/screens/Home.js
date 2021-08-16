@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
-import { ScrollView } from 'react-navigation';
+import PropTypes from 'prop-types';
+import { ScrollView, Text, View } from 'react-native';
 import { gStyle } from '../constants';
 
 // components
@@ -42,11 +42,12 @@ class Home extends React.Component {
   }
 
   render() {
+    const { navigation } = this.props;
     const { showHeader } = this.state;
 
     return (
       <View style={gStyle.container}>
-        <HeaderHome show={showHeader} />
+        <HeaderHome navigation={navigation} show={showHeader} />
 
         <ScrollView
           bounces
@@ -85,5 +86,10 @@ class Home extends React.Component {
     );
   }
 }
+
+Home.propTypes = {
+  // required
+  navigation: PropTypes.object.isRequired
+};
 
 export default Home;

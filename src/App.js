@@ -5,7 +5,7 @@ import AppLoading from 'expo-app-loading';
 import { func } from './constants';
 
 // main navigation stack
-import Stack from './navigation/Stack';
+import RootStack from './navigation/RootStack';
 
 class App extends React.Component {
   constructor() {
@@ -34,7 +34,8 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <StatusBar barStyle="light-content" />
-        <Stack />
+
+        <RootStack />
       </React.Fragment>
     );
   }

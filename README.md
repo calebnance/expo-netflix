@@ -31,7 +31,7 @@ Run Project Locally: `yarn dev` or `yarn start`
 
 - Expo SDK 42
 - iOS, Android and PWA (Progressive Web App)
-- React Navigation v4
+- React Navigation v5
 - PropTypes
 
 ## API Components/Packages Used
@@ -93,6 +93,7 @@ a couple manual changes within `index.html` i found needed to be made so far:
 
 ### version 0.0.2 (current)
 
+- upgraded to [React Navigation v5](https://reactnavigation.org/docs/5.x/getting-started)
 - upgraded to [Expo SDK 42](https://blog.expo.io/expo-sdk-42-579aee2348b6)
 - upgraded to [Expo SDK 41](https://blog.expo.io/expo-sdk-41-12cc5232f2ef)
 - upgraded to [Expo SDK 40](https://blog.expo.io/expo-sdk-40-is-now-available-d4d73e67da33)

@@ -1,14 +1,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { withNavigation } from 'react-navigation';
+import { useNavigation } from '@react-navigation/native';
 import { colors, device, fonts, gStyle, images } from '../constants';
 
 // icons
-import SvgArrowLeft from './icons/Svg.ArrowLeft';
+import SvgArrowLeft from '../icons/Svg.ArrowLeft';
 
-const Header = (props) => {
-  const { bg, close, closeText, navigation, showBack, showLogo, title } = props;
+const Header = ({ bg, close, closeText, showBack, showLogo, title }) => {
+  const navigation = useNavigation();
 
   return (
     <View style={[styles.container, { backgroundColor: bg }]}>
@@ -62,9 +62,6 @@ Header.defaultProps = {
 };
 
 Header.propTypes = {
-  // required
-  navigation: PropTypes.object.isRequired,
-
   // optional
   bg: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   close: PropTypes.bool,
@@ -121,4 +118,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default withNavigation(Header);
+export default Header;

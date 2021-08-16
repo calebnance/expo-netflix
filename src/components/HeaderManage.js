@@ -1,10 +1,11 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { withNavigation } from 'react-navigation';
+import { useNavigation } from '@react-navigation/native';
 import { colors, device, fonts, gStyle } from '../constants';
 
-const HeaderManage = ({ backText, navigation, save, saveActive, title }) => {
+const HeaderManage = ({ backText, save, saveActive, title }) => {
+  const navigation = useNavigation();
   const saveColor = saveActive ? { color: colors.white } : {};
 
   return (
@@ -46,9 +47,6 @@ HeaderManage.defaultProps = {
 };
 
 HeaderManage.propTypes = {
-  // required
-  navigation: PropTypes.object.isRequired,
-
   // optional
   backText: PropTypes.string,
   save: PropTypes.bool,
@@ -99,4 +97,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default withNavigation(HeaderManage);
+export default HeaderManage;

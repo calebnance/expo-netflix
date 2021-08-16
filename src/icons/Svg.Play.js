@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, View } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
-import { colors } from '../../constants';
+import { colors } from '../constants';
 
 const SvgPlay = ({ active, fill, size }) => {
   let fillColor = fill;

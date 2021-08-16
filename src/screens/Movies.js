@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import { Text, View } from 'react-native';
 import { gStyle } from '../constants';
 
@@ -6,9 +7,9 @@ import { gStyle } from '../constants';
 import Cast from '../components/Cast';
 import HeaderHome from '../components/HeaderHome';
 
-const Movies = () => (
+const Movies = ({ navigation }) => (
   <View style={gStyle.container}>
-    <HeaderHome show />
+    <HeaderHome navigation={navigation} show />
 
     <View style={gStyle.spacer96} />
 
@@ -19,5 +20,10 @@ const Movies = () => (
     <Cast />
   </View>
 );
+
+Movies.propTypes = {
+  // required
+  navigation: PropTypes.object.isRequired
+};
 
 export default Movies;

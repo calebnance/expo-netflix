@@ -7,9 +7,9 @@ import PromotionPlay from './PromotionPlay';
 import TouchTextIcon from './TouchTextIcon';
 
 // icons
-import SvgCheck from './icons/Svg.Check';
-import SvgInfo from './icons/Svg.Info';
-import SvgPlus from './icons/Svg.Plus';
+import SvgCheck from '../icons/Svg.Check';
+import SvgInfo from '../icons/Svg.Info';
+import SvgPlus from '../icons/Svg.Plus';
 
 class PromotionBanner extends React.Component {
   constructor(props) {
