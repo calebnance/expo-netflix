@@ -10,7 +10,7 @@ const ShowScroller = ({ dataset, type }) => {
 
   return (
     <FlatList
-      contentContainerStyle={gStyle.pH4}
+      contentContainerStyle={gStyle.pHHalf}
       data={dataArray}
       horizontal
       keyExtractor={({ id }) => id.toString()}

@@ -78,7 +78,7 @@ class Home extends React.Component {
           <Text style={gStyle.heading}>Documentaries</Text>
           <ShowScroller />
 
-          <View style={gStyle.spacer24} />
+          <View style={gStyle.spacer3} />
         </ScrollView>
 
         <Cast />

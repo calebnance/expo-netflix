@@ -11,9 +11,9 @@ const MyList = ({ navigation }) => (
   <View style={gStyle.container}>
     <HeaderHome navigation={navigation} show />
 
-    <View style={gStyle.spacer96} />
+    <View style={gStyle.spacer12} />
 
-    <View style={gStyle.pH4}>
+    <View style={gStyle.pHHalf}>
       <Text style={gStyle.heading}>My List</Text>
     </View>
 
