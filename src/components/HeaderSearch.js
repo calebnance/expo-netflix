@@ -10,26 +10,16 @@ import {
 } from 'react-native';
 import { colors, device, fonts, gStyle } from '../constants';
 
-class HeaderSearch extends React.Component {
-  constructor() {
-    super();
+const HeaderSearch = () => {
+  // local state
+  const [focus, setFocus] = React.useState(false);
+  const [text, setText] = React.useState('');
 
-    this.state = {
-      focus: false,
-      cancelOpacity: new Animated.Value(0),
-      inputWidth: new Animated.Value(100),
-      text: ''
-    };
+  const cancelOpacity = React.useRef(new Animated.Value(0)).current;
+  const inputWidth = React.useRef(new Animated.Value(100)).current;
 
-    this.onBlur = this.onBlur.bind(this);
-    this.onCancel = this.onCancel.bind(this);
-    this.onFocus = this.onFocus.bind(this);
-  }
-
-  onBlur() {
-    const { cancelOpacity, inputWidth, text } = this.state;
-
-    this.setState({ focus: false });
+  const onBlur = () => {
+    setFocus(false);
 
     // if empty, go back to orignial state
     if (text === '') {
@@ -44,18 +34,16 @@ class HeaderSearch extends React.Component {
         useNativeDriver: false
       }).start();
     }
-  }
+  };
 
-  onCancel() {
+  const onCancel = () => {
     Keyboard.dismiss();
 
-    this.setState({ text: '' }, () => this.onBlur());
-  }
+    setText('');
+  };
 
-  onFocus() {
-    const { cancelOpacity, inputWidth } = this.state;
-
-    this.setState({ focus: true });
+  const onFocus = () => {
+    setFocus(true);
 
     Animated.timing(inputWidth, {
       duration: 300,
@@ -67,50 +55,47 @@ class HeaderSearch extends React.Component {
       toValue: 1,
       useNativeDriver: false
     }).start();
-  }
+  };
 
-  render() {
-    const { cancelOpacity, focus, inputWidth, text } = this.state;
+  // if there is focus or text in input, align left
+  const inputOverride = focus || text ? { textAlign: 'left' } : {};
+  // convert to percentage
+  const percentage = inputWidth.interpolate({
+    inputRange: [80, 100],
+    outputRange: ['80%', '100%']
+  });
 
-    // if there is focus or text in input, align left
-    const inputOverride = focus || text ? { textAlign: 'left' } : {};
-    // convert to percentage
-    const percentage = inputWidth.interpolate({
-      inputRange: [80, 100],
-      outputRange: ['80%', '100%']
-    });
+  return (
+    <View style={styles.container}>
+      <Animated.View style={[styles.containerInput, { width: percentage }]}>
+        <TextInput
+          autoCapitalize="none"
+          autoFocus
+          keyboardAppearance="dark"
+          onBlur={onBlur}
+          onChangeText={(input) => setText(input)}
+          onFocus={onFocus}
+          placeholder="Search"
+          placeholderTextColor={colors.searchIcon}
+          selectionColor={colors.brandPrimary}
+          style={[styles.input, inputOverride]}
+          value={text}
+        />
+      </Animated.View>
 
-    return (
-      <View style={styles.container}>
-        <Animated.View style={[styles.containerInput, { width: percentage }]}>
-          <TextInput
-            autoCapitalize="none"
-            autoFocus
-            keyboardAppearance="dark"
-            onBlur={this.onBlur}
-            onChangeText={(input) => this.setState({ text: input })}
-            onFocus={this.onFocus}
-            placeholder="Search"
-            placeholderTextColor={colors.searchIcon}
-            selectionColor={colors.brandPrimary}
-            style={[styles.input, inputOverride]}
-            value={text}
-          />
-        </Animated.View>
-        <Animated.View
-          style={[styles.containerCancel, { opacity: cancelOpacity }]}
+      <Animated.View
+        style={[styles.containerCancel, { opacity: cancelOpacity }]}
+      >
+        <TouchableOpacity
+          activeOpacity={gStyle.activeOpacity}
+          onPress={onCancel}
         >
-          <TouchableOpacity
-            activeOpacity={gStyle.activeOpacity}
-            onPress={this.onCancel}
-          >
-            <Text style={styles.cancel}>Cancel</Text>
-          </TouchableOpacity>
-        </Animated.View>
-      </View>
-    );
-  }
-}
+          <Text style={styles.cancel}>Cancel</Text>
+        </TouchableOpacity>
+      </Animated.View>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {

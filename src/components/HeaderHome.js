@@ -7,78 +7,67 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { colors, device, fonts, gStyle, images } from '../constants';
 
 // components
 import TouchText from './TouchText';
 
-class HeaderHome extends React.Component {
-  constructor() {
-    super();
+const HeaderHome = ({ all, show }) => {
+  const navigation = useNavigation();
 
-    this.state = {
-      top: new Animated.Value(0)
-    };
-  }
+  // local state
+  const top = React.useRef(new Animated.Value(0)).current;
 
-  componentDidUpdate(prevProps) {
-    const { show } = this.props;
-    const { top } = this.state;
-
-    if (prevProps.show !== show) {
-      if (show) {
-        Animated.timing(top, {
-          duration: 200,
-          toValue: 0,
-          useNativeDriver: false
-        }).start();
-      } else {
-        Animated.timing(top, {
-          duration: 200,
-          toValue: -100,
-          useNativeDriver: false
-        }).start();
-      }
+  React.useEffect(() => {
+    if (show) {
+      Animated.timing(top, {
+        duration: 200,
+        toValue: 0,
+        useNativeDriver: false
+      }).start();
+    } else {
+      Animated.timing(top, {
+        duration: 200,
+        toValue: -100,
+        useNativeDriver: false
+      }).start();
     }
-  }
+  }, [show]);
 
-  render() {
-    const { all, navigation } = this.props;
-    const { top } = this.state;
+  return (
+    <Animated.View style={[styles.container, { top }]}>
+      <TouchableOpacity
+        activeOpacity={gStyle.activeOpacity}
+        onPress={() => navigation.navigate('Home')}
+      >
+        <Image source={images.netflixTransparent} style={styles.logo} />
+      </TouchableOpacity>
 
-    return (
-      <Animated.View style={[styles.container, { top }]}>
-        <TouchableOpacity
-          activeOpacity={gStyle.activeOpacity}
-          onPress={() => navigation.navigate('Home')}
-        >
-          <Image source={images.netflixTransparent} style={styles.logo} />
-        </TouchableOpacity>
-        <View style={styles.containerMenu}>
-          {all && (
-            <React.Fragment>
-              <TouchText
-                onPress={() => navigation.navigate('TvShows')}
-                text="TV Shows"
-                textStyle={styles.text}
-              />
-              <TouchText
-                onPress={() => navigation.navigate('Movies')}
-                text="Movies"
-                textStyle={styles.text}
-              />
-              <TouchText
-                onPress={() => navigation.navigate('MyList')}
-                text="My List"
-                textStyle={styles.text}
-              />
-            </React.Fragment>
-          )}
-        </View>
-      </Animated.View>
-    );
-  }
-}
+      <View style={styles.containerMenu}>
+        {all && (
+          <React.Fragment>
+            <TouchText
+              onPress={() => navigation.navigate('TvShows')}
+              text="TV Shows"
+              textStyle={styles.text}
+            />
+            <TouchText
+              onPress={() => navigation.navigate('Movies')}
+              text="Movies"
+              textStyle={styles.text}
+            />
+            <TouchText
+              onPress={() => navigation.navigate('MyList')}
+              text="My List"
+              textStyle={styles.text}
+            />
+          </React.Fragment>
+        )}
+      </View>
+    </Animated.View>
+  );
+};
 
 HeaderHome.defaultProps = {
   all: true
@@ -86,7 +75,6 @@ HeaderHome.defaultProps = {
 
 HeaderHome.propTypes = {
   // required
-  navigation: PropTypes.object.isRequired,
   show: PropTypes.bool.isRequired,
 
   // optional

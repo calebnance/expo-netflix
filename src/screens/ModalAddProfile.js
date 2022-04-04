@@ -13,19 +13,12 @@ import { colors, fonts, gStyle, images } from '../constants';
 // components
 import HeaderManage from '../components/HeaderManage';
 
-class ModalAddProfile extends React.Component {
-  constructor() {
-    super();
+const ModalAddProfile = () => {
+  // local state
+  const [isForKids, setForKids] = React.useState(false);
+  const [text, setText] = React.useState('');
 
-    this.state = {
-      forKidsValue: false,
-      text: ''
-    };
-
-    this.handleSwitchChange = this.handleSwitchChange.bind(this);
-  }
-
-  handleSwitchChange(value) {
+  const handleSwitchChange = (value) => {
     // warn on switch off from kids settings...
     if (value === false) {
       Alert.alert(
@@ -36,49 +29,40 @@ class ModalAddProfile extends React.Component {
       );
     }
 
-    this.setState({
-      forKidsValue: value
-    });
-  }
+    setForKids(value);
+  };
 
-  render() {
-    const { forKidsValue, text } = this.state;
+  return (
+    <View style={[gStyle.container, { backgroundColor: colors.black }]}>
+      <HeaderManage
+        backText="Cancel"
+        save
+        saveActive={text !== ''}
+        title="Create Profile"
+      />
 
-    return (
-      <View style={[gStyle.container, { backgroundColor: colors.black }]}>
-        <HeaderManage
-          backText="Cancel"
-          save
-          saveActive={text !== ''}
-          title="Create Profile"
+      <View style={styles.container}>
+        <Image source={images.mask} style={styles.avatar} />
+        <Text style={styles.text}>CHANGE</Text>
+
+        <TextInput
+          autoCapitalize="none"
+          autoFocus
+          keyboardAppearance="dark"
+          onChangeText={(input) => setText(input)}
+          selectionColor={colors.brandPrimary}
+          style={styles.input}
+          value={text}
         />
 
-        <View style={styles.container}>
-          <Image source={images.mask} style={styles.avatar} />
-          <Text style={styles.text}>CHANGE</Text>
-
-          <TextInput
-            autoCapitalize="none"
-            autoFocus
-            keyboardAppearance="dark"
-            onChangeText={(input) => this.setState({ text: input })}
-            selectionColor={colors.brandPrimary}
-            style={styles.input}
-            value={text}
-          />
-
-          <View style={styles.containerSwitch}>
-            <Text style={styles.switchLabel}>For Kids</Text>
-            <Switch
-              onValueChange={(val) => this.handleSwitchChange(val)}
-              value={forKidsValue}
-            />
-          </View>
+        <View style={styles.containerSwitch}>
+          <Text style={styles.switchLabel}>For Kids</Text>
+          <Switch onValueChange={handleSwitchChange} value={isForKids} />
         </View>
       </View>
-    );
-  }
-}
+    </View>
+  );
+};
 
 const BLOCK_SIZE = 108;
 
