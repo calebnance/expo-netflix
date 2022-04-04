@@ -5,7 +5,7 @@ import {
   createStackNavigator
 } from '@react-navigation/stack';
 
-// tab naviation
+// tab navigation
 import TabNavigation from './TabNavigation';
 
 // screens

@@ -11,56 +11,34 @@ import SvgCheck from '../icons/Svg.Check';
 import SvgInfo from '../icons/Svg.Info';
 import SvgPlus from '../icons/Svg.Plus';
 
-class PromotionBanner extends React.Component {
-  constructor(props) {
-    super(props);
+const PromotionBanner = () => {
+  // local state
+  const [added, setAdded] = React.useState(false);
+  const icon = added ? <SvgCheck /> : <SvgPlus />;
 
-    this.state = {
-      added: false
-    };
+  return (
+    <ImageBackground
+      source={images.bannerBander}
+      style={styles.imageBackground}
+    >
+      <View style={styles.containerContent}>
+        <Image source={images.logoBander} style={styles.image} />
 
-    this.myListPress = this.myListPress.bind(this);
-  }
+        <View style={gStyle.flexRowSpace}>
+          <TouchTextIcon
+            icon={icon}
+            onPress={() => setAdded(!added)}
+            text="My List"
+          />
 
-  myListPress() {
-    this.setState((prevState) => ({
-      added: !prevState.added
-    }));
-  }
+          <PromotionPlay onPress={() => null} />
 
-  render() {
-    const { added } = this.state;
-
-    const icon = added ? <SvgCheck /> : <SvgPlus />;
-
-    return (
-      <ImageBackground
-        source={images.bannerBander}
-        style={styles.imageBackground}
-      >
-        <View style={styles.containerContent}>
-          <Image source={images.logoBander} style={styles.image} />
-
-          <View style={gStyle.flexRowSpace}>
-            <TouchTextIcon
-              icon={icon}
-              onPress={this.myListPress}
-              text="My List"
-            />
-
-            <PromotionPlay onPress={() => null} />
-
-            <TouchTextIcon
-              icon={<SvgInfo />}
-              onPress={() => null}
-              text="Info"
-            />
-          </View>
+          <TouchTextIcon icon={<SvgInfo />} onPress={() => null} text="Info" />
         </View>
-      </ImageBackground>
-    );
-  }
-}
+      </View>
+    </ImageBackground>
+  );
+};
 
 const styles = StyleSheet.create({
   imageBackground: {
@@ -80,4 +58,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default PromotionBanner;
+export default React.memo(PromotionBanner);
