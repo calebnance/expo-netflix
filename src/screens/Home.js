@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ScrollView, Text, View } from 'react-native';
+import { useScrollToTop } from '@react-navigation/native';
 import { gStyle } from '../constants';
 
 // components
@@ -9,6 +10,10 @@ import PromotionBanner from '../components/PromotionBanner';
 import ShowScroller from '../components/ShowScroller';
 
 const Home = () => {
+  // on active tab press, scroll to top
+  const ref = React.useRef(null);
+  useScrollToTop(ref);
+
   // local state
   const [showHeader, setShowHeader] = React.useState(true);
   const [offset, setOffset] = React.useState(0);
@@ -33,6 +38,7 @@ const Home = () => {
       <HeaderHome show={showHeader} />
 
       <ScrollView
+        ref={ref}
         bounces
         onScroll={onScroll}
         scrollEventThrottle={16}
