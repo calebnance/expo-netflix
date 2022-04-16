@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { DarkTheme, NavigationContainer } from '@react-navigation/native';
 import {
   CardStyleInterpolators,
   createStackNavigator
@@ -18,7 +18,7 @@ import ModalWebView from '../screens/ModalWebView';
 const Stack = createStackNavigator();
 
 export default () => (
-  <NavigationContainer>
+  <NavigationContainer theme={DarkTheme}>
     <Stack.Navigator
       screenOptions={{
         cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS,
