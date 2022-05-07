@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // screens
 import HomeScreen from '../screens/Home';
@@ -7,7 +7,7 @@ import TvShowsScreen from '../screens/TvShows';
 import MoviesScreen from '../screens/Movies';
 import MyListScreen from '../screens/MyList';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default () => (
   <Stack.Navigator>

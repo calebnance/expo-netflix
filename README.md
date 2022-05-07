@@ -27,7 +27,7 @@ Run Project Locally: `yarn dev` or `yarn start`
 
 ## Features
 
-- Expo SDK 44
+- Expo SDK 45
 - iOS, Android and PWA (Progressive Web App)
 - React Navigation v6
 - PropTypes
@@ -91,6 +91,7 @@ a couple manual changes within `index.html` i found needed to be made so far:
 
 ### version 0.0.2 (current)
 
+- upgraded to [Expo SDK 45](https://blog.expo.dev/expo-sdk-45-f4e332954a68)
 - upgraded to [Expo SDK 44](https://blog.expo.dev/expo-sdk-44-4c4b8306584a)
 - upgraded to [Expo SDK 43](https://blog.expo.dev/expo-sdk-43-aa9b3c7d5541)
 - upgraded to [React Navigation v6](https://reactnavigation.org/docs/getting-started)
