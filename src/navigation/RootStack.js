@@ -1,9 +1,6 @@
 import * as React from 'react';
 import { DarkTheme, NavigationContainer } from '@react-navigation/native';
-import {
-  CardStyleInterpolators,
-  createStackNavigator
-} from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // tab navigation
 import TabNavigation from './TabNavigation';
@@ -15,14 +12,13 @@ import ModalManageProfiles from '../screens/ModalManageProfiles';
 import ModalVideo from '../screens/ModalVideo';
 import ModalWebView from '../screens/ModalWebView';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default () => (
   <NavigationContainer theme={DarkTheme}>
     <Stack.Navigator
       screenOptions={{
-        cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS,
-        presentation: 'modal'
+        presentation: 'fullScreenModal'
       }}
     >
       <Stack.Screen

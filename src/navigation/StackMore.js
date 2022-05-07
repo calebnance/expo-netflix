@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // screens
 import MoreScreen from '../screens/More';
@@ -7,7 +7,7 @@ import MoreAppSettingsScreen from '../screens/MoreAppSettings';
 import MoreNotificationsScreen from '../screens/MoreNotifications';
 import MoreMyListScreen from '../screens/MoreMyList';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default () => (
   <Stack.Navigator>
