@@ -19,11 +19,13 @@ web demo: [Expo Netflix](https://expo-netflix.vercel.app)
 
 ## Install & Build
 
-First, make sure you have Expo CLI installed: `npm install -g expo-cli`
+First, make sure you have installed on your machine:
+  - [Yarn](https://classic.yarnpkg.com/en/docs/install): `npm install --global yarn`
+  - Expo CLI: `npm install -g expo-cli`
 
 Install: `yarn` or `yarn install`
 
-Run Project Locally: `yarn dev` or `yarn start`
+Run Project Locally: `yarn dev` or `expo start`
 
 ## Features
 
