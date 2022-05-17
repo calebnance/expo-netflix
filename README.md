@@ -89,7 +89,7 @@ a couple manual changes within `index.html` i found needed to be made so far:
 
 ## Release Notes
 
-### version 0.0.2 (current)
+**version 0.0.2 (current)**
 
 - upgraded to [Expo SDK 45](https://blog.expo.dev/expo-sdk-45-f4e332954a68)
 - upgraded to [Expo SDK 44](https://blog.expo.dev/expo-sdk-44-4c4b8306584a)
@@ -129,7 +129,7 @@ a couple manual changes within `index.html` i found needed to be made so far:
   - on open (mount), screen orientation changes to landscape
   - on close (unmount), screen orientation changes back to portrait
 
-### version 0.0.1
+**version 0.0.1**
 
 - iOS and Android
 - Tab Navigation
