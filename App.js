@@ -8,7 +8,7 @@ import RootStack from './src/navigation/RootStack';
 
 SplashScreen.preventAutoHideAsync();
 
-const App = () => {
+function App() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
@@ -47,6 +47,6 @@ const App = () => {
       <View onLayout={onLayoutRootView} />
     </React.Fragment>
   );
-};
+}
 
 export default App;

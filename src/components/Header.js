@@ -7,7 +7,7 @@ import { colors, device, fonts, gStyle, images } from '../constants';
 // icons
 import SvgArrowLeft from '../icons/Svg.ArrowLeft';
 
-const Header = ({ bg, close, closeText, showBack, showLogo, title }) => {
+function Header({ bg, close, closeText, showBack, showLogo, title }) {
   const navigation = useNavigation();
 
   return (
@@ -50,7 +50,7 @@ const Header = ({ bg, close, closeText, showBack, showLogo, title }) => {
       )}
     </View>
   );
-};
+}
 
 Header.defaultProps = {
   bg: colors.black,

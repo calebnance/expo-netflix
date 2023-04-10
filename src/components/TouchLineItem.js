@@ -6,7 +6,7 @@ import { colors, fonts, gStyle } from '../constants';
 // icons
 import SvgArrowRight from '../icons/Svg.ArrowRight';
 
-const TouchLineItem = (props) => {
+function TouchLineItem(props) {
   const { icon, iconSize, onPress, showArrow, showBorder, text } = props;
 
   const borderTopWidth = showBorder ? 2 : 0;
@@ -30,7 +30,7 @@ const TouchLineItem = (props) => {
       )}
     </TouchableOpacity>
   );
-};
+}
 
 TouchLineItem.defaultProps = {
   icon: null,

@@ -9,7 +9,7 @@ import HeaderHome from '../components/HeaderHome';
 import PromotionBanner from '../components/PromotionBanner';
 import ShowScroller from '../components/ShowScroller';
 
-const Home = () => {
+function Home() {
   // on active tab press, scroll to top
   const ref = React.useRef(null);
   useScrollToTop(ref);
@@ -73,6 +73,6 @@ const Home = () => {
       <Cast />
     </View>
   );
-};
+}
 
 export default Home;

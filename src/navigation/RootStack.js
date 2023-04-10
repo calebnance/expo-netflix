@@ -14,56 +14,60 @@ import ModalWebView from '../screens/ModalWebView';
 
 const Stack = createNativeStackNavigator();
 
-export default () => (
-  <NavigationContainer theme={DarkTheme}>
-    <Stack.Navigator
-      screenOptions={{
-        presentation: 'fullScreenModal'
-      }}
-    >
-      <Stack.Screen
-        name="TabNavigation"
-        component={TabNavigation}
-        options={{
-          headerShown: false
+function RootStack() {
+  return (
+    <NavigationContainer theme={DarkTheme}>
+      <Stack.Navigator
+        screenOptions={{
+          presentation: 'fullScreenModal'
         }}
-      />
+      >
+        <Stack.Screen
+          name="TabNavigation"
+          component={TabNavigation}
+          options={{
+            headerShown: false
+          }}
+        />
 
-      <Stack.Screen
-        name="ModalAddProfile"
-        component={ModalAddProfile}
-        options={{
-          headerShown: false
-        }}
-      />
-      <Stack.Screen
-        name="ModalCastConnect"
-        component={ModalCastConnect}
-        options={{
-          headerShown: false
-        }}
-      />
-      <Stack.Screen
-        name="ModalManageProfiles"
-        component={ModalManageProfiles}
-        options={{
-          headerShown: false
-        }}
-      />
-      <Stack.Screen
-        name="ModalVideo"
-        component={ModalVideo}
-        options={{
-          headerShown: false
-        }}
-      />
-      <Stack.Screen
-        name="ModalWebView"
-        component={ModalWebView}
-        options={{
-          headerShown: false
-        }}
-      />
-    </Stack.Navigator>
-  </NavigationContainer>
-);
+        <Stack.Screen
+          name="ModalAddProfile"
+          component={ModalAddProfile}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="ModalCastConnect"
+          component={ModalCastConnect}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="ModalManageProfiles"
+          component={ModalManageProfiles}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="ModalVideo"
+          component={ModalVideo}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="ModalWebView"
+          component={ModalWebView}
+          options={{
+            headerShown: false
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default RootStack;

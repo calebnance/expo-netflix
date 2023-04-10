@@ -13,7 +13,7 @@ import { colors, fonts, gStyle, images } from '../constants';
 // components
 import HeaderManage from '../components/HeaderManage';
 
-const ModalAddProfile = () => {
+function ModalAddProfile() {
   // local state
   const [isForKids, setForKids] = React.useState(false);
   const [text, setText] = React.useState('');
@@ -62,7 +62,7 @@ const ModalAddProfile = () => {
       </View>
     </View>
   );
-};
+}
 
 const BLOCK_SIZE = 108;
 

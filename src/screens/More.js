@@ -25,50 +25,52 @@ const alertSignOut = () => {
   );
 };
 
-const More = ({ navigation }) => (
-  <View style={gStyle.container}>
-    <HeaderAccounts />
+function More({ navigation }) {
+  return (
+    <View style={gStyle.container}>
+      <HeaderAccounts />
 
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <TouchLineItem
-        icon={<SvgBell />}
-        onPress={() => navigation.navigate('MoreNotifications')}
-        showBorder
-        text="Notifications"
-      />
-      <TouchLineItem
-        icon={<SvgCheck />}
-        onPress={() => navigation.navigate('MoreMyList')}
-        showBorder
-        text="My List"
-      />
-      <TouchLineItem
-        onPress={() => navigation.navigate('MoreAppSettings')}
-        showArrow={false}
-        showBorder
-        text="App Settings"
-      />
-      <TouchLineItem
-        onPress={() => {
-          navigation.navigate('ModalWebView', { url: privacyUrl });
-        }}
-        showArrow={false}
-        text="Privacy"
-      />
-      <TouchLineItem onPress={() => null} showArrow={false} text="Help" />
-      <TouchLineItem
-        onPress={() => alertSignOut()}
-        showArrow={false}
-        text="Sign Out"
-      />
-      <Text style={styles.versionText}>
-        {`Version: ${Constants.manifest.version}`}
-      </Text>
-    </ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <TouchLineItem
+          icon={<SvgBell />}
+          onPress={() => navigation.navigate('MoreNotifications')}
+          showBorder
+          text="Notifications"
+        />
+        <TouchLineItem
+          icon={<SvgCheck />}
+          onPress={() => navigation.navigate('MoreMyList')}
+          showBorder
+          text="My List"
+        />
+        <TouchLineItem
+          onPress={() => navigation.navigate('MoreAppSettings')}
+          showArrow={false}
+          showBorder
+          text="App Settings"
+        />
+        <TouchLineItem
+          onPress={() => {
+            navigation.navigate('ModalWebView', { url: privacyUrl });
+          }}
+          showArrow={false}
+          text="Privacy"
+        />
+        <TouchLineItem onPress={() => null} showArrow={false} text="Help" />
+        <TouchLineItem
+          onPress={() => alertSignOut()}
+          showArrow={false}
+          text="Sign Out"
+        />
+        <Text style={styles.versionText}>
+          {`Version: ${Constants.manifest.version}`}
+        </Text>
+      </ScrollView>
 
-    <Cast />
-  </View>
-);
+      <Cast />
+    </View>
+  );
+}
 
 More.propTypes = {
   // required

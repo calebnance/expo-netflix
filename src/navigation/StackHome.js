@@ -9,39 +9,43 @@ import MyListScreen from '../screens/MyList';
 
 const Stack = createNativeStackNavigator();
 
-export default () => (
-  <Stack.Navigator>
-    <Stack.Screen
-      name="Home"
-      component={HomeScreen}
-      options={{
-        animationEnabled: false,
-        headerShown: false
-      }}
-    />
-    <Stack.Screen
-      name="TvShows"
-      component={TvShowsScreen}
-      options={{
-        animationEnabled: false,
-        headerShown: false
-      }}
-    />
-    <Stack.Screen
-      name="Movies"
-      component={MoviesScreen}
-      options={{
-        animationEnabled: false,
-        headerShown: false
-      }}
-    />
-    <Stack.Screen
-      name="MyList"
-      component={MyListScreen}
-      options={{
-        animationEnabled: false,
-        headerShown: false
-      }}
-    />
-  </Stack.Navigator>
-);
+function StackHome() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          animationEnabled: false,
+          headerShown: false
+        }}
+      />
+      <Stack.Screen
+        name="TvShows"
+        component={TvShowsScreen}
+        options={{
+          animationEnabled: false,
+          headerShown: false
+        }}
+      />
+      <Stack.Screen
+        name="Movies"
+        component={MoviesScreen}
+        options={{
+          animationEnabled: false,
+          headerShown: false
+        }}
+      />
+      <Stack.Screen
+        name="MyList"
+        component={MyListScreen}
+        options={{
+          animationEnabled: false,
+          headerShown: false
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+
+export default StackHome;

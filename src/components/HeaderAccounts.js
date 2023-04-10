@@ -7,7 +7,7 @@ import { colors, device, fonts, gStyle, images } from '../constants';
 import SvgEdit from '../icons/Svg.Edit';
 import SvgPlus from '../icons/Svg.Plus';
 
-const HeaderAccounts = () => {
+function HeaderAccounts() {
   const navigation = useNavigation();
 
   return (
@@ -45,7 +45,7 @@ const HeaderAccounts = () => {
       </TouchableOpacity>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {

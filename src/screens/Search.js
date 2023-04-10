@@ -6,16 +6,18 @@ import { gStyle } from '../constants';
 import Cast from '../components/Cast';
 import HeaderSearch from '../components/HeaderSearch';
 
-const Search = () => (
-  <React.Fragment>
-    <TouchableWithoutFeedback accessible={false} onPress={Keyboard.dismiss}>
-      <View style={gStyle.container}>
-        <HeaderSearch />
-      </View>
-    </TouchableWithoutFeedback>
+function Search() {
+  return (
+    <React.Fragment>
+      <TouchableWithoutFeedback accessible={false} onPress={Keyboard.dismiss}>
+        <View style={gStyle.container}>
+          <HeaderSearch />
+        </View>
+      </TouchableWithoutFeedback>
 
-    <Cast />
-  </React.Fragment>
-);
+      <Cast />
+    </React.Fragment>
+  );
+}
 
 export default Search;

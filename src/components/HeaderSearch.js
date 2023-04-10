@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { colors, device, fonts, gStyle } from '../constants';
 
-const HeaderSearch = () => {
+function HeaderSearch() {
   // local state
   const [focus, setFocus] = React.useState(false);
   const [text, setText] = React.useState('');
@@ -95,7 +95,7 @@ const HeaderSearch = () => {
       </Animated.View>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {

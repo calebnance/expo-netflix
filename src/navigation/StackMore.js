@@ -9,35 +9,39 @@ import MoreMyListScreen from '../screens/MoreMyList';
 
 const Stack = createNativeStackNavigator();
 
-export default () => (
-  <Stack.Navigator>
-    <Stack.Screen
-      name="More"
-      component={MoreScreen}
-      options={{
-        headerShown: false
-      }}
-    />
-    <Stack.Screen
-      name="MoreAppSettings"
-      component={MoreAppSettingsScreen}
-      options={{
-        headerShown: false
-      }}
-    />
-    <Stack.Screen
-      name="MoreNotifications"
-      component={MoreNotificationsScreen}
-      options={{
-        headerShown: false
-      }}
-    />
-    <Stack.Screen
-      name="MoreMyList"
-      component={MoreMyListScreen}
-      options={{
-        headerShown: false
-      }}
-    />
-  </Stack.Navigator>
-);
+function StackMore() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="More"
+        component={MoreScreen}
+        options={{
+          headerShown: false
+        }}
+      />
+      <Stack.Screen
+        name="MoreAppSettings"
+        component={MoreAppSettingsScreen}
+        options={{
+          headerShown: false
+        }}
+      />
+      <Stack.Screen
+        name="MoreNotifications"
+        component={MoreNotificationsScreen}
+        options={{
+          headerShown: false
+        }}
+      />
+      <Stack.Screen
+        name="MoreMyList"
+        component={MoreMyListScreen}
+        options={{
+          headerShown: false
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+
+export default StackMore;

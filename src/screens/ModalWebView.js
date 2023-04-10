@@ -7,7 +7,7 @@ import { gStyle } from '../constants';
 // components
 import Header from '../components/Header';
 
-const ModalWebView = ({ route }) => {
+function ModalWebView({ route }) {
   const { url = 'https://netflix.com' } = route.params;
 
   return (
@@ -23,7 +23,7 @@ const ModalWebView = ({ route }) => {
       />
     </View>
   );
-};
+}
 
 ModalWebView.propTypes = {
   // required

@@ -16,55 +16,59 @@ import SvgSearch from '../icons/Svg.Search';
 
 const Tab = createBottomTabNavigator();
 
-export default () => (
-  <Tab.Navigator
-    screenOptions={({ route }) => ({
-      headerShown: false,
-      tabBarActiveTintColor: colors.white,
-      tabBarInactiveTintColor: colors.inactiveGrey,
-      tabBarIcon: ({ color }) => {
-        let icon = <SvgHome fill={color} />;
+function TabNavigation() {
+  return (
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        headerShown: false,
+        tabBarActiveTintColor: colors.white,
+        tabBarInactiveTintColor: colors.inactiveGrey,
+        tabBarIcon: ({ color }) => {
+          let icon = <SvgHome fill={color} />;
 
-        if (route.name === 'StackSearch') {
-          icon = <SvgSearch fill={color} />;
-        } else if (route.name === 'StackDownloads') {
-          icon = <SvgDownloads fill={color} />;
-        } else if (route.name === 'StackMore') {
-          icon = <SvgMenu fill={color} />;
-        }
+          if (route.name === 'StackSearch') {
+            icon = <SvgSearch fill={color} />;
+          } else if (route.name === 'StackDownloads') {
+            icon = <SvgDownloads fill={color} />;
+          } else if (route.name === 'StackMore') {
+            icon = <SvgMenu fill={color} />;
+          }
 
-        return icon;
-      },
-      tabBarStyle: gStyle.navTabStyle
-    })}
-  >
-    <Tab.Screen
-      name="StackHome"
-      component={StackHome}
-      options={{
-        tabBarLabel: 'Home'
-      }}
-    />
-    <Tab.Screen
-      name="StackSearch"
-      component={StackSearch}
-      options={{
-        tabBarLabel: 'Search'
-      }}
-    />
-    <Tab.Screen
-      name="StackDownloads"
-      component={StackDownloads}
-      options={{
-        tabBarLabel: 'Downloads'
-      }}
-    />
-    <Tab.Screen
-      name="StackMore"
-      component={StackMore}
-      options={{
-        tabBarLabel: 'More'
-      }}
-    />
-  </Tab.Navigator>
-);
+          return icon;
+        },
+        tabBarStyle: gStyle.navTabStyle
+      })}
+    >
+      <Tab.Screen
+        name="StackHome"
+        component={StackHome}
+        options={{
+          tabBarLabel: 'Home'
+        }}
+      />
+      <Tab.Screen
+        name="StackSearch"
+        component={StackSearch}
+        options={{
+          tabBarLabel: 'Search'
+        }}
+      />
+      <Tab.Screen
+        name="StackDownloads"
+        component={StackDownloads}
+        options={{
+          tabBarLabel: 'Downloads'
+        }}
+      />
+      <Tab.Screen
+        name="StackMore"
+        component={StackMore}
+        options={{
+          tabBarLabel: 'More'
+        }}
+      />
+    </Tab.Navigator>
+  );
+}
+
+export default TabNavigation;

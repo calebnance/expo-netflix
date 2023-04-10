@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Svg, { Path } from 'react-native-svg';
 import { colors } from '../constants';
 
-const SvgInfo = ({ active, fill, size }) => {
+function SvgInfo({ active, fill, size }) {
   let fillColor = fill;
 
   if (fillColor === null) {
@@ -22,7 +22,7 @@ const SvgInfo = ({ active, fill, size }) => {
       />
     </Svg>
   );
-};
+}
 
 SvgInfo.defaultProps = {
   active: true,

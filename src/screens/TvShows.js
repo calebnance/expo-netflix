@@ -6,18 +6,20 @@ import { gStyle } from '../constants';
 import Cast from '../components/Cast';
 import HeaderHome from '../components/HeaderHome';
 
-const TvShows = () => (
-  <View style={gStyle.container}>
-    <HeaderHome show />
+function TvShows() {
+  return (
+    <View style={gStyle.container}>
+      <HeaderHome show />
 
-    <View style={gStyle.spacer12} />
+      <View style={gStyle.spacer12} />
 
-    <View style={gStyle.pHHalf}>
-      <Text style={gStyle.heading}>TV Shows</Text>
+      <View style={gStyle.pHHalf}>
+        <Text style={gStyle.heading}>TV Shows</Text>
+      </View>
+
+      <Cast />
     </View>
-
-    <Cast />
-  </View>
-);
+  );
+}
 
 export default TvShows;

@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 import { colors } from '../constants';
 
-const SvgPlay = ({ active, fill, size }) => {
+function SvgPlay({ active, fill, size }) {
   let fillColor = fill;
 
   if (fillColor === null) {
@@ -23,7 +23,7 @@ const SvgPlay = ({ active, fill, size }) => {
       </Svg>
     </View>
   );
-};
+}
 
 SvgPlay.defaultProps = {
   active: true,

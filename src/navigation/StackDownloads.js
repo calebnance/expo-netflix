@@ -6,14 +6,18 @@ import DownloadsScreen from '../screens/Downloads';
 
 const Stack = createNativeStackNavigator();
 
-export default () => (
-  <Stack.Navigator>
-    <Stack.Screen
-      name="Downloads"
-      component={DownloadsScreen}
-      options={{
-        headerShown: false
-      }}
-    />
-  </Stack.Navigator>
-);
+function StackDownloads() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Downloads"
+        component={DownloadsScreen}
+        options={{
+          headerShown: false
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+
+export default StackDownloads;

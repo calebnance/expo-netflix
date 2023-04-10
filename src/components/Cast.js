@@ -6,7 +6,7 @@ import { colors, gStyle } from '../constants';
 // icons
 import SvgCast from '../icons/Svg.Cast';
 
-const Cast = () => {
+function Cast() {
   const navigation = useNavigation();
 
   return (
@@ -18,7 +18,7 @@ const Cast = () => {
       <SvgCast />
     </TouchableOpacity>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {

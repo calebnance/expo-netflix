@@ -5,7 +5,7 @@ import { colors, gStyle, images } from '../constants';
 
 import mockData from '../mockdata/data';
 
-const ShowScroller = ({ dataset, type }) => {
+function ShowScroller({ dataset, type }) {
   const dataArray = Object.values(mockData[dataset]);
 
   return (
@@ -28,7 +28,7 @@ const ShowScroller = ({ dataset, type }) => {
       showsHorizontalScrollIndicator={false}
     />
   );
-};
+}
 
 ShowScroller.defaultProps = {
   dataset: 'dumbData',

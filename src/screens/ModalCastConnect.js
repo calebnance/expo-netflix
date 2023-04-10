@@ -5,17 +5,19 @@ import { colors, fonts, gStyle } from '../constants';
 // components
 import Header from '../components/Header';
 
-const ModalCastConnect = () => (
-  <View style={gStyle.container}>
-    <Header close showLogo />
+function ModalCastConnect() {
+  return (
+    <View style={gStyle.container}>
+      <Header close showLogo />
 
-    <View style={styles.containerConnect}>
-      <Text style={styles.connect}>Connect to device</Text>
+      <View style={styles.containerConnect}>
+        <Text style={styles.connect}>Connect to device</Text>
+      </View>
+
+      <Text style={styles.deviceText}>[TV] Samsung 7 Series (43)</Text>
     </View>
-
-    <Text style={styles.deviceText}>[TV] Samsung 7 Series (43)</Text>
-  </View>
-);
+  );
+}
 
 const styles = StyleSheet.create({
   containerConnect: {

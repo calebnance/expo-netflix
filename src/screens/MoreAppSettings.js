@@ -30,7 +30,7 @@ const alertDeleteDownloads = () => {
   );
 };
 
-const AppSettings = () => {
+function AppSettings() {
   let deviceType = 'Unknown Device';
 
   // is iOS?
@@ -91,7 +91,7 @@ const AppSettings = () => {
       </View>
     </ScrollView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   containerHeading: {

@@ -6,23 +6,25 @@ import { colors, fonts, gStyle } from '../constants';
 // icons
 import SvgArrowRight from '../icons/Svg.ArrowRight';
 
-const TouchLineItemApp = ({ iconSize, onPress, showArrow, tagline, text }) => (
-  <TouchableOpacity
-    activeOpacity={gStyle.activeOpacity}
-    onPress={onPress}
-    style={styles.container}
-  >
-    <View style={styles.containerText}>
-      <Text style={styles.text}>{text}</Text>
-      {tagline && <Text style={styles.tagline}>{tagline}</Text>}
-    </View>
-    {showArrow && (
-      <View style={styles.arrow}>
-        <SvgArrowRight size={iconSize} />
+function TouchLineItemApp({ iconSize, onPress, showArrow, tagline, text }) {
+  return (
+    <TouchableOpacity
+      activeOpacity={gStyle.activeOpacity}
+      onPress={onPress}
+      style={styles.container}
+    >
+      <View style={styles.containerText}>
+        <Text style={styles.text}>{text}</Text>
+        {tagline && <Text style={styles.tagline}>{tagline}</Text>}
       </View>
-    )}
-  </TouchableOpacity>
-);
+      {showArrow && (
+        <View style={styles.arrow}>
+          <SvgArrowRight size={iconSize} />
+        </View>
+      )}
+    </TouchableOpacity>
+  );
+}
 
 TouchLineItemApp.defaultProps = {
   iconSize: 20,

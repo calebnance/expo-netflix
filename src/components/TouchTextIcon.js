@@ -3,18 +3,20 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { colors, fonts, gStyle } from '../constants';
 
-const TouchTextIcon = ({ icon, iconSize, onPress, text, width }) => (
-  <TouchableOpacity
-    activeOpacity={gStyle.activeOpacity}
-    onPress={onPress}
-    style={[styles.container, { width }]}
-  >
-    <View style={styles.icon}>
-      {React.cloneElement(icon, { size: iconSize })}
-    </View>
-    <Text style={styles.text}>{text}</Text>
-  </TouchableOpacity>
-);
+function TouchTextIcon({ icon, iconSize, onPress, text, width }) {
+  return (
+    <TouchableOpacity
+      activeOpacity={gStyle.activeOpacity}
+      onPress={onPress}
+      style={[styles.container, { width }]}
+    >
+      <View style={styles.icon}>
+        {React.cloneElement(icon, { size: iconSize })}
+      </View>
+      <Text style={styles.text}>{text}</Text>
+    </TouchableOpacity>
+  );
+}
 
 TouchTextIcon.defaultProps = {
   iconSize: 20,

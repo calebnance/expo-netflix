@@ -9,25 +9,27 @@ import Header from '../components/Header';
 // icons
 import SvgDownloads from '../icons/Svg.Downloads';
 
-const Downloads = () => (
-  <View style={gStyle.container}>
-    <Header bg={colors.headerBarBg} title="My Downloads" />
+function Downloads() {
+  return (
+    <View style={gStyle.container}>
+      <Header bg={colors.headerBarBg} title="My Downloads" />
 
-    <View style={styles.containerIcon}>
-      <SvgDownloads fill={colors.bgGrey} size={80} />
+      <View style={styles.containerIcon}>
+        <SvgDownloads fill={colors.bgGrey} size={80} />
+      </View>
+
+      <Text style={styles.description}>
+        Movies and TV shows that you download appear here.
+      </Text>
+
+      <View style={styles.button}>
+        <Text style={styles.buttonText}>FIND SOMETHING TO DOWNLOAD</Text>
+      </View>
+
+      <Cast />
     </View>
-
-    <Text style={styles.description}>
-      Movies and TV shows that you download appear here.
-    </Text>
-
-    <View style={styles.button}>
-      <Text style={styles.buttonText}>FIND SOMETHING TO DOWNLOAD</Text>
-    </View>
-
-    <Cast />
-  </View>
-);
+  );
+}
 
 const styles = StyleSheet.create({
   containerIcon: {

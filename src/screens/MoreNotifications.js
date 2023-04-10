@@ -5,10 +5,12 @@ import { colors, gStyle } from '../constants';
 // components
 import Header from '../components/Header';
 
-const MoreNotifications = () => (
-  <View style={gStyle.container}>
-    <Header bg={colors.headerBarBg} showBack title="Notifications" />
-  </View>
-);
+function MoreNotifications() {
+  return (
+    <View style={gStyle.container}>
+      <Header bg={colors.headerBarBg} showBack title="Notifications" />
+    </View>
+  );
+}
 
 export default MoreNotifications;

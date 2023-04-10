@@ -11,7 +11,7 @@ import SvgCheck from '../icons/Svg.Check';
 import SvgInfo from '../icons/Svg.Info';
 import SvgPlus from '../icons/Svg.Plus';
 
-const PromotionBanner = () => {
+function PromotionBanner() {
   // local state
   const [added, setAdded] = React.useState(false);
   const icon = added ? <SvgCheck /> : <SvgPlus />;
@@ -38,7 +38,7 @@ const PromotionBanner = () => {
       </View>
     </ImageBackground>
   );
-};
+}
 
 const styles = StyleSheet.create({
   imageBackground: {

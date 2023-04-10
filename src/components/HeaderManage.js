@@ -4,7 +4,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { colors, device, fonts, gStyle } from '../constants';
 
-const HeaderManage = ({ backText, save, saveActive, title }) => {
+function HeaderManage({ backText, save, saveActive, title }) {
   const navigation = useNavigation();
   const saveColor = saveActive ? { color: colors.white } : {};
 
@@ -37,7 +37,7 @@ const HeaderManage = ({ backText, save, saveActive, title }) => {
       )}
     </View>
   );
-};
+}
 
 HeaderManage.defaultProps = {
   backText: 'Done',
