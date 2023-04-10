@@ -19,17 +19,23 @@ web demo: [Expo Netflix](https://expo-netflix.vercel.app)
 
 ## Install & Build
 
-First, make sure you have installed on your machine:
-  - [Yarn](https://classic.yarnpkg.com/en/docs/install): `npm install --global yarn`
-  - Expo CLI: `npm install -g expo-cli`
+First, make sure you have Expo CLI installed: `npm install -g expo-cli`
 
-Install: `yarn` or `yarn install`
+**Install:**
 
-Run Project Locally: `yarn dev` or `expo start`
+```bash
+yarn
+```
+
+**Run Project Locally:**
+
+```bash
+yarn dev
+```
 
 ## Features
 
-- Expo SDK 45
+- Expo SDK 46
 - iOS, Android and PWA (Progressive Web App)
 - React Navigation v6
 - PropTypes
@@ -93,6 +99,7 @@ a couple manual changes within `index.html` i found needed to be made so far:
 
 **version 0.0.2 (current)**
 
+- upgraded to [Expo SDK 46](https://blog.expo.dev/expo-sdk-46-c2a1655f63f7)
 - upgraded to [Expo SDK 45](https://blog.expo.dev/expo-sdk-45-f4e332954a68)
 - upgraded to [Expo SDK 44](https://blog.expo.dev/expo-sdk-44-4c4b8306584a)
 - upgraded to [Expo SDK 43](https://blog.expo.dev/expo-sdk-43-aa9b3c7d5541)
