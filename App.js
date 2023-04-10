@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, View } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import { func } from './src/constants';
 
-// main navigation stack
+// root stack navigation
 import RootStack from './src/navigation/RootStack';
+
+SplashScreen.preventAutoHideAsync();
 
 const App = () => {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -12,15 +14,12 @@ const App = () => {
   React.useEffect(() => {
     async function prepare() {
       try {
-        // keeps the splash screen visible while assets are cached
-        await SplashScreen.preventAutoHideAsync();
-
         // pre-load/cache assets: images, fonts, and videos
         await func.loadAssetsAsync();
       } catch (e) {
         // console.warn(e);
       } finally {
-        // loading is complete
+        // loading is complete, show app
         setIsLoading(false);
       }
     }
@@ -28,14 +27,10 @@ const App = () => {
     prepare();
   }, []);
 
-  React.useEffect(() => {
-    // when loading is complete
+  const onLayoutRootView = React.useCallback(async () => {
     if (isLoading === false) {
-      // hide splash function
-      const hideSplash = async () => SplashScreen.hideAsync();
-
-      // hide splash screen to show app
-      hideSplash();
+      // loading is complete, hide Splash Screen and show app
+      await SplashScreen.hideAsync();
     }
   }, [isLoading]);
 
@@ -48,6 +43,8 @@ const App = () => {
       <StatusBar barStyle="light-content" />
 
       <RootStack />
+
+      <View onLayout={onLayoutRootView} />
     </React.Fragment>
   );
 };
