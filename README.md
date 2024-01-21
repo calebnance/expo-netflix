@@ -35,7 +35,7 @@ yarn dev
 
 ## Features
 
-- Expo SDK 48
+- Expo SDK 49
 - iOS, Android and PWA (Progressive Web App)
 - React Navigation v6
 - PropTypes
@@ -53,7 +53,6 @@ yarn dev
   - `StyleSheet`, `Text`, and `View`
 - Expo
   - `expo-asset`
-  - `expo-constants`
   - `expo-font`
   - `expo-linear-gradient`
   - `AppLoading`
