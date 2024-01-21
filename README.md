@@ -35,7 +35,7 @@ yarn dev
 
 ## Features
 
-- Expo SDK 49
+- Expo SDK 50
 - iOS, Android and PWA (Progressive Web App)
 - React Navigation v6
 - PropTypes
@@ -98,6 +98,8 @@ a couple manual changes within `index.html` i found needed to be made so far:
 
 **version 0.0.2 (current)**
 
+- upgraded to [Expo SDK 50](https://expo.dev/changelog/2024/01-18-sdk-50#%E2%9E%A1%EF%B8%8F-upgrading-your-app)
+- upgraded to [Expo SDK 49](https://blog.expo.dev/expo-sdk-49-c6d398cdf740)
 - upgraded to [Expo SDK 48](https://blog.expo.dev/expo-sdk-48-ccb8302e231)
 - upgraded to [Expo SDK 47](https://blog.expo.dev/expo-sdk-47-a0f6f5c038af)
 - upgraded to [Expo SDK 46](https://blog.expo.dev/expo-sdk-46-c2a1655f63f7)
