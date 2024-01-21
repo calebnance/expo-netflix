@@ -13,12 +13,19 @@ const aspectRatio = height / width;
 const { isPad } = Platform;
 
 // is iPhone with Notch?
-// iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max, iPhone 11 & 12
+// iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max, iPhone 11, 12, 13, and 14
 let iPhoneNotch = false;
 if (iOS) {
   // iphone screen breakdown
   // https://blog.calebnance.com/development/iphone-ipad-pixel-sizes-guide-complete-list.html
-  if (height === 812 || height === 844 || height === 896 || height === 926) {
+  if (
+    height === 812 ||
+    height === 844 ||
+    height === 852 ||
+    height === 896 ||
+    height === 926 ||
+    height === 932
+  ) {
     iPhoneNotch = true;
   }
 }
