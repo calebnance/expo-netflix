@@ -1,7 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
-import Constants from 'expo-constants';
 import { colors, fonts, gStyle } from '../constants';
 
 // components
@@ -62,9 +61,7 @@ function More({ navigation }) {
           showArrow={false}
           text="Sign Out"
         />
-        <Text style={styles.versionText}>
-          {`Version: ${Constants.manifest.version}`}
-        </Text>
+        <Text style={styles.versionText}>Version: 1.2.0</Text>
       </ScrollView>
 
       <Cast />
